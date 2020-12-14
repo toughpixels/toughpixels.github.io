@@ -1,0 +1,9 @@
+baseURL = "https://stridesprogramming.com"
+languageCode = "en-us"
+title = "Tough Pixels Tips"
+theme = "tips"
+publishDir = "docs"
+[params]
+    description = "Simple explanations for coding problems."
+    images = ["images/logo.jpg"]
+    author = "Tough Pixels"

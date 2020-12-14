@@ -1,0 +1,11 @@
+<header class="contain smFlex align-center space-between">
+    {{if .IsHome}}
+    <h1 class="sr-only">{{ block "title" . }}{{ if .Title }}{{ .Title }} | {{ end }}{{end }}{{ .Site.Title }}</h1>
+    {{end}}
+
+    <!-- If you want to mess with performance ding of FOIT, try using the partial logo-image.html -->
+    
+    {{- partial "text-logo.html" . -}}
+
+    <a href="#footer-nav" class="skip-link">Skip to Footer Links</a>
+</header>

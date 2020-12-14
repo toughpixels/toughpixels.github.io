@@ -1,0 +1,24 @@
+{{ define "main" }}
+<main class="contain tc">
+    <p class="lead">{{ .Params.Caption }}</p>
+    {{- partial "svg-waving-hand.html" . -}}
+    {{ .Content }}
+    {{- range .Sections }}
+        <section class="tl articles">
+            {{- range .Pages }}
+                <article class="article-prompt">
+                    <header>
+                        <h3 class="mt-0"><a class="page-link" href="{{.Permalink}}">{{.Title}}</a></h3>
+                    </header>
+                    <footer>
+                        <time datetime="{{ .PublishDate }}">{{.PublishDate.Format "January 2, 2006"}}</time>
+                        
+                        {{- partial "reading-time.html" . -}}                        
+                        
+                    </footer>
+                </article>
+            {{- end }}
+        </section>
+    {{- end }}
+</main>
+{{ end }}

@@ -1,0 +1,7 @@
+{{ define "main" }}
+<div class="contain">
+    <h1>{{ .Title }}</h1>
+    <div>Reading time: {{ .ReadingTime }} minutes ({{ .WordCount}} words)</div>
+    {{ .Content }}
+</div>
+{{ end }}
