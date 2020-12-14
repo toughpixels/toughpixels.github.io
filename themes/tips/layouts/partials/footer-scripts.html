@@ -1,5 +1,14 @@
 <script>
-if('serviceWorker' in navigator) {
+const baseUrl = window.location.host;
+
+console.log(baseUrl);
+if(baseUrl.indexOf('localhost') >= 0) {
+    caches.keys().then(function(names) {
+    for (let name of names)
+        caches.delete(name);
+    });
+}
+else if('serviceWorker' in navigator) {
         navigator.serviceWorker
             .register('/sw.js', { scope: '/' })
             .then(function(registration) {
@@ -11,5 +20,5 @@ if('serviceWorker' in navigator) {
             .then(function(registration) {
                 console.log('Service Worker Ready');
             });
-    }
+} 
 </script>
