@@ -90,12 +90,17 @@ body {
 .lead {
     display: block;
 
-    font-size: 2rem;
-    font-weight: bold;
+    font-size: 1.8rem;
+    font-weight: normal;
     margin: 0.67em 0;
 }
 h1 {
+    font-size: 2rem;
     line-height: 1.2;
+}
+pre {
+    max-width: 100%;
+    overflow: auto;
 }
 h2, .title-big , .title-small {
     font-family: var(--font-fancy);
