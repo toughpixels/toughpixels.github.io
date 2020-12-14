@@ -6,4 +6,4 @@ type: list
 
 # You are offline!
 
-We saved our longest tip for you, though:
+But at least you can read our longest tip:
