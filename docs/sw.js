@@ -1,18 +1,14 @@
 const CACHE_VERSION = 1;
 
 const BASE_CACHE_FILES = [
-    '/later.css',
-    '/favicon.icon',
+    '/favicon.ico',
 ];
 
 const OFFLINE_CACHE_FILES = [
-    '/later.css',
     '/offline/index.html',
 ];
 
 const NOT_FOUND_CACHE_FILES = [
-    '/later.css',
-
     '/404.html',
 ];
 
