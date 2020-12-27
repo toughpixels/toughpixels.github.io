@@ -1,1 +1,56 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tags on Tough Pixels Tips</title><link>https://toughpixels.com/tags/</link><description>Recent content in Tags on Tough Pixels Tips</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 13 Dec 2020 13:45:07 -0600</lastBuildDate><atom:link href="https://toughpixels.com/tags/index.xml" rel="self" type="application/rss+xml"/><item><title>hugo, beginner, markdown, html, Github Pages</title><link>https://toughpixels.com/tags/hugo-beginner-markdown-html-github-pages/</link><pubDate>Sun, 13 Dec 2020 13:45:07 -0600</pubDate><guid>https://toughpixels.com/tags/hugo-beginner-markdown-html-github-pages/</guid><description/></item><item><title>hugo, static site generator, github pages, bug-fix</title><link>https://toughpixels.com/tags/hugo-static-site-generator-github-pages-bug-fix/</link><pubDate>Sun, 13 Dec 2020 08:36:59 -0600</pubDate><guid>https://toughpixels.com/tags/hugo-static-site-generator-github-pages-bug-fix/</guid><description/></item><item><title>SCSS, SASS, CSS, iFrames, Responsive Sites</title><link>https://toughpixels.com/tags/scss-sass-css-iframes-responsive-sites/</link><pubDate>Tue, 17 Nov 2020 00:00:00 +0000</pubDate><guid>https://toughpixels.com/tags/scss-sass-css-iframes-responsive-sites/</guid><description/></item><item><title>hugo, markdown, html, go, css</title><link>https://toughpixels.com/tags/hugo-markdown-html-go-css/</link><pubDate>Fri, 25 Sep 2020 20:06:44 -0500</pubDate><guid>https://toughpixels.com/tags/hugo-markdown-html-go-css/</guid><description/></item><item><title>hugo, beginner, markdown, html</title><link>https://toughpixels.com/tags/hugo-beginner-markdown-html/</link><pubDate>Tue, 08 Sep 2020 21:42:52 -0500</pubDate><guid>https://toughpixels.com/tags/hugo-beginner-markdown-html/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Tough Pixels Tips</title>
+    <link>https://toughpixels.com/tags/</link>
+    <description>Recent content in Tags on Tough Pixels Tips</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 13 Dec 2020 13:45:07 -0600</lastBuildDate><atom:link href="https://toughpixels.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>hugo, beginner, markdown, html, Github Pages</title>
+      <link>https://toughpixels.com/tags/hugo-beginner-markdown-html-github-pages/</link>
+      <pubDate>Sun, 13 Dec 2020 13:45:07 -0600</pubDate>
+      
+      <guid>https://toughpixels.com/tags/hugo-beginner-markdown-html-github-pages/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo, static site generator, github pages, bug-fix</title>
+      <link>https://toughpixels.com/tags/hugo-static-site-generator-github-pages-bug-fix/</link>
+      <pubDate>Sun, 13 Dec 2020 08:36:59 -0600</pubDate>
+      
+      <guid>https://toughpixels.com/tags/hugo-static-site-generator-github-pages-bug-fix/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SCSS, SASS, CSS, iFrames, Responsive Sites</title>
+      <link>https://toughpixels.com/tags/scss-sass-css-iframes-responsive-sites/</link>
+      <pubDate>Tue, 17 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://toughpixels.com/tags/scss-sass-css-iframes-responsive-sites/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo, markdown, html, go, css</title>
+      <link>https://toughpixels.com/tags/hugo-markdown-html-go-css/</link>
+      <pubDate>Fri, 25 Sep 2020 20:06:44 -0500</pubDate>
+      
+      <guid>https://toughpixels.com/tags/hugo-markdown-html-go-css/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo, beginner, markdown, html</title>
+      <link>https://toughpixels.com/tags/hugo-beginner-markdown-html/</link>
+      <pubDate>Tue, 08 Sep 2020 21:42:52 -0500</pubDate>
+      
+      <guid>https://toughpixels.com/tags/hugo-beginner-markdown-html/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

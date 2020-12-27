@@ -1,8 +1,7 @@
 <article>
     <h1>{{ .Title }}</h1>
     {{ if eq .Page.Type "tips" }}
-        <time datetime="{{ .PublishDate }}">{{.PublishDate.Format "January 2, 2006"}}</time>
-        {{- partial "reading-time.html" . -}}  
+        <time datetime="{{ .PublishDate }}">{{.PublishDate.Format "January 2, 2006"}}</time> 
     {{ end }}
     {{ .Content }}
 </article>

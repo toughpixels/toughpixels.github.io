@@ -6,17 +6,17 @@
     {{ range where .Pages "Section" "tips" }}
         <section class="tl articles">
             {{- range .Pages }}
+            <a class="page-link" href="{{.Permalink}}">    
                 <article class="article-prompt">
                     <header>
-                        <h3 class="mt-0"><a class="page-link" href="{{.Permalink}}">{{.Title}}</a></h3>
+                        <h3 class="mt-0">{{.Title}}</h3>
                     </header>
                     <footer>
                         <time datetime="{{ .PublishDate }}">{{.PublishDate.Format "January 2, 2006"}}</time>
-                        
                         {{- partial "reading-time.html" . -}}                        
-                        
                     </footer>
                 </article>
+            </a>
             {{- end }}
         </section>
     {{- end }}

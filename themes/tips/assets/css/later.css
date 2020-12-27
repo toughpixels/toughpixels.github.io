@@ -2,6 +2,7 @@
 a {
     color: inherit;
 }
+
 a:hover, a:focus {
     color: var(--primary);
     background: var(--link-hover-bg);
@@ -114,7 +115,13 @@ main {
     margin: 2rem 0;
     padding: 0.2em;
     border-radius: 0.2em;
-    background: rgba(0, 0, 0, 0.05);
+    background: var(--article-preview-bg);
+    border: .1em solid black;
+    color: var(--article-preview-text);
+}
+
+.article-prompt:focus, .article-prompt:hover {
+    box-shadow: .2em .2em black;
 }
 
 .article-prompt time {
@@ -167,12 +174,10 @@ svg {
     text-decoration: none;
 }
 
-
-
 code {
-
-
-    background: linear-gradient(to right, #e6adda, #caade6, #adb6e6 ,#aeade6, #caade6, #e6adda);
+    background: linear-gradient(to bottom right, #e6adda, #caade6, #caade6, #e6adda);
+    border: 1px solid black;
+    margin: .1em;
 }
 
 ul, ol, p {
