@@ -1,7 +1,8 @@
 <article>
     <h1>{{ .Title }}</h1>
     {{ if eq .Page.Type "tips" }}
-        <time datetime="{{ .PublishDate }}">{{.PublishDate.Format "January 2, 2006"}}</time> 
+        <time datetime="{{ .PublishDate }}">Published: {{.PublishDate.Format "Jan 2, 06"}}</time>
+        {{ partial "solicitProject.html" . }}
     {{ end }}
     {{ .Content }}
 </article>

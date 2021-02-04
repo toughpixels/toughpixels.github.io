@@ -113,9 +113,16 @@ h3 {
     }
 }
 .icon.waving {
-
     width: 3rem;
 }
 .tc {
     text-align: center;
+}
+
+.dib {
+    display: inline;
+}
+
+.invis {
+    display: none;
 }
