@@ -1,8 +1,9 @@
 ---
-title: "Making a Hugo Homepage"
+title: "Making a Custom Hugo Homepage"
 date: 2020-09-08T21:42:52-05:00
 tags: hugo, beginner, markdown, html
 categories: tech
+description: "This article walks you through all the steps needed to build a custom homepage in Hugo" 
 ---
 
 ## Taking Inventory

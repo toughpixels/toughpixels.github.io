@@ -2,6 +2,7 @@
 title: "Hugo Fastest Custom Setup, Building a Theme"
 date: 2020-09-25T20:06:44-05:00
 tags: hugo, markdown, html, go, css
+description: "Use Hugo's buit in theme generator to build a homepage fast."
 ---
 
 ## Orienting for Speed

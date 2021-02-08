@@ -2,6 +2,7 @@
 title: "Combining Javascript and Hugo"
 date: 2021-01-16T15:49:06-05:00
 draft: true
+description: "There are many ways to add JavaScript to Hugo, we cover all the options so you can choose the best one for you."
 ---
 ## Javascript
 

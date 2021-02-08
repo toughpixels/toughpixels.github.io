@@ -1,0 +1,43 @@
+<div id="projectBucket">
+    <input type="text" placeholder="your project name" id="projectInput">
+    <button id="projectButton" type="button" onclick="setProject();">Customize Article</button>
+    <script>  
+
+    function getProject() {
+        return localStorage.getItem('project');
+    }
+
+    function initialProject() {
+        if (getProject() === null) {
+            setProjectText();
+        } else {
+            unsetProjectText();
+        }
+    }
+
+    function setProject() {
+        console.log(document.getElementById("projectInput").value)
+        localStorage.setItem('project', document.getElementById("projectInput").value);
+        unsetProjectText();
+    }
+
+    function unsetProject() {
+        localStorage.removeItem("project");
+        setProjectText();
+    }
+
+    function setProjectText() {
+        let button = document.getElementById("projectButton");
+        button.onclick = "unsetProject();"
+        button.innerHTML = "Resert Project Name"
+    }
+
+    function unsetProjectText() {
+        let button = document.getElementById("projectButton"); 
+        button.onclick = "setProject();"
+        button.innerHTML = "Customize Article" 
+    }
+
+    initialProject();
+    </script>
+</div>
