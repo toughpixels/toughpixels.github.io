@@ -1,6 +1,6 @@
 <div id="projectBucket">
     <input type="text" placeholder="your project name" id="projectInput">
-    <button id="projectButton" type="button" onclick="setProject();">Customize Article</button>
+    <button id="projectButton" type="button" onclick="setProject()">Customize Article</button>
     <script>  
 
     function getProject() {
@@ -16,7 +16,7 @@
     }
 
     function setProject() {
-        console.log(document.getElementById("projectInput").value)
+        console.log(document.getElementById("projectInput").value);
         localStorage.setItem('project', document.getElementById("projectInput").value);
         unsetProjectText();
     }
