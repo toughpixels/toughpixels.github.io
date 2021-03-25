@@ -1,11 +1,13 @@
 ---
-title: "Debugging APIs in the Browser"
+title: Simple In Browser Debugging for APIs
 date: 2021-03-23T19:09:06-05:00
 tags:
  - api
  - HTTP
  - browser
-description: "You can easily mock API and other network requests for development and debugging using Firefox, the Network Inspector, and the 'Edit and Resend' tool."
+images:
+ - editandresend.png
+description: You can easily mock API and other network requests for development and debugging using Firefox, the Network Inspector, and the 'Edit and Resend' tool.
 ---
 
 ## Mocking API Network Requests with The Inspector
