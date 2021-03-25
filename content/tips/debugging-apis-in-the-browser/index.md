@@ -1,7 +1,10 @@
 ---
 title: "Debugging APIs in the Browser"
 date: 2021-03-23T19:09:06-05:00
-tags: api, HTTP, browser
+tags:
+ - api
+ - HTTP
+ - browser
 description: "You can easily mock API and other network requests for development and debugging using Firefox, the Network Inspector, and the 'Edit and Resend' tool."
 ---
 
@@ -37,6 +40,6 @@ Now when I click the send button, I can see that my API is reponding as expected
 
 ##  Pack It Up and Take It Away!
 
-Once your API request is properly formed in the browser, and your API or application is returning the results you expect, how do you export that request to another application?  Again, the brwowser makes it easy. Right click your working request, then copy it into the format you want. Now you can use your working request anywhere in your code!
+Once your API request is properly formed in the browser, and your API or application is returning the results you expect, how do you export that request to another application?  Again, the browser makes it easy. Right click your working request, then copy it into the format you want. Now you can use your working request anywhere in your code!
 
 {{< figure src="copytoyourfavoritetool.png" caption="Copying my API request for use in my application." >}}

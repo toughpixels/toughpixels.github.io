@@ -1,0 +1,41 @@
+{{ if in .Params.tags "project" }}
+<div id="projectBucket">
+    <input id="projectInput" type="text" placeholder="Your project name" id="projectInput">
+    <button id="projectButton" type="button" onclick="clickSetProject()">Customize Your Project Name</button>
+        <script>
+
+        function getProject() {
+            return localStorage.getItem('project');
+        }
+
+        function initProjectNames() {
+            if (getProject() !== null) {
+                setProject();
+                setInputValue();
+            }
+        }
+
+        function clickSetProject() {
+            localStorage.setItem('project', document.getElementById("projectInput").value);
+            setProject();
+        }
+
+        function setProject() {
+            setPageValues();
+            document.getElementById("projectButton").innerHTML = "Reset Project Name";
+        }
+
+        function setInputValue() {
+            document.getElementById("projectInput").value = getProject();
+        }
+
+        function setPageValues() {
+            const elements = document.getElementsByClassName("projectField");
+            for (var item of elements) {
+                item.innerHTML = getProject();
+            }
+        }
+
+    </script>
+</div>
+{{ end }}

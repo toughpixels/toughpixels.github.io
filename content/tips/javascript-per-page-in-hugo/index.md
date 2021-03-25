@@ -2,6 +2,8 @@
 title: "Combining Javascript and Hugo"
 date: 2021-01-16T15:49:06-05:00
 draft: true
+tags:
+- project
 description: "There are many ways to add JavaScript to Hugo, we cover all the options so you can choose the best one for you."
 ---
 ## Javascript
@@ -10,7 +12,7 @@ JavaScript is wonderful, you can add motion to your website and change elements 
 
 ## In A Script Tag
 
-The most basic way to add Javascript to Hugo is the HTML `<script>` element. Add this tag to a page inside your {{< project "/layouts/" >}} folder. Write some JavaScript code to execute:
+The most basic way to add Javascript to Hugo is the HTML `<script>` element. Add this tag to a page inside your `{{< project >}}/layouts` folder. Write some JavaScript code to execute:
 ```
 <script>
 let alert = function () {
@@ -22,7 +24,7 @@ alert();
 
 ### Adding JavaScript to some Hugo Pages
 
-If you want some JavaScript to appear on many types of pages, make a file like {{< project "/layouts/script.js" >}} and save the script tag in it. Then, you can call that JavaScript from the partial on whatever layout you want.
+If you want some JavaScript to appear on many types of pages, make a file like `{{< project >}}/layouts/script.js` and save the script tag in it. Then, you can call that JavaScript from the partial on whatever layout you want.
 
 `<script>console.log("alert");</script>`
 
