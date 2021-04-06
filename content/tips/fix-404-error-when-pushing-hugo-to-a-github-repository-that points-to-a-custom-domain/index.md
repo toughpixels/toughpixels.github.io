@@ -15,4 +15,4 @@ When you update your repository's Github Pages settings to point to a custom dom
 
 1. Create the file `CNAME` inside a `/static` folder (which can be created in root and/or in your THEME folder)
 2. Add your domain inside that file in the format "domain.com".  Don't add "https://" before it!.  
-3. Wait a few minutes and then notice that your site is (hopefully) working again!  If it's not, consider reading the guide [About]({{< ref "/tips/loading-hugo-into-github-pages/index.md" >}} "Loading Hugo into Github Pages").
+3. Wait a few minutes and then notice that your site is (hopefully) working again!  If it's not, consider reading our guide [Loading Hugo into Github Pages]({{< ref "/tips/loading-hugo-into-github-pages/index.md" >}}).

@@ -7,3 +7,6 @@ publishDir = "docs"
     description = "Simple explanations for coding problems."
     images = ["images/logo.jpg"]
     author = "Tough Pixels"
+[blackfriday]
+  plainIDAnchors = true
+  hrefTargetBlank = true
