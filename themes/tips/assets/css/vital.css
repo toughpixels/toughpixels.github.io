@@ -5,7 +5,10 @@
     --primary: azure;
     --link-hover-bg: #2D6FE7;
     --home-hover: var(--primary);
-    --twitter-hover: rgba(29,161,242,1.00);    --contact-hover: var(--pink);
+    --twitter-hover: rgba(29,161,242,1.00);    
+    --contact-hover: var(--pink);
+    --article-preview-bg: #aeade6;
+    --article-preview-text: #100a14;
     --font-default: sans-serif;
     --font-fancy: 'Baloo Tamma', sans-serif;
 }
@@ -33,7 +36,6 @@ a {
     border: 0;
 }
 
-
 body {
     background: var(--background);
     overflow-x: hidden;  
@@ -41,7 +43,6 @@ body {
 }
 .lead {
     display: block;
-
     font-size: 1.8rem;
     font-weight: normal;
     margin: 0.67em 0;
@@ -112,9 +113,16 @@ h3 {
     }
 }
 .icon.waving {
-
     width: 3rem;
 }
 .tc {
     text-align: center;
+}
+
+.dib {
+    display: inline;
+}
+
+.invis {
+    display: none;
 }

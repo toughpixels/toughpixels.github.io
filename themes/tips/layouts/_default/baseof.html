@@ -4,9 +4,8 @@
     <body class="{{ .Kind }} {{ .Layout }}">
         {{- partial "header.html" . }}
         {{- block "main" . }}{{- end }}
-
         {{ if not (eq .Layout "offline") }}
-        {{- partial "footer.html" . }}
+            {{- partial "footer.html" . }}
         {{ end }}
         {{- partial "footer-scripts.html" . -}}
     </body>

@@ -2,6 +2,7 @@
 title: "Creating Responsive iFrames"
 date: 2020-11-17
 tags: SCSS, SASS, CSS, iFrames, Responsive Sites
+description: "Making a responsive iFrame that fits any HTML website."
 ---
 
 ## The Problem

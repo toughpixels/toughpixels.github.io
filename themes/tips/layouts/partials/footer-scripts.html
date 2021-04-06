@@ -1,7 +1,6 @@
 <script>
 const baseUrl = window.location.host;
 
-console.log(baseUrl);
 if(baseUrl.indexOf('localhost') >= 0) {
     caches.keys().then(function(names) {
     for (let name of names)
@@ -20,5 +19,10 @@ else if('serviceWorker' in navigator) {
             .then(function(registration) {
                 console.log('Service Worker Ready');
             });
-} 
+}
+
+if ( typeof(initProjectNames) !== 'undefined')  {
+    initProjectNames();
+}
+
 </script>

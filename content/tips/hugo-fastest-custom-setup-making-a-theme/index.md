@@ -1,7 +1,14 @@
 ---
 title: "Hugo Fastest Custom Setup, Building a Theme"
 date: 2020-09-25T20:06:44-05:00
-tags: hugo, markdown, html, go, css
+tags:
+- hugo
+- markdown
+- html
+- go
+- css
+- project
+description: "Use Hugo's buit in theme generator to build a homepage fast."
 ---
 
 ## Orienting for Speed
@@ -16,18 +23,18 @@ Open your terminal, check your installation and version of Hugo, and let's run s
 # if you have a site, skip this
 hugo new site best-website-ever
 # move into the project directory
-cd best-website-ever
+cd {{< project >}}
 hugo new theme theme-time-now
 ````
 
 ### Outcome
-Look at the new files with `ls themes/theme-time-now`. The file structure is similar to a `hugo new site` command. 
+Look at the new files with `ls themes/theme-time-now`. The file structure is similar to a `hugo new site` command.
 
 ### Differences
 There is no `content`, and some default `layouts` and `partials` have been created to kickstart your custom theme. Woo!
 
 ### Make The Theme Appear
-Your website hasn't heard about your theme yet. Tell your site by editing `config.toml` in the `best-website-ever` folder. Add this line: `theme = "theme-time-now"` and save.
+Your website hasn't heard about your theme yet. Tell your site by editing `config.toml` in the `{{< project >}}` folder. Add this line: `theme = "theme-time-now"` and save.
 
 ## Wiring Components Together
 
@@ -74,7 +81,7 @@ It's helpful to know every element a `<head>` [tag](https://www.w3schools.com/ht
     * `viewport` Helps you [look good](https://www.w3schools.com/css/css_rwd_viewport.asp) on phones.
     * `keywords` Set your search engine keywords, be accurate and concise. Keep it under a dozen words.
     * `description` Write a sentence that describes your page well.
-1. Some CSS. We can use Hugo to process the CSS file before it's sent out for users. 
+1. Some CSS. We can use Hugo to process the CSS file before it's sent out for users.
     * You have to build a special home for this file, in `best-website-ever/themes/theme-time-now/assets/main.css`. Create this file (and `asset` folder) to apply CSS style.
 
 ```

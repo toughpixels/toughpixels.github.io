@@ -1,6 +1,6 @@
 ---
 title: "Fix 404 Error When Pushing Hugo to a Github Repository that Points to a Custom Domain"
-description: "Adding a custom domain to a Github repository creates a file that is easily overwritten with a static site generator like Hugo. This is a frustrating, site-breaking error that can be solved once and for all!"
+description: "Adding a custom domain to a Github repository creates a file that is easily overwritten with a static site generator like Hugo. Solve this site-breaking error once and for all with one file!"
 date: 2020-12-13T08:36:59-06:00
 tags: hugo, static site generator, github pages, bug-fix
 ---
