@@ -1,9 +1,91 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tough Pixels Tips</title><link>https://toughpixels.com/</link><description>Recent content on Tough Pixels Tips</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 08 Sep 2020 22:41:26 -0500</lastBuildDate><atom:link href="https://toughpixels.com/index.xml" rel="self" type="application/rss+xml"/><item><title>Simple In Browser Debugging for APIs</title><link>https://toughpixels.com/tips/debugging-apis-in-the-browser/</link><pubDate>Tue, 23 Mar 2021 19:09:06 -0500</pubDate><guid>https://toughpixels.com/tips/debugging-apis-in-the-browser/</guid><description>Mocking API Network Requests with The Inspector One difficult part of building an API is mocking and modifying the requests your application will receive. There are lots of tools out there, like Postman, but those are heavy tools to use early in the development process or for simple testing. Instead, there is a simple way of copying, editing, and re-running HTTP requests directly in the inspector.
-Firefox! The Firefox browser inspector comes bundles with some great developments tools.</description></item><item><title>Loading Hugo Into Github Pages</title><link>https://toughpixels.com/tips/loading-hugo-into-github-pages/</link><pubDate>Sun, 13 Dec 2020 13:45:07 -0600</pubDate><guid>https://toughpixels.com/tips/loading-hugo-into-github-pages/</guid><description>The Checklist Follow the directions on how to make a repo for Github Pages. In your Hugo project&amp;rsquo;s config.toml, make sure you include the line publishDir = &amp;quot;docs&amp;quot;. Normally Hugo generates files into a folder named &amp;ldquo;public&amp;rdquo;, but Github Pages can only be set to look inside an child folder if that folder is named &amp;ldquo;docs&amp;rdquo;. Stay inside config.toml and make sure that your baseURL equals the URL you want to send to people to show off your site.</description></item><item><title>Fix 404 Error When Pushing Hugo to a Github Repository that Points to a Custom Domain</title><link>https://toughpixels.com/tips/fix-404-error-when-pushing-hugo-to-a-github-repository-that-points-to-a-custom-domain/</link><pubDate>Sun, 13 Dec 2020 08:36:59 -0600</pubDate><guid>https://toughpixels.com/tips/fix-404-error-when-pushing-hugo-to-a-github-repository-that-points-to-a-custom-domain/</guid><description>The Problem You once experienced the joy of seeing your Hugo site up on github pages pointing to a custom url. Then you decided to push new pages to the repo and your custom domain is a 404 page! What&amp;rsquo;s happening??
-The Solution When you update your repository&amp;rsquo;s Github Pages settings to point to a custom domain, Github creates a file CNAME inside your directory /docs. You may have accidentally overwrote this file when you did your last git push!</description></item><item><title>Creating Responsive iFrames</title><link>https://toughpixels.com/tips/creating-responsive-iframes/</link><pubDate>Tue, 17 Nov 2020 00:00:00 +0000</pubDate><guid>https://toughpixels.com/tips/creating-responsive-iframes/</guid><description>The Problem Whenever you pull some iFrame code from a 3rd party site (like YouTube or Bandcamp) to embed on your site, it will have an inline height and width defined in pixels.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tough Pixels Tips</title>
+    <link>https://toughpixels.com/</link>
+    <description>Recent content on Tough Pixels Tips</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 08 Sep 2020 22:41:26 -0500</lastBuildDate><atom:link href="https://toughpixels.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Domain Registration Advice</title>
+      <link>https://toughpixels.com/tips/domain-registration-advice/</link>
+      <pubDate>Sat, 10 Apr 2021 20:35:49 -0500</pubDate>
+      
+      <guid>https://toughpixels.com/tips/domain-registration-advice/</guid>
+      <description>Straightforward Domain Buying Advice The easiest way to feel like you&amp;rsquo;re building a website is buying a domain. We recommend waiting until you have a website before buying your domain. People have been able to register domains since 1985, so your domain will almost certainly last another month. Instead, start by making something simple to help clarify your ideas. We believe that before you can buy a domain that fits your site well, you have to be able to write a good description of your idea.</description>
+    </item>
+    
+    <item>
+      <title>Simple In Browser Debugging for APIs</title>
+      <link>https://toughpixels.com/tips/debugging-apis-in-the-browser/</link>
+      <pubDate>Tue, 23 Mar 2021 19:09:06 -0500</pubDate>
+      
+      <guid>https://toughpixels.com/tips/debugging-apis-in-the-browser/</guid>
+      <description>Mocking API Network Requests with The Inspector One difficult part of building an API is mocking and modifying the requests your application will receive. There are lots of tools out there, like Postman, but those are heavy tools to use early in the development process or for simple testing. Instead, there is a simple way of copying, editing, and re-running HTTP requests directly in the inspector.
+Firefox! The Firefox browser inspector comes bundles with some great developments tools.</description>
+    </item>
+    
+    <item>
+      <title>Loading Hugo Into Github Pages</title>
+      <link>https://toughpixels.com/tips/loading-hugo-into-github-pages/</link>
+      <pubDate>Sun, 13 Dec 2020 13:45:07 -0600</pubDate>
+      
+      <guid>https://toughpixels.com/tips/loading-hugo-into-github-pages/</guid>
+      <description>The Checklist  Follow the directions on how to make a repo for Github Pages. In your Hugo project&amp;rsquo;s config.toml, make sure you include the line publishDir = &amp;quot;docs&amp;quot;. Normally Hugo generates files into a folder named &amp;ldquo;public&amp;rdquo;, but Github Pages can only be set to look inside an child folder if that folder is named &amp;ldquo;docs&amp;rdquo;. Stay inside config.toml and make sure that your baseURL equals the URL you want to send to people to show off your site.</description>
+    </item>
+    
+    <item>
+      <title>Fix 404 Error When Pushing Hugo to a Github Repository that Points to a Custom Domain</title>
+      <link>https://toughpixels.com/tips/fix-404-error-when-pushing-hugo-to-a-github-repository-that-points-to-a-custom-domain/</link>
+      <pubDate>Sun, 13 Dec 2020 08:36:59 -0600</pubDate>
+      
+      <guid>https://toughpixels.com/tips/fix-404-error-when-pushing-hugo-to-a-github-repository-that-points-to-a-custom-domain/</guid>
+      <description>The Problem You once experienced the joy of seeing your Hugo site up on github pages pointing to a custom url. Then you decided to push new pages to the repo and your custom domain is a 404 page! What&amp;rsquo;s happening??
+The Solution When you update your repository&amp;rsquo;s Github Pages settings to point to a custom domain, Github creates a file CNAME inside your directory /docs. You may have accidentally overwrote this file when you did your last git push!</description>
+    </item>
+    
+    <item>
+      <title>Creating Responsive iFrames</title>
+      <link>https://toughpixels.com/tips/creating-responsive-iframes/</link>
+      <pubDate>Tue, 17 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://toughpixels.com/tips/creating-responsive-iframes/</guid>
+      <description>The Problem Whenever you pull some iFrame code from a 3rd party site (like YouTube or Bandcamp) to embed on your site, it will have an inline height and width defined in pixels.
 &amp;lt;iframe width=&amp;quot;560&amp;quot; height=&amp;quot;315&amp;quot; src=&amp;quot;...&amp;quot;&amp;gt;&amp;lt;/iframe&amp;gt;
 This is because iFrames are like little windows into another site and need to have a defined size so that everything that site wants to display in its iFrame will be visible.
-If you want your iFrame to fill 100% of its allotted space, it&amp;rsquo;s not enough to make the width &amp;ldquo;100%&amp;rdquo; because its height won&amp;rsquo;t follow suit.</description></item><item><title>Hugo Fastest Custom Setup, Building a Theme</title><link>https://toughpixels.com/tips/hugo-fastest-custom-setup-making-a-theme/</link><pubDate>Fri, 25 Sep 2020 20:06:44 -0500</pubDate><guid>https://toughpixels.com/tips/hugo-fastest-custom-setup-making-a-theme/</guid><description>Orienting for Speed Hugo is a way to write an HTML website using the Go programming language. It&amp;rsquo;s nice, because you use lots of HTML and a little Go. The fastest way to build a custom Hugo site is starting your own theme.
-Command Line, Activate Theme Open your terminal, check your installation and version of Hugo, and let&amp;rsquo;s run some commands. You can rename the last word of these, they use silly placeholder names.</description></item><item><title>Contact Us</title><link>https://toughpixels.com/contact/</link><pubDate>Tue, 08 Sep 2020 22:41:26 -0500</pubDate><guid>https://toughpixels.com/contact/</guid><description>Loading…</description></item><item><title>Making a Custom Hugo Homepage</title><link>https://toughpixels.com/tips/making-a-homepage-with-hugo/</link><pubDate>Tue, 08 Sep 2020 21:42:52 -0500</pubDate><guid>https://toughpixels.com/tips/making-a-homepage-with-hugo/</guid><description>Taking Inventory Do you know how to use the terminal? If you don&amp;rsquo;t, start here.
+If you want your iFrame to fill 100% of its allotted space, it&amp;rsquo;s not enough to make the width &amp;ldquo;100%&amp;rdquo; because its height won&amp;rsquo;t follow suit.</description>
+    </item>
+    
+    <item>
+      <title>Hugo Fastest Custom Setup, Building a Theme</title>
+      <link>https://toughpixels.com/tips/hugo-fastest-custom-setup-making-a-theme/</link>
+      <pubDate>Fri, 25 Sep 2020 20:06:44 -0500</pubDate>
+      
+      <guid>https://toughpixels.com/tips/hugo-fastest-custom-setup-making-a-theme/</guid>
+      <description>Orienting for Speed Hugo is a way to write an HTML website using the Go programming language. It&amp;rsquo;s nice, because you use lots of HTML and a little Go. The fastest way to build a custom Hugo site is starting your own theme.
+Command Line, Activate Theme Open your terminal, check your installation and version of Hugo, and let&amp;rsquo;s run some commands. You can rename the last word of these, they use silly placeholder names.</description>
+    </item>
+    
+    <item>
+      <title>Contact Us</title>
+      <link>https://toughpixels.com/contact/</link>
+      <pubDate>Tue, 08 Sep 2020 22:41:26 -0500</pubDate>
+      
+      <guid>https://toughpixels.com/contact/</guid>
+      <description>Loading… </description>
+    </item>
+    
+    <item>
+      <title>Making a Custom Hugo Homepage</title>
+      <link>https://toughpixels.com/tips/making-a-homepage-with-hugo/</link>
+      <pubDate>Tue, 08 Sep 2020 21:42:52 -0500</pubDate>
+      
+      <guid>https://toughpixels.com/tips/making-a-homepage-with-hugo/</guid>
+      <description>Taking Inventory Do you know how to use the terminal? If you don&amp;rsquo;t, start here.
 The first step in the installation process is noting what software is already installed. I&amp;rsquo;m running Linux (an operating system, specifically Ubuntu 18.04) and have Hugo (0.74.3) installed. If you don&amp;rsquo;t have Hugo, follow their installation instructions. With Hugo installed, run hugo new site best-website in the terminal.
-Lookup Operating System Version, Lookup Hugo Version, Create Hugo New Site</description></item></channel></rss>
+  Lookup Operating System Version, Lookup Hugo Version, Create Hugo New Site</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,24 +1,144 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Tough Pixels Tips</title><meta name=description content><meta name=keywords content="Hugo,HTML,CSS,JavaScript,Personal Growth,Tutorial"><meta name=author content="Tough Pixels"><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Baloo+Tamma&display=swap"><meta property="og:title" content><meta property="og:description" content="Simple explanations for coding problems."><meta property="og:type" content="website"><meta property="og:url" content="https://toughpixels.com/offline/"><meta property="og:image" content="https://toughpixels.com/images/logo.jpg"><meta property="og:updated_time" content="2020-09-08T22:41:26-05:00"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://toughpixels.com/images/logo.jpg"><meta name=twitter:title content><meta name=twitter:description content="Simple explanations for coding problems."><style type=text/css>:root{--background: lightblue;--pink: #e6adda;--dark:  black;--primary: azure;--link-hover-bg: #2D6FE7;--home-hover: var(--primary);--twitter-hover: rgba(29,161,242,1.00);--contact-hover: var(--pink);--article-preview-bg: #aeade6;--article-preview-text: #100a14;--font-default: sans-serif;--font-fancy: 'Baloo Tamma', sans-serif}body,html{margin:0;padding:0}html{font-size:16px;line-height:1.5}a{color:inherit}.skip-link,.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}body{background:var(--background);overflow-x:hidden;font-family:var(--font-default)}.lead{display:block;font-size:1.8rem;font-weight:400;margin:.67em 0}h1{font-size:2rem;line-height:1.2}h2,.title-big,.title-small{font-family:var(--font-fancy)}h2,h3,h4,h5,h6{margin-top:1.5em;margin-bottom:.5em}h2{font-size:1.6rem;font-weight:400}h3{font-size:1.3rem;line-height:1.3}.align-center{align-items:center}.title-big{margin-top:.5rem;padding:.2em .2rem 0;display:inline-block;font-size:1.6rem;line-height:1.2;text-decoration:none;vertical-align:top}.title-small{font-size:.66rem;padding:0 .2rem}.contain{margin-left:auto;margin-right:auto;max-width:27rem;padding-right:1rem;padding-left:1rem}.smFlex{display:block}@media only screen and (min-width:401px){html{font-size:20px}}@media only screen and (min-width:768px){html{font-size:26px}.smFlex{display:flex}}@media only screen and (min-width:1100px){html{font-size:30px}}.icon.waving{width:3rem}.tc{text-align:center}.dib{display:inline}.invis{display:none}</style><link rel=preload href=https://toughpixels.com/css/later.min.5521249918f6ae6ba81519b3beefd84a6c994c5d4469bc5889b4961d45e2b7b4.css as=style onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel=stylesheet href=https://toughpixels.com/css/later.min.5521249918f6ae6ba81519b3beefd84a6c994c5d4469bc5889b4961d45e2b7b4.css></noscript><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=manifest href=/site.webmanifest></head><body class="section offline"><header class="contain smFlex align-center space-between"><div><a href=https://toughpixels.com class=title-big>Tips</a><div class=title-small>by Tough Pixels</div></div><a href=#footer-nav class=skip-link>Skip to Footer Links</a></header><div class=contain><div style=text-align:center><h1 id=you-are-offline>You are offline!</h1><p>But at least you can read our longest tip:</p></div><article><h1>Hugo Fastest Custom Setup, Building a Theme</h1><time datetime="2020-09-25 20:06:44 -0500 CDT">Published: September 25, 2020</time><div id=projectBucket><input id=projectInput type=text placeholder="Your project name" id=projectInput>
-<button id=projectButton type=button onclick=clickSetProject()>Customize Your Project Name</button>
-<script>function getProject(){return localStorage.getItem('project');}
-function initProjectNames(){if(getProject()!==null){setProject();setInputValue();}}
-function clickSetProject(){localStorage.setItem('project',document.getElementById("projectInput").value);setProject();}
-function setProject(){setPageValues();document.getElementById("projectButton").innerHTML="Reset Project Name";}
-function setInputValue(){document.getElementById("projectInput").value=getProject();}
-function setPageValues(){const elements=document.getElementsByClassName("projectField");for(var item of elements){item.innerHTML=getProject();}}</script></div><h2 id=orienting-for-speed>Orienting for Speed</h2><p><a href=https://gohugo.io/>Hugo</a> is a way to write an HTML website using the <a href=https://golang.org/>Go</a> programming language. It&rsquo;s nice, because you use lots of <a href=https://www.w3schools.com/html/html_intro.asp>HTML</a> and a little Go. The fastest way to build a custom Hugo site is starting your own theme.</p><h2 id=command-line-activate-theme>Command Line, Activate Theme</h2><p>Open your terminal, check your installation and version of Hugo, and let&rsquo;s run some commands. You can rename the last word of these, they use silly placeholder names.</p><pre><code># if you have a site, skip this
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tough Pixels Tips</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="Hugo, HTML, CSS, JavaScript, Personal Growth, Tutorial">
+    <meta name="author" content="Tough Pixels">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Baloo+Tamma&display=swap">
+    <meta property="og:title" content="" />
+<meta property="og:description" content="Simple explanations for coding problems." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://toughpixels.com/offline/" />
+<meta property="og:image" content="https://toughpixels.com/images/logo.jpg"/>
+<meta property="og:updated_time" content="2020-09-08T22:41:26-05:00" />
+
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://toughpixels.com/images/logo.jpg"/>
+
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="Simple explanations for coding problems."/>
+
+<style type="text/css">:root{--background: lightblue;--pink: #e6adda;--dark:  black;--primary: azure;--link-hover-bg: #2D6FE7;--home-hover: var(--primary);--twitter-hover: rgba(29,161,242,1.00);--contact-hover: var(--pink);--article-preview-bg: #aeade6;--article-preview-text: #100a14;--font-default: sans-serif;--font-fancy: 'Baloo Tamma', sans-serif}body,html{margin:0;padding:0}html{font-size:16px;line-height:1.5}a{color:inherit}.skip-link,.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}body{background:var(--background);overflow-x:hidden;font-family:var(--font-default)}.lead{display:block;font-size:1.8rem;font-weight:400;margin:.67em 0}h1{font-size:2rem;line-height:1.2}h2,.title-big,.title-small{font-family:var(--font-fancy)}h2,h3,h4,h5,h6{margin-top:1.5em;margin-bottom:.5em}h2{font-size:1.6rem;font-weight:400}h3{font-size:1.3rem;line-height:1.3}.align-center{align-items:center}.title-big{margin-top:.5rem;padding:.2em .2rem 0;display:inline-block;font-size:1.6rem;line-height:1.2;text-decoration:none;vertical-align:top}.title-small{font-size:.66rem;padding:0 .2rem}.contain{margin-left:auto;margin-right:auto;max-width:27rem;padding-right:1rem;padding-left:1rem}.smFlex{display:block}@media only screen and (min-width:401px){html{font-size:20px}}@media only screen and (min-width:768px){html{font-size:26px}.smFlex{display:flex}}@media only screen and (min-width:1100px){html{font-size:30px}}.icon.waving{width:3rem}.tc{text-align:center}.dib{display:inline}.invis{display:none}</style> 
+<link rel="preload" href="https://toughpixels.com/css/later.min.5521249918f6ae6ba81519b3beefd84a6c994c5d4469bc5889b4961d45e2b7b4.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+<noscript><link rel="stylesheet" href="https://toughpixels.com/css/later.min.5521249918f6ae6ba81519b3beefd84a6c994c5d4469bc5889b4961d45e2b7b4.css" /></noscript><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest"></head>
+    <body class="section offline"><header class="contain smFlex align-center space-between">
+    
+
+    <div>
+    <a href="https://toughpixels.com" class="title-big">Tips</a>
+    <div class="title-small">by Tough Pixels</div>
+</div><a href="#footer-nav" class="skip-link">Skip to Footer Links</a>
+</header>
+    <div class="contain">
+        <div style="text-align: center;">
+            <h1 id="you-are-offline">You are offline!</h1>
+<p>But at least you can read our longest tip:</p>
+
+        </div>
+
+        <article>
+    <h1>Hugo Fastest Custom Setup, Building a Theme</h1>
+    
+        <time datetime="2020-09-25 20:06:44 -0500 CDT">Published: September 25, 2020</time>
+        
+<div id="projectBucket">
+    <input id="projectInput" type="text" placeholder="Your project name" id="projectInput">
+    <button id="projectButton" type="button" onclick="clickSetProject()">Customize Your Project Name</button>
+        <script>
+
+        function getProject() {
+            return localStorage.getItem('project');
+        }
+
+        function initProjectNames() {
+            if (getProject() !== null) {
+                setProject();
+                setInputValue();
+            }
+        }
+
+        function clickSetProject() {
+            localStorage.setItem('project', document.getElementById("projectInput").value);
+            setProject();
+        }
+
+        function setProject() {
+            setPageValues();
+            document.getElementById("projectButton").innerHTML = "Reset Project Name";
+        }
+
+        function setInputValue() {
+            document.getElementById("projectInput").value = getProject();
+        }
+
+        function setPageValues() {
+            const elements = document.getElementsByClassName("projectField");
+            for (var item of elements) {
+                item.innerHTML = getProject();
+            }
+        }
+
+    </script>
+</div>
+
+    
+    <h2 id="orienting-for-speed">Orienting for Speed</h2>
+<p><a href="https://gohugo.io/">Hugo</a> is a way to write an HTML website using the <a href="https://golang.org/">Go</a> programming language. It&rsquo;s nice, because you use lots of <a href="https://www.w3schools.com/html/html_intro.asp">HTML</a> and a little Go. The fastest way to build a custom Hugo site is starting your own theme.</p>
+<h2 id="command-line-activate-theme">Command Line, Activate Theme</h2>
+<p>Open your terminal, check your installation and version of Hugo, and let&rsquo;s run some commands. You can rename the last word of these, they use silly placeholder names.</p>
+<pre><code># if you have a site, skip this
 hugo new site best-website-ever
 # move into the project directory
-cd <span class=projectField>project</span>
+cd <span class="projectField">project</span>
 hugo new theme theme-time-now
-</code></pre><h3 id=outcome>Outcome</h3><p>Look at the new files with <code>ls themes/theme-time-now</code>. The file structure is similar to a <code>hugo new site</code> command.</p><h3 id=differences>Differences</h3><p>There is no <code>content</code>, and some default <code>layouts</code> and <code>partials</code> have been created to kickstart your custom theme. Woo!</p><h3 id=make-the-theme-appear>Make The Theme Appear</h3><p>Your website hasn&rsquo;t heard about your theme yet. Tell your site by editing <code>config.toml</code> in the <code><span class=projectField>project</span></code> folder. Add this line: <code>theme = "theme-time-now"</code> and save.</p><h2 id=wiring-components-together>Wiring Components Together</h2><p>All code described from here is inside <code>best-website-ever/themes/theme-time-now/layouts/</code>.</p><h3 id=theme-layouts>Theme Layouts</h3><p>To hook your pages to the <code>_default/_baseof.html</code> layout, use this Go code.</p><pre><code>{{- define &quot;main&quot; }}
+</code></pre><h3 id="outcome">Outcome</h3>
+<p>Look at the new files with <code>ls themes/theme-time-now</code>. The file structure is similar to a <code>hugo new site</code> command.</p>
+<h3 id="differences">Differences</h3>
+<p>There is no <code>content</code>, and some default <code>layouts</code> and <code>partials</code> have been created to kickstart your custom theme. Woo!</p>
+<h3 id="make-the-theme-appear">Make The Theme Appear</h3>
+<p>Your website hasn&rsquo;t heard about your theme yet. Tell your site by editing <code>config.toml</code> in the <code><span class="projectField">project</span></code> folder. Add this line: <code>theme = &quot;theme-time-now&quot;</code> and save.</p>
+<h2 id="wiring-components-together">Wiring Components Together</h2>
+<p>All code described from here is inside <code>best-website-ever/themes/theme-time-now/layouts/</code>.</p>
+<h3 id="theme-layouts">Theme Layouts</h3>
+<p>To hook your pages to the <code>_default/_baseof.html</code> layout, use this Go code.</p>
+<pre><code>{{- define &quot;main&quot; }}
 {{- end }}
-</code></pre><p>To jump start your homepage, add it to <code>index.html</code>. You can also add it to <code>_default/list.html</code> and <code>_default/single.html</code>. These files are two primary categories for your content.</p><h3 id=filling-out-main>Filling Out Main</h3><p>When building your site, Hugo will convert any Go code in a <code>.html</code> file into HTML. Open <code>index.html</code> again and write something like this.</p><pre><code>{{- define &quot;main&quot; }}
+</code></pre><p>To jump start your homepage, add it to <code>index.html</code>. You can also add it to <code>_default/list.html</code> and <code>_default/single.html</code>. These files are two primary categories for your content.</p>
+<h3 id="filling-out-main">Filling Out Main</h3>
+<p>When building your site, Hugo will convert any Go code in a <code>.html</code> file into HTML. Open <code>index.html</code> again and write something like this.</p>
+<pre><code>{{- define &quot;main&quot; }}
     &lt;div&gt;
         {{ .Title }}
     &lt;/div&gt;
     &lt;div&gt;It's Home!&lt;/div&gt;
 {{- end }}
-</code></pre><p>You can sprinkle in Go wherever you need by using the <code>{{}}</code> double curly braces, and you can choose to write HTML all day.</p><h3 id=partials-hold-best-practices>Partials Hold Best Practices</h3><p>Inside the <code>_default/_baseof.html</code> file is a HTML skeleton and partials for <code>head</code>, <code>header</code>, and <code>footer</code>. Static HTML sites do best when they are well planned. Apply best practices to your website now, starting with the <code>head</code> partial. Check tools like <a href=https://developers.google.com/web/tools/lighthouse/>Lighthouse</a> and <a href=https://webaim.org/>WebAIM</a> regularly to maintain high usability for your site.</p><h2 id=partials-every-website-needs>Partials Every Website Needs</h2><h3 id=inside-the-head>Inside the Head</h3><p>It&rsquo;s helpful to know every element a <code>&lt;head></code> <a href=https://www.w3schools.com/html/html_head.asp_>tag</a> can contain. Many are important for search engines. It&rsquo;s early in the <code>&lt;html></code> document, and search engines can load this without accidentally downloading every image on the world wide web. Try to make sure your head partial contains these elements!</p><ol><li>A title tag. To make it unique for every page, we use some Hugo code.</li><li>Several <code>meta</code> tags with different <code>name</code> attributes.<ul><li><code>viewport</code> Helps you <a href=https://www.w3schools.com/css/css_rwd_viewport.asp>look good</a> on phones.</li><li><code>keywords</code> Set your search engine keywords, be accurate and concise. Keep it under a dozen words.</li><li><code>description</code> Write a sentence that describes your page well.</li></ul></li><li>Some CSS. We can use Hugo to process the CSS file before it&rsquo;s sent out for users.<ul><li>You have to build a special home for this file, in <code>best-website-ever/themes/theme-time-now/assets/main.css</code>. Create this file (and <code>asset</code> folder) to apply CSS style.</li></ul></li></ol><pre><code>&lt;head&gt;
+</code></pre><p>You can sprinkle in Go wherever you need by using the <code>{{}}</code> double curly braces, and you can choose to write HTML all day.</p>
+<h3 id="partials-hold-best-practices">Partials Hold Best Practices</h3>
+<p>Inside the <code>_default/_baseof.html</code> file is a HTML skeleton and partials for <code>head</code>, <code>header</code>, and <code>footer</code>. Static HTML sites do best when they are well planned. Apply best practices to your website now, starting with the <code>head</code> partial. Check tools like <a href="https://developers.google.com/web/tools/lighthouse/">Lighthouse</a> and <a href="https://webaim.org/">WebAIM</a> regularly to maintain high usability for your site.</p>
+<h2 id="partials-every-website-needs">Partials Every Website Needs</h2>
+<h3 id="inside-the-head">Inside the Head</h3>
+<p>It&rsquo;s helpful to know every element a <code>&lt;head&gt;</code> <a href="https://www.w3schools.com/html/html_head.asp_">tag</a> can contain. Many are important for search engines. It&rsquo;s early in the <code>&lt;html&gt;</code> document, and search engines can load this without accidentally downloading every image on the world wide web. Try to make sure your head partial contains these elements!</p>
+<ol>
+<li>A title tag. To make it unique for every page, we use some Hugo code.</li>
+<li>Several <code>meta</code> tags with different <code>name</code> attributes.
+<ul>
+<li><code>viewport</code> Helps you <a href="https://www.w3schools.com/css/css_rwd_viewport.asp">look good</a> on phones.</li>
+<li><code>keywords</code> Set your search engine keywords, be accurate and concise. Keep it under a dozen words.</li>
+<li><code>description</code> Write a sentence that describes your page well.</li>
+</ul>
+</li>
+<li>Some CSS. We can use Hugo to process the CSS file before it&rsquo;s sent out for users.
+<ul>
+<li>You have to build a special home for this file, in <code>best-website-ever/themes/theme-time-now/assets/main.css</code>. Create this file (and <code>asset</code> folder) to apply CSS style.</li>
+</ul>
+</li>
+</ol>
+<pre><code>&lt;head&gt;
     &lt;title&gt;{{ .Title }} | {{ .Site.Title }}&lt;title&gt;
     &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=0&quot;&gt;
     &lt;meta name=&quot;description&quot; content=&quot;I want to be searched, engine.&quot;&gt;
@@ -26,10 +146,50 @@ hugo new theme theme-time-now
     {{ $style := resources.Get &quot;css/main.css&quot; }}
     &lt;link rel=&quot;stylesheet&quot; href=&quot;{{ $style.RelPermalink }}&gt;
 &lt;/head&gt;
-</code></pre><h3 id=taking-on-the-header>Taking on the Header</h3><p>A header is visible to most visitors on most pages. This is a final moment to take a breath and carefully plan your website. Decide what to share, what to highlight, how to invite feedback, and examine any personal information you&rsquo;re making public.</p><p>A common choice is to make the header a <a href=https://www.w3schools.com/css/css_navbar.asp>navigation system</a> to highlight the most important ideas and links.</p><p>This is a <code>.html</code> file, so you can start very simple, in <code>best-website-ever/themes/theme-time-now/layouts/partial/header.html</code> add:</p><pre><code>&lt;div&gt;
+</code></pre><h3 id="taking-on-the-header">Taking on the Header</h3>
+<p>A header is visible to most visitors on most pages. This is a final moment to take a breath and carefully plan your website. Decide what to share, what to highlight, how to invite feedback, and examine any  personal information you&rsquo;re making public.</p>
+<p>A common choice is to make the header a <a href="https://www.w3schools.com/css/css_navbar.asp">navigation system</a> to highlight the most important ideas and links.</p>
+<p>This is a <code>.html</code> file, so you can start very simple, in <code>best-website-ever/themes/theme-time-now/layouts/partial/header.html</code> add:</p>
+<pre><code>&lt;div&gt;
     It's header time.
 &lt;/div&gt;
-</code></pre><h3 id=what-to-footer>What to Footer</h3><p>Footers can contain stuff you want on every page, but don&rsquo;t need to highlight. JavaScript that can run whenever, copyrights, and contact information are common. Check out the <a href=https://gohugo.io/templates/partials/#example-footerhtml>Hugo documentation</a> for a good example! You could also build a beautiful soundscape bounding over the whole website landscape. I believe in you.</p><h2 id=checking-our-work>Checking Our Work</h2><p>At any time, you can run <code>hugo server</code> and check the your progress by opening <a href=http://localhost:1313/>localhost:1313</a> in your browser.</p><h2 id=goodbye>Goodbye</h2><p>With the theme skeleton, you get homepage, list page, and single page layouts. You get partials for a solid HTML skeleton, and a 404 page. Good start!</p></article><script>const baseUrl=window.location.host;if(baseUrl.indexOf('localhost')>=0){caches.keys().then(function(names){for(let name of names)
-caches.delete(name);});}
-else if('serviceWorker'in navigator){navigator.serviceWorker.register('/sw.js',{scope:'/'}).then(function(registration){console.log('Service Worker Registered');});navigator.serviceWorker.ready.then(function(registration){console.log('Service Worker Ready');});}
-if(typeof(initProjectNames)!=='undefined'){initProjectNames();}</script></body></html>
+</code></pre><h3 id="what-to-footer">What to Footer</h3>
+<p>Footers can contain stuff you want on every page, but don&rsquo;t need to highlight. JavaScript that can run whenever, copyrights, and contact information are common. Check out the <a href="https://gohugo.io/templates/partials/#example-footerhtml">Hugo documentation</a> for a good example! You could also build a beautiful soundscape bounding over the whole website landscape. I believe in you.</p>
+<h2 id="checking-our-work">Checking Our Work</h2>
+<p>At any time, you can run <code>hugo server</code> and check the your progress by opening <a href="http://localhost:1313/">localhost:1313</a> in your browser.</p>
+<h2 id="goodbye">Goodbye</h2>
+<p>With the theme skeleton, you get homepage, list page, and single page layouts. You get partials for a solid HTML skeleton, and a 404 page. Good start!</p>
+
+</article>
+
+
+        
+        <script>
+const baseUrl = window.location.host;
+
+if(baseUrl.indexOf('localhost') >= 0) {
+    caches.keys().then(function(names) {
+    for (let name of names)
+        caches.delete(name);
+    });
+}
+else if('serviceWorker' in navigator) {
+        navigator.serviceWorker
+            .register('/sw.js', { scope: '/' })
+            .then(function(registration) {
+                console.log('Service Worker Registered');
+            });
+
+        navigator.serviceWorker
+            .ready
+            .then(function(registration) {
+                console.log('Service Worker Ready');
+            });
+}
+
+if ( typeof(initProjectNames) !== 'undefined')  {
+    initProjectNames();
+}
+
+</script></body>
+</html>
