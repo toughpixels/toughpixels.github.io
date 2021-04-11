@@ -2,7 +2,7 @@
 title: "Domain Registration Advice"
 date: 2021-04-10T20:35:49-05:00
 tags: html, dns, domains
-description: "Domain registration is easy, alsmost too easy. Take your time, and you can find a domain you'll love and use forever."
+description: "Domain registration is easy, almost too easy. Take your time, and you can find a domain you'll love and use forever."
 ---
 
 # Straightforward Domain Buying Advice
