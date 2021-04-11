@@ -14,7 +14,7 @@ We think the best way to find a great domain is to be flexible and to develop yo
 
 Once you have a few possible domains written down and a website you can see, research buying your domain! Domain registration should be cheap (for sure under $20, ideally $10), but there are predatory people in the world so sometimes it's not. A company will register a domain they don't intend to use ("parking" the domain) until a rich startup, existing company, or Courtney Love's son really wants it, then it's sold for thousands.
 
-## What Domain Registration Is
+## What Is Domain Registration
 
 Every domain registrar has a different interface, price point, and level of virtuousness, but what they do is pretty similar. They manage DNS records, which is the technical way of telling the internet exactly which computer your website lives on. A lot of them also offer to host your website, which means they'll sell (or just give) you space for your website.
 
