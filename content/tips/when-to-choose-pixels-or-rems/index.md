@@ -8,13 +8,13 @@ draft: false
 
 ## The great thing about Rems
 
-Rems (and ems) allow users to scale up the size of your site if they want.  Make sure that the `<html>` element does not have a `font-size` attached to it because that will override the user's defaults and then maybe they won't be able to read and enjoy your site!
+Rems (and ems) allow users to scale up the size of your site if they want.  Make sure that the `<html>` element does not have a `font-size` attached to it because that will override the user's defaults settings.
 
 Rems should generally be the default but pixels are sometimes nice.
 
 ## The great thing about pixels
 
-Pixels are great for conserving horizontal space!  Like if you have some buttons in a row and you don't want them to easily stack, maybe define and left and right padding in pixels.  That way only the increased text will eat up the valuable horizontal space.
+Pixels are great for conserving horizontal space.  For example, if you don't want buttons in a row to stack on smaller screens, consider the gaps in between them in pixels.  That way only the increased text will eat up their valuable horizontal space.
 
 ## An example of them together on the same element
 
@@ -28,4 +28,4 @@ Pixels are great for conserving horizontal space!  Like if you have some buttons
 
 Maybe this is the single best use of pixels!  They keep the content from bumping right up against the edge of the user's screen.  
 
-A max-width defined as Rems is also great because when the user ups the size of the text, the width of the container will grow to accomodate it.
+A max-width defined as Rems user-friendly because when the user increases the size of the text, the width of the container will grow to accomodate it.

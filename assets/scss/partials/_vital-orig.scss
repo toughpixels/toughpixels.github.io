@@ -18,7 +18,6 @@ body, html {
     padding: 0;
 }
 html {
-    font-size: 16px;
     line-height: 1.5;
 }
 a {
@@ -39,57 +38,9 @@ a {
 body {
     background: var(--background);
     overflow-x: hidden;  
-    font-family: var(--font-default);                                    
-}
-.lead {
-    display: block;
-    font-size: 1.8rem;
-    font-weight: normal;
-    margin: 0.67em 0;
-}
-h1 {
-    font-size: 2rem;
-    line-height: 1.2;
-}
-h2, .title-big , .title-small {
-    font-family: var(--font-fancy);
-}
-h2, h3, h4, h5, h6 {
-    margin-top: 1.5em;
-    margin-bottom: 0.5em;
-}
-h2 {
-    font-size: 1.6rem;
-    font-weight: normal;
-}
-h3 {
-    font-size: 1.3rem;
-    line-height: 1.3;
-}
-.align-center {
-    align-items: center;
-}
-.title-big {
-    margin-top: 0.5rem;
-    padding: 0.2em 0.2rem 0;
-    display: inline-block;
-    font-size: 1.6rem;
-    line-height: 1.2;
-    text-decoration: none;
-    vertical-align: top;
+    font-family: var(--font-default);
 }
 
-.title-small {
-    font-size: 0.66rem;
-    padding: 0 0.2rem;
-}
-.contain {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 27rem;
-    padding-right: 1rem;
-    padding-left: 1rem;
-}
 
 .smFlex {
     display: block;

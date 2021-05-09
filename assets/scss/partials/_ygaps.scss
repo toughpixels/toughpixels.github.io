@@ -1,0 +1,5 @@
+.space-y-sm {
+    > * + * {
+        margin-top: 1rem;
+    }
+}

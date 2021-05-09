@@ -1,0 +1,44 @@
+@mixin controlDimensions {
+    padding: 0.5rem;
+    line-height: 1.4;
+    display: inline-block;
+    border: 2px solid currentColor;
+    font-size: 1rem;
+    font-family: inherit;
+    vertical-align: top;
+}
+@mixin xpad($pad) {
+    padding-left: $pad;
+    padding-right: $pad;
+}
+.label {
+    padding-bottom: 0.2rem;
+    display: inline-block;
+    vertical-align: top;
+}
+.textInput {
+    @include controlDimensions;
+    width: 100%;
+    border-color: rgba(0, 0, 0, 0.2);
+    &:hover, &:focus {
+        border-color: currentColor;
+    }
+}
+textarea {
+    min-height: 5rem;
+}
+
+.btn {
+    @include controlDimensions;
+    @include xpad(1rem);
+    &-primary {
+        color: #fff;
+        background: darken(#add8e6, 50%);
+        border-color: #000;
+        border-radius: 5px;
+        &:hover, &:focus {
+            background: darken(#add8e6, 20%);
+            color: #000;
+        }
+    }
+}

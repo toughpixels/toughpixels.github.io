@@ -1,0 +1,36 @@
+@mixin generateContainerOverrides($containerMaxWidth) {
+    .container {
+      padding: 0 15px;
+      margin-right: auto;
+      margin-left: auto;
+      box-sizing: content-box;
+      max-width: $containerMaxWidth;
+    }
+    .containerPull {
+      &-left {
+        margin-left: -15px;
+        padding-left: 15px;
+        @media screen and (min-width: #{$containerMaxWidth}) {
+          margin-left: calc(#{$containerMaxWidth}/2 - 50vw);
+        }
+      }
+      &-right {
+        margin-right: -15px;
+        padding-right: 15px;
+        text-align: right;
+        @media screen and (min-width: #{$containerMaxWidth}) {
+          margin-right: calc(#{$containerMaxWidth}/2 - 50vw);
+        }
+      }
+      &-both {
+        margin: 0 -15px;
+        padding: 0 15px;
+        @media screen and (min-width: $containerMaxWidth) {
+          margin: 0 calc($containerMaxWidth/2 - 50vw);
+        }
+      }
+    }
+  }
+
+  @include generateContainerOverrides(27rem);
+

@@ -2,8 +2,8 @@
 title: "Using SASS to Create a Lean Utility Library"
 date: 2021-03-02T21:15:55-06:00
 tags: 
-description: ""
-draft: true
+description: "Write mixins with SASS to generate utility classes that speed up the development of your site."
+draft: false
 ---
 
 ## An alternative to Tailwind CSS
@@ -15,7 +15,7 @@ Tailwind CSS is great but requires precious build minutes when using a service l
 Here are some examples of the types of utlity classes you may want.
 
 ### Color Classes
-An easy win for creating utility classes is to create some color classes like this:
+Like these:
 
 ```
 .bg-light {
@@ -95,14 +95,13 @@ Sometimes we want to generate some utility classes like this:
   margin-left: 2rem; }
 ```
 
-Note that after every utility class, there is a "> * + *" part of the selector.  This is what we'll add to a new, 3rd part of our array:
+Note that after every utility class, there is a `> * + *` part of the selector.  This is what we'll add to a new, 3rd part of our array:
 
 ```
 $gapProperties: (
     ('space-y-', 'margin-top', '> * + *'),
     ('space-x-', 'margin-left', '> * + *')
 );
-
 ```
 And our properties look like this:
 
@@ -130,13 +129,16 @@ Now we'll include a `$selectorAdditional` variable as a part of the new mixin:
   }
 }
 ```
-Note: Now that our mixin expects `nth($item, 3)`, we have to update our colors array to:
+{{< aside type="note" >}}
+#### Note
+Now that our mixin expects `nth($item, 3)`, we have to update our colors array to:
 ```
 $colorProperties: (
     ('bg-', 'background-color', '')
     ('c-', 'color', '')
 );
 ```
+{{< /aside >}}
 
 ### Display Utility Classes
 
@@ -176,8 +178,11 @@ $displayOptions: (
   grid: grid
 );
 ```
+{{< aside >}}
+### Note 
+`('', 'display', ''),` has a trailing comma.  SASS will give you an error if it's not there.
+{{< /aside >}}
 
-Note: `('', 'display', ''),` has a trailing comma.  SASS is giving me an error unless I include it.  Something to do with it being the only item in the array.  Please reach out if you know!
 
 ### Responsive Utility Classes
 
@@ -228,7 +233,9 @@ And use another mixin:
 }
 ```
 
-Bonus: Using this mixin, you can create CSS like this:
+{{< aside >}}
+### Bonus
+Using this mixin, you can create CSS like this:
 
 ```
 img {
@@ -246,7 +253,7 @@ img {
   }
 }
 ```
-... using a breakpoints map like this:
+... by starting with a breakpoints map like this:
 ```
 $breakpoints: (
     sm: 768px,
@@ -267,8 +274,12 @@ img {
   }
 }
 ```
+{{< /aside >}}
 
-Tip: See if you can use one or two breakpoint options.  Fewer breakpoint options means a smaller CSS file size!
+{{< aside >}}
+### Tip
+Try to use one or two breakpoint options if any at all.  Fewer breakpoint options means a smaller CSS file size!
+{{< /aside >}}
 
 Here's our new mixin, now incorporating the `responsive` mixin:
 
@@ -300,17 +311,55 @@ Here's our new mixin, now incorporating the `responsive` mixin:
 ```
 
 ### Fancy Utility Classes
-Some utility classes are too complex for the above mixin to generate.  But we can write custom mixins for custom needs.  For example:
+Some utility classes are too complex for the above mixin to generate.  But we can write custom mixins for custom needs.  
+#### For example:
+
+Sometimes you might want to visually shift an element
+
+{{< containerPull type="left" >}}over here{{< /containerPull >}}
+
+or 
+
+{{< containerPull type="right" >}}over here!{{< /containerPull >}}
+
+The classes that are pulling that text are built based on the max-width of the `.container` element, so this is a great opportunity to make all these classes with a single mixin:
 
 ```
-
+@mixin generateContainerOverrides($containerMaxWidth) {
+  .container {
+    padding: 0 15px;
+    margin: 0 auto;
+    max-width: $containerMaxWidth;
+  }
+  .containerPull {
+    &-left {
+      margin-left: -15px;
+      @media screen and (min-width: $containerMaxWidth) {
+        margin-left: calc($containerMaxWidth/2 - 50vw);
+      }
+    }
+    &-right {
+      margin-right: -15px;
+      @media screen and (min-width: $containerMaxWidth) {
+        margin-right: calc($containerMaxWidth/2 - 50vw);
+      }
+    }
+    &-both {
+      margin: 0 -15px;
+      @media screen and (min-width: $containerMaxWidth) {
+        margin: 0 calc($containerMaxWidth/2 - 50vw);
+      }
+    }
+  }
+}
 ```
-
-
-
+You would then generate these classes by running:
+```
+@include generateContainerOverrides(70rem);
+```
 
 ## Abstracting Classes
-Once you have your utility clsses, you can abstract them out using SASS extends like this:
+Once you have your utility clsses, you can optionally abstract them out using SASS extends like this:
 
 ```
 .btn {
@@ -318,5 +367,8 @@ Once you have your utility clsses, you can abstract them out using SASS extends 
 }
 ```
 
-Tip: Challenge yourself to abstract out your HTML instead!  For example, you could make a "btn" shortcode in Hugo and add all these utility classes there as HTML classes.  You'll get the same styles but will save a little bit of CSS.
+{{< aside >}}
+### Bonus
+Challenge yourself to abstract out your HTML instead!  For example, you could make a "btn" shortcode in Hugo and add all these utility classes there as HTML classes.  You'll get the same styles but will save a little bit of CSS.
+{{< /aside >}}
 
