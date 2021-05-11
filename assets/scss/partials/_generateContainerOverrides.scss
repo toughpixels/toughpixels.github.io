@@ -24,9 +24,9 @@
       }
       &-both {
         margin: 0 -15px;
-        padding: 0 15px;
+        // padding: 0 15px;
         @media screen and (min-width: $containerMaxWidth) {
-          margin: 0 calc($containerMaxWidth/2 - 50vw);
+          margin: 0 calc(#{$containerMaxWidth}/2 - 50vw);
         }
       }
     }

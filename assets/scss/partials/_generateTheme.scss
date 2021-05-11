@@ -1,0 +1,113 @@
+.bg-white {
+    background-color: #fff;
+}
+@mixin generateTheme($color) {
+    $btnAltColor: lighten($color, 15%);
+    .theme {
+        .btn, .text-input {
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            line-height: 1.2;
+            font-size: 1rem;
+            border-radius: 5px;
+        }
+        
+        .bg-dark {
+            background-color: darken($color, 30%);
+            color: #fff;
+            h3 {
+                color: inherit;
+            }
+        }
+        .bg-offwhite {
+            background-color: lighten($color, 57%);
+        }
+        a {
+            color: $color;
+            cursor: pointer;
+            text-decoration: underline;
+            border-radius: 0;
+            &:hover, &:focus {
+                background: $color;
+                color: #fff;
+            }
+        }
+        .btn-secondary {
+            color: $color;
+            border-color: currentColor;
+            background-color: #fff;
+            &:hover, &:focus {
+                color: $btnAltColor;
+                background-color: #fff;
+            }
+        }
+        .btn-primary {
+            background: $color;
+            color: #fff;
+            border-color: $color;
+            &:hover, &:focus {
+                background: $btnAltColor;
+                border-color: $btnAltColor;
+            }
+        }
+        .textInput {
+            &:hover, &:focus {
+                outline: 0;
+                border-color: $color;
+                box-shadow: 0 0 3px darken($color, 20%);
+            }
+        }
+        h1, h2, h3, h4, label:focus-within span.label {
+            color: darken($color, 15%);
+        }
+    }
+}
+
+@mixin generateThemePruned($color) {
+    $btnAltColor: lighten($color, 20%);
+    $headerColor: darken($color, 15%);
+    .bg-dark {
+        background-color: darken($color, 30%);
+        color: #fff;
+    }
+    .bg-offwhite {
+        background-color: lighten($color, 30%);
+    }
+    a {
+        color: $color;
+        &:hover, &:focus {
+            background: $color;
+            color: #fff;
+        }
+    }
+    .btn-secondary {
+        color: $color;
+        border-color: currentColor;
+        background-color: #fff;
+        &:hover, &:focus {
+            color: $btnAltColor;
+            background-color: #fff;
+        }
+    }
+    .btn-primary {
+        color: #fff;
+        background: $color;
+        border-color: $color;
+        &:hover, &:focus {
+            background: $btnAltColor;
+            border-color: $btnAltColor;
+        }
+    }
+    .textInput {
+        &:hover, &:focus {
+            border-color: $color;
+            box-shadow: 0 0 3px darken($color, 20%);
+        }
+    }
+    h1, h2, h3, h4, label:focus-within span.label {
+        color: $headerColor;
+    }
+}
+
+
+@include generateTheme(rgb(137, 0, 201));
