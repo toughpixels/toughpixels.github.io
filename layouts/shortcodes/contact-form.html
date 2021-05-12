@@ -6,7 +6,8 @@
 }
 
 if(getParameter("message") == 'success') {
-    alert('Your message was delivered!')
+    alert('Your message was delivered!');
+    window.location.href = "/";
 }
 </script>
 <form action="https://api.staticforms.xyz/submit" method="post" class="space-y-sm max-w-md">
