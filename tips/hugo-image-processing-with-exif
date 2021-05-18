@@ -1,0 +1,30 @@
+The two things to know about Hugo image processing are that it's amazing to resize and process images in advance. It also requires special handling for EXIF data, and while we're there, we're going to throw in a spoonful of `<img>` element best practices.
+
+```
+<picture>
+    {{ $rotation := "" }}
+    {{ with .Exif }}
+        {{ $orientation  := .Tags.Orientation }}
+        {{ if in (slice 3 4) $orientation }}
+            {{ $rotation = " r180" }}
+        {{ else if in (slice 5 6) $orientation }}
+            {{ $rotation = " r270"}}
+        {{ else if in (slice 7 8) $orientation }}
+            {{ $rotation = " r90"}}
+        {{ end }}
+        {{ $orientation }}
+    {{ end }}
+    {{- $small := .Resize (print "340x" $rotation) }}
+    {{- $medium := .Resize (print "640x" $rotation) }}
+    {{- $large := .Resize (print "1280x" $rotation) }}
+    <source media="(min-width: 1280px)" srcset="{{ $large.RelPermalink }}">
+    <source media="(min-width: 640px)" srcset="{{ $medium.RelPermalink }}">
+    <img src="{{ $small.RelPermalink }}" loading="lazy" alt="{{ .Title }}" />
+</picture>
+
+```
+
+Here is the image that we'recurrently using in our website `base` repository.
+
+## Fixing Hugo Images Exif Information
+

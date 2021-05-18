@@ -17,8 +17,8 @@ We will help you turn your idea into a website over the course of 4 meetings tha
 ## Our Process
 We believe making a site should be easy and fun.  We'll guide you through the creative choices you need to make only when you need to make them.
 
-### Our meeting 
-* [Meeting 1](/website/meetings/meeting-1)
-* [Meeting 2](/website/meetings/meeting-2)
-* [Meeting 3](/website/meetings/meeting-3)
-* [Meeting 4](/website/meetings/meeting-4)
+### Our meeting
+* [Meeting 1](/meetings/meeting-1)
+* [Meeting 2](/meetings/meeting-2)
+* [Meeting 3](/meetings/meeting-3)
+* [Meeting 4](/meetings/meeting-4)
