@@ -1,7 +1,12 @@
 ---
 title: "Creating Responsive iFrames"
 date: 2020-11-17
-tags: SCSS, SASS, CSS, iFrames, Responsive Sites
+tags:
+- SCSS
+- SASS
+- CSS
+- iFrames
+- Responsive Sites
 description: "Making a responsive iFrame that fits any HTML website."
 ---
 
@@ -20,15 +25,15 @@ If you want your iFrame to fill 100% of its allotted space, it's not enough to m
 
 On the iFrame, apply the CSS:
 ```
-position: absolute; 
-width: 100%; 
+position: absolute;
+width: 100%;
 height: 100%;
 left: 0;
 top: 0;
 ```
 This makes the iFrame completely fill the first parent element with a "position" attribute other than "static" ([More info here](https://www.w3schools.com/css/css_positioning.asp)).
 
-Create a wrapper element and apply the CSS `position: relative` so that its child iFrame will fill it.  Then give the wrapper element a "padding-bottom" percentage value that matches the height/width aspect-ratio of the iFrame (as shown in [these directions](https://www.w3schools.com/howto/howto_css_responsive_iframes.asp)).  
+Create a wrapper element and apply the CSS `position: relative` so that its child iFrame will fill it.  Then give the wrapper element a "padding-bottom" percentage value that matches the height/width aspect-ratio of the iFrame (as shown in [these directions](https://www.w3schools.com/howto/howto_css_responsive_iframes.asp)).
 
 I like to use a SASS mixin to do the math for me!
 ```

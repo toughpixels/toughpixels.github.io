@@ -1,9 +1,13 @@
 ---
 title: "Making a Custom Hugo Homepage"
 date: 2020-09-08T21:42:52-05:00
-tags: hugo, beginner, markdown, html
+tags:
+- hugo
+- beginner
+- markdown
+- html
 categories: tech
-description: "This article walks you through all the steps needed to build a custom homepage in Hugo" 
+description: "This article walks you through all the steps needed to build a custom homepage in Hugo"
 ---
 
 ## Taking Inventory
@@ -18,7 +22,7 @@ This commands generates a folder structure (run `ls` in the terminal to see!), a
 
 ## Seeing HTML
 
-The first command is running the server, this generates HTML for your web browser to read. Move into the correct directory with `cd best-website` and run `hugo server`.  This generates warnings in the terminal, and you should be able to open a web browser at [http://localhost:1313/](http://localhost:1313/). 
+The first command is running the server, this generates HTML for your web browser to read. Move into the correct directory with `cd best-website` and run `hugo server`.  This generates warnings in the terminal, and you should be able to open a web browser at [http://localhost:1313/](http://localhost:1313/).
 
 There is nothing there but an empty HTML page.
 

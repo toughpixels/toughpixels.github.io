@@ -1,7 +1,12 @@
 ---
 title: "Loading Hugo Into Github Pages"
 date: 2020-12-13T13:45:07-06:00
-tags: hugo, beginner, markdown, html, Github Pages
+tags:
+- hugo
+- beginner
+- markdown
+- html
+- Github Pages
 description: "Loading Hugo into Github Pages is a great way show your new site to the word while paying nothing in hosting!"
 categories: tech
 ---
