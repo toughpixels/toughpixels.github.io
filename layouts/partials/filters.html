@@ -1,0 +1,35 @@
+{{ $filters := slice "Filter 1" "Filter 2" }}
+
+<style>
+    .filteredContent > * {
+        display: none;
+    }
+    {{ range $filters }}
+    #{{ . | urlize }}:checked ~ .filterLabels [for="{{ . | urlize }}"] {
+    background-color: rgb(7, 75, 121);
+    color: #fff;
+}
+#{{ . | urlize }}:checked ~ .filteredContent .{{ . | urlize }} {
+    display: block;
+}
+{{ end }}
+</style>
+
+{{ range $filters }}
+<input class="sr-only" type="radio" aria-label="Hide {{ . }}" id="{{ . | urlize }}" value="{{ . | urlize }}" name="filterGroupNameExample" />
+{{ end }}
+
+<div class="filterLabels">
+    <h4>Display</h4>
+    {{ range $filters }}
+    <label class="inline-block p-sm mrb-sm bg-gray" for="{{ . | urlize }}">{{ . }}</label>
+    {{ end }}
+</div>
+
+
+{{/* Make sure classnames on filterable content matches the urlized titles of the filters */}}
+<div class="filteredContent">
+    <div class="filter-1">Filter 1</div>
+    <div class="filter-2">Filter 2</div>
+    <div class="filter-1 filter-2">Filter 1 and filter 2</div>
+</div>
