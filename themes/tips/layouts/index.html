@@ -2,20 +2,19 @@
 <main class="container tc">
     <p class="lead">{{ .Params.Description }}</p>
     {{- partial "svg-waving-hand.html" . -}}
-    {{ .Content }}
-
     {{- partial "filters.html" . -}}
+    {{ .Content }}
     {{ range where .Pages "Section" "tips" }}
         <section class="tl articles">
             {{- range .Pages }}
-            <a class="page-link" href="{{.Permalink}}">    
+            <a class="page-link" href="{{.Permalink}}">
                 <article class="article-prompt">
                     <header>
                         <h3 class="mt-0">{{.Title}}</h3>
                     </header>
                     <footer>
                         <time datetime="{{ .PublishDate }}">{{.PublishDate.Format "January 2, 2006"}}</time>
-                        {{- partial "reading-time.html" . -}}                        
+                        {{- partial "reading-time.html" . -}}
                     </footer>
                 </article>
             </a>
