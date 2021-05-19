@@ -3,6 +3,8 @@
     <p class="lead">{{ .Params.Description }}</p>
     {{- partial "svg-waving-hand.html" . -}}
     {{ .Content }}
+
+    {{- partial "filters.html" . -}}
     {{ range where .Pages "Section" "tips" }}
         <section class="tl articles">
             {{- range .Pages }}
