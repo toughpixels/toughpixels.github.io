@@ -31,6 +31,7 @@ textarea {
 .btn {
     @include controlDimensions;
     @include xpad(1rem);
+    text-decoration: none;
     &-primary {
         color: #fff;
         background: darken(#add8e6, 50%);
