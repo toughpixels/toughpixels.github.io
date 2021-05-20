@@ -1,7 +1,7 @@
 baseURL = "https://toughpixels.com"
 languageCode = "en-us"
 title = "Tough Pixels Tips"
-theme = "tips"
+theme = "base"
 publishDir = "docs"
 [params]
     description = "Simple explanations for coding problems."
