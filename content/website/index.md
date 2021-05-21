@@ -19,7 +19,7 @@ Each website costs $400 and you may qualify for up to $300 off in stackable disc
 
 {{< aside >}}
 ### Additional Savings
-An easy-to-forget additional cost of owning a website is the regular payments for hosting it.  Here's [how we make sites that are cheap to host]().
+An easy-to-forget additional cost of owning a website is the regular payments for hosting it.  Here's [how we make sites that are cheap to host](/website/cheap-hosting.md).
 {{< /aside >}}
 
 ## Our Process
