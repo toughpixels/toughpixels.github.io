@@ -9,7 +9,7 @@
         display: none;
     }
     {{ range $tags }}
-    #{{ .  }}:checked ~ .filterLabels [for="{{ . }}"] {
+    #{{ . }}:checked ~ .filterLabels [for="{{ . }}"] {
     background-color: rgb(7, 75, 121);
     color: #fff;
 }
