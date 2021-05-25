@@ -17,16 +17,24 @@
     display: block;
 }
 {{ end }}
+    {{ range $tags }}
+        {{ $red := index (seq 255 | shuffle) 0 }}
+        {{ $green := index (seq 255 | shuffle) 0 }}
+        {{ $blue := index (seq 255 | shuffle) 0 }}
+        .{{ . }} {
+            background-color: rgb({{$red}},{{$green}},{{$blue}});
+        }
+    {{ end }}
 </style>
 
 {{ range $tags }}
-<input class="sr-only" type="checkbox" aria-label="Hide {{ . }}" id="{{ . }}" value="{{ . }}" name="filterGroupNameExample" />
+<input class="sr-only" type="radio" aria-label="Hide {{ . }}" id="{{ . }}" value="{{ . }}" name="filterGroupNameExample" />
 {{ end }}
 
 <div class="filterLabels">
     <h4>Filter By Topic:</h4>
     {{ range $index, $tag := $tags }}
-        <label class="inline-block p-sm mrb-sm bg-gray" for="{{ $tag }}">
+        <label class="inline-block p-sm mrb-sm bg-gray {{ $tag }}" for="{{ $tag }}">
             {{- index $tagNames $index -}}
         </label>
     {{ end }}
