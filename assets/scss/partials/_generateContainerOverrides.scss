@@ -1,4 +1,7 @@
 @mixin generateContainerOverrides($containerMaxWidth) {
+  .px-edge {
+    padding: 0 15px;
+  }
     .container {
       padding: 0 15px;
       margin-right: auto;

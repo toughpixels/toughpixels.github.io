@@ -6,7 +6,7 @@ draft: true
 
 
 ## Pre-meeting plan
-The first big step in creating a website is writing content that is clear, concise, and engaging.  Here are [some tips for writing content on the web](???).  We'll send you a link to a development site where you can start adding you content online.
+The first big step in creating a website is writing content that is clear, concise, and engaging.  Here are some [tips for writing content on the web](???).  We'll send you a link to a development site where you can start adding you content online.
 
 Once you feel like you have a good first draft, we'll send you a link to schedule this meeting.
 

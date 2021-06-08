@@ -1,0 +1,15 @@
+@mixin flexWidthGaps($gap) {
+    margin-right: $gap*-1;
+    margin-bottom: $gap*-1;
+    > * {
+        margin-right: $gap;
+        margin-bottom: $gap;
+    }
+}
+.flexWidthGaps {
+    display: flex;
+    flex-wrap: wrap;
+    &-sm {
+        @include flexWidthGaps(0.5rem);
+    }
+}

@@ -19,7 +19,7 @@ Each website costs $400 and you may qualify for up to $300 off in stackable disc
 
 {{< aside >}}
 ### Additional Savings
-An easy-to-forget additional cost of owning a website is the regular payments for hosting it.  Here's [how we make sites that are cheap to host](/website/cheap-hosting.md).
+An easy-to-forget additional cost of owning a website is the regular payments for hosting it.  Here's [how we make sites that are cheap to host](/website/cheap-hosting).
 {{< /aside >}}
 
 ## Our Process
@@ -55,5 +55,16 @@ We communicate early what we can and cannot do.
 
 ### We're focused
 We believe that a small idea that becomes a real site is better than a big idea that only exists as fantasy.  Because of this, we designed our 5-meeting site-building process to be focused on attainable steps to help you put a part of yourself out into the world.
+
+## Our Vibe
+We’ll work with you to help ???
+
+We’ll make your vision shine with a structured process ???
+
+If your idea is adding kindness and art into the world, we’ll be excited. 
+
+If your not sure of how to represent your idea on a website, we can brainstorm ideas together.  
+
+Or if you dont want to be put on the spot, we’ll give you ~journal prompts~ you can do on your own time. 
 
 {{< calendly url="https://calendly.com/toughpixelsdev/meeting-1" text="Schedule a free meeting with us" type="btn btn-primary" >}}
