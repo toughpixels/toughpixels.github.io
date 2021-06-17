@@ -3,4 +3,4 @@ date: 2020-09-08T22:41:26-05:00
 description: "Programming tips, working solutions, and emotional inspiration."
 ---
 
-## Our Latest Posts
+## Our Latest Post
