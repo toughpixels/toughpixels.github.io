@@ -9,7 +9,7 @@
         display: none;
     }
     {{ range $tags }}
-    
+
 #{{ . }}:checked ~ .filteredContent .filteredContentItems .{{ . }} {
     display: block;
 }
@@ -59,8 +59,8 @@
                         <h3 class="mt-0">{{.Title}}</h3>
                     </header>
                     <footer>
-                        
-                        
+
+
                         {{ if .Params.tags }}
                         Tags: {{delimit .Params.tags ", "}}
                         {{ end }}

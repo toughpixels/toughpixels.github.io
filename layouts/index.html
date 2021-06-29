@@ -1,12 +1,10 @@
 {{ define "main" }}
 <main class="container tc">
     <p class="lead">{{ .Params.Description }}</p>
-    {{- partial "svg-waving-hand.html" . -}}
-    {{- partial "filters.html" . -}}
     {{ .Content }}
     {{ range where .Pages "Section" "tips" }}
         <section class="tl articles">
-            {{- range .Pages }}
+            {{- range first 3 .Pages }}
             <a class="page-link" href="{{.Permalink}}">
                 <article class="article-prompt">
                     <header>
@@ -21,5 +19,8 @@
             {{- end }}
         </section>
     {{- end }}
+    <div style="width: 100%;">
+        {{- partial "filters.html" . -}}
+    </div>
 </main>
 {{ end }}
