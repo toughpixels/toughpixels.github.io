@@ -168,6 +168,10 @@ svg {
 .page-link {
     text-decoration: none;
     display: block;
+    &:hover,&:focus {
+        background-color: var(--article-preview-bg);
+        color: var(--article-preview-text);
+    }
 }
 
 code {

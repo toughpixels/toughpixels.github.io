@@ -1,16 +1,15 @@
 {{ define "main" }}
 <main class="container tc">
     <p class="lead">{{ .Params.Description }}</p>
-    
+
     <div class="mb-md">
         {{ .Content }}
     </div>
     {{ range where .Pages "Section" "tips" }}
-    
         <section class="tl articles">
-            {{- range first 1 .Pages }}
-            
-            <a class="page-link" href="{{.Permalink}}">
+            {{- range first 3 .Pages }}
+
+            <a class="page-link mt-md" href="{{.Permalink}}">
                 <article class="article-prompt">
                     <header>
                         <h3 class="mt-0">{{.Title}}</h3>

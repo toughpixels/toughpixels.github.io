@@ -34,7 +34,6 @@
 {{ range $tags }}
 <input {{ if eq . "all" }}checked{{end}} class="sr-only tagInput" type="radio" aria-label="Show {{ . }}" id="{{ . }}" value="{{ . }}" name="filterTag" />
 {{ end }}
-
 <div class="filterLabels containerPull-both mb-md">
     <div class="px-edge">
     <h4 class="mb-md tc">Filter By Topic</h4>
@@ -49,12 +48,12 @@
 </div>
 {{/* Make sure classnames on filterable content matches the urlized titles of the filters */}}
 <div class="filteredContent containerPull-both px-edge">
-    
-        <div class="filteredContentItems">
+        <div class="filteredContentItems grid two-cols gap-sm">
             {{- range where .Site.RegularPages "Type" "tips" }}
-            <span class="all {{ if .Params.tags }}{{ range $tag := .Params.tags}}{{ $tag | urlize }} {{ end }}{{ end }}" >&bull; 
-                <a href="{{.Permalink}}" class="textLink">{{.Title}}</a>
-            </span>
+            <a href="{{.Permalink}}" class="article-prompt page-link all {{ if .Params.tags }}{{ range $tag := .Params.tags}}{{ $tag | urlize }} {{ end }}{{ end }}" >
+                <h5>{{.Title}}</h5>
+                <time datetime="{{ .PublishDate }}">{{.PublishDate.Format "January 2, 2006"}}</time>
+            </a>
             {{- end }}
         </div>
 
