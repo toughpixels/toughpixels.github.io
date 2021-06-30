@@ -49,34 +49,12 @@
 </div>
 {{/* Make sure classnames on filterable content matches the urlized titles of the filters */}}
 <div class="filteredContent containerPull-both px-edge">
-<<<<<<< HEAD
     
         <div class="filteredContentItems">
             {{- range where .Site.RegularPages "Type" "tips" }}
             <span class="all {{ if .Params.tags }}{{ range $tag := .Params.tags}}{{ $tag | urlize }} {{ end }}{{ end }}" >&bull; 
                 <a href="{{.Permalink}}" class="textLink">{{.Title}}</a>
             </span>
-=======
-
-    {{ range where .Pages "Section" "tips" }}
-        <div class="grid-flex filteredContentItems">
-            {{- range .Pages }}
-            <a class="miniArticleLink all {{ if .Params.tags }}{{ range $tag := .Params.tags}}{{ $tag | urlize }} {{ end }}{{ end }}" href="{{.Permalink}}">
-                <article>
-                    <header>
-                        <h3 class="mt-0">{{.Title}}</h3>
-                    </header>
-                    <footer>
-
-
-                        {{ if .Params.tags }}
-                        Tags: {{delimit .Params.tags ", "}}
-                        {{ end }}
-
-                    </footer>
-                </article>
-            </a>
->>>>>>> 691b95697b864044b6b850555cd74933bec7423b
             {{- end }}
         </div>
 
