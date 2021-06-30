@@ -47,13 +47,11 @@
 </div>
 </div>
 </div>
-
-
 {{/* Make sure classnames on filterable content matches the urlized titles of the filters */}}
 <div class="filteredContent containerPull-both px-edge">
-
-        <div class=" filteredContentItems">
-            {{- range where .Site.Pages "Type" "tips" }}
+    
+        <div class="filteredContentItems">
+            {{- range where .Site.RegularPages "Type" "tips" }}
             <span class="all {{ if .Params.tags }}{{ range $tag := .Params.tags}}{{ $tag | urlize }} {{ end }}{{ end }}" >&bull; 
                 <a href="{{.Permalink}}" class="textLink">{{.Title}}</a>
             </span>
