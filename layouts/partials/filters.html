@@ -4,6 +4,7 @@
     {{ $tags = $tags | append ( $key | urlize ) }}
     {{ $tagNames = $tagNames | append .Page.Title }}
 {{end }}
+<section>
 <style>
     .filteredContentItems > * {
         display: none;
@@ -11,20 +12,21 @@
     {{ range $tags }}
 
 #{{ . }}:checked ~ .filteredContent .filteredContentItems .{{ . }} {
-    display: block;
+    display: inline;
 }
 {{ end }}
     {{ range $tags }}
-        {{ $red := index (seq 255 | shuffle) 0 }}
-        {{ $green := index (seq 255 | shuffle) 0 }}
-        {{ $blue := index (seq 255 | shuffle) 0 }}
+        {{ $red := index (seq 100 | shuffle) 0 }}
+        {{ $green := index (seq 100 | shuffle) 0 }}
+        {{ $blue := index (seq 100 | shuffle) 0 }}
+
         label.{{ . }} {
-            border-color: rgb({{$red}},{{$green}},{{$blue}});
+            color: rgb({{$red}},{{$green}},{{$blue}});
         }
         #{{ . }}:checked ~ .filterLabels [for="{{ . }}"] {
             background-color: rgb({{$red}},{{$green}},{{$blue}});
             color: #fff;
-            text-shadow: 2px 2px 0 #000;
+            text-decoration: none;
         }
     {{ end }}
 </style>
@@ -33,9 +35,9 @@
 <input {{ if eq . "all" }}checked{{end}} class="sr-only tagInput" type="radio" aria-label="Show {{ . }}" id="{{ . }}" value="{{ . }}" name="filterTag" />
 {{ end }}
 
-<div class="filterLabels containerPull-both">
+<div class="filterLabels containerPull-both mb-md">
     <div class="px-edge">
-    <h4 class="mb-md">Filter By Topic:</h4>
+    <h4 class="mb-md tc">Filter By Topic</h4>
     <div class="justify-center flexWidthGaps flexWidthGaps-sm">
     {{ range $index, $tag := $tags }}
         <label class="filterLabel inline-block p-sm mrb-sm bg-gray {{ $tag }}" for="{{ $tag }}">
@@ -45,31 +47,17 @@
 </div>
 </div>
 </div>
-
-
 {{/* Make sure classnames on filterable content matches the urlized titles of the filters */}}
 <div class="filteredContent containerPull-both px-edge">
-
-    {{ range where .Pages "Section" "tips" }}
-        <div class="grid-flex filteredContentItems">
-            {{- range .Pages }}
-            <a class="miniArticleLink all {{ if .Params.tags }}{{ range $tag := .Params.tags}}{{ $tag | urlize }} {{ end }}{{ end }}" href="{{.Permalink}}">
-                <article>
-                    <header>
-                        <h3 class="mt-0">{{.Title}}</h3>
-                    </header>
-                    <footer>
-
-
-                        {{ if .Params.tags }}
-                        Tags: {{delimit .Params.tags ", "}}
-                        {{ end }}
-
-                    </footer>
-                </article>
-            </a>
+    
+        <div class="filteredContentItems">
+            {{- range where .Site.RegularPages "Type" "tips" }}
+            <span class="all {{ if .Params.tags }}{{ range $tag := .Params.tags}}{{ $tag | urlize }} {{ end }}{{ end }}" >&bull; 
+                <a href="{{.Permalink}}" class="textLink">{{.Title}}</a>
+            </span>
             {{- end }}
-        </section>
-    {{- end }}
+        </div>
+
 </div>
 </div>
+</section>
