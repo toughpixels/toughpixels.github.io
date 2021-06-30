@@ -14,13 +14,12 @@ h1 {
     font-size: 2rem;
     line-height: 1.2;
 }
-h2, h4, .title-big , .title-small {
+h4, .title-big {
     font-family: var(--font-fancy);
 }
 
 h2 {
     font-size: 1.6rem;
-    font-weight: normal;
 }
 h3 {
     font-size: 1.3rem;
@@ -36,16 +35,11 @@ h4 {
 
 // logo
 .title-big {
-    margin-top: 0.5rem;
-    padding: 0.2em 0.2rem 0;
-    display: inline-block;
     font-size: 1.6rem;
-    line-height: 1.2;
     text-decoration: none;
-    vertical-align: top;
 }
+
 .title-small {
-    font-size: 0.66rem;
     padding: 0 0.2rem;
 }
 

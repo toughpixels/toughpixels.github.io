@@ -1,6 +1,7 @@
 {{ define "main" }}
 <main class="container tc">
     <p class="lead">{{ .Params.Description }}</p>
+<<<<<<< HEAD
     <div class="mb-md">
         {{- partial "svg-waving-hand.html" . -}}
     </div>
@@ -8,11 +9,18 @@
     <div class="mb-md">
         {{ .Content }}
     </div>
+=======
+    {{ .Content }}
+>>>>>>> 691b95697b864044b6b850555cd74933bec7423b
     {{ range where .Pages "Section" "tips" }}
     
         <section class="tl articles">
+<<<<<<< HEAD
             {{- range first 1 .Pages }}
             
+=======
+            {{- range first 3 .Pages }}
+>>>>>>> 691b95697b864044b6b850555cd74933bec7423b
             <a class="page-link" href="{{.Permalink}}">
                 <article class="article-prompt">
                     <header>
@@ -27,5 +35,8 @@
             {{- end }}
         </section>
     {{- end }}
+    <div style="width: 100%;">
+        {{- partial "filters.html" . -}}
+    </div>
 </main>
 {{ end }}
