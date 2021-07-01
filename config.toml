@@ -4,8 +4,8 @@ title = "Tough Pixels Tips"
 theme = "base"
 publishDir = "docs"
 [params]
-    description = "Simple explanations for coding problems."
-    images = ["images/logo.jpg"]
+    description = "Hugo, HTML, CSS. Common sense web development that combines modern tools with ancient standards."
+    images = ["toughpixels.png"]
     author = "Tough Pixels"
 [blackfriday]
   plainIDAnchors = true
