@@ -52,6 +52,7 @@ a:hover, a:focus {
 @media only screen and (min-width: 460px) {
     .logo {
         max-width: 33vw;
+        height: auto;
     }
 }
 
@@ -169,10 +170,10 @@ img {
     visibility: none;
 }
 
-
 svg {
     fill: currentColor;
 }
+
 .page-link {
     text-decoration: none;
     display: block;

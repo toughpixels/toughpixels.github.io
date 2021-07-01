@@ -6,11 +6,5 @@
 @import "partials/tagFilters";
 @import "partials/position";
 @import "partials/textLink";
-
-@keyframes tipsColor {
-      0% { fill: #238f25;}
-      25% {fill: #1b791f;}
-      50% {fill: #115b25;}
-      75% {fill: #004521;}
-      100% {fill: #238f25;}
-}
+@import "partials/icons/toughPixels";
+@import "partials/icons/tips";

@@ -1,6 +1,6 @@
 ---
 date: 2020-09-08T22:41:26-05:00
-description: "Programming tips and attempted emotional inspiration."
+description: "Programming tips for beginners, attempted inspiration for everyone."
 ---
 
-## Our Latest Postsuo
+## Our Latest Posts
