@@ -7,6 +7,7 @@ publishDir = "docs"
     description = "Hugo, HTML, CSS. Common sense web development that combines modern tools with ancient standards."
     images = ["toughpixels.png"]
     author = "Tough Pixels"
+    title = "Tough Pixels"
 [blackfriday]
   plainIDAnchors = true
   hrefTargetBlank = true
