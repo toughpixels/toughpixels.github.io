@@ -8,7 +8,6 @@
     {{ range where .Pages "Section" "tips" }}
         <section class="tl articles">
             {{- range first 3 .Pages }}
-
             <a class="page-link mt-md" href="{{.Permalink}}">
                 <article class="article-prompt">
                     <header>

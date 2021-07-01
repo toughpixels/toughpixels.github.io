@@ -43,10 +43,18 @@ a:hover, a:focus {
 
 .logo {
     display: block;
-    width: 8rem;
-    max-width: 15vw;
+    width: 80vw;
+    margin: auto;
     padding: 0.5rem 0 0;
+    animation-direction: alternate;
 }
+
+@media only screen and (min-width: 460px) {
+    .logo {
+        max-width: 33vw;
+    }
+}
+
 .full-img {
     display: block;
     width: 100%;
