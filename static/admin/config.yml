@@ -6,7 +6,7 @@ public_folder: /images
 collections:
   - name: 'tips'
     label: 'Tips'
-    folder: 'content/tips/{{slug}}'
+    folder: 'content/tips/'
     path: '{{slug}}/_index'
     media_folder: ''
     public_folder: ''
@@ -17,4 +17,4 @@ collections:
       - {label: "Description", name: "description", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Date", name: "date", widger: "date"}
+      - {label: "Date", name: "date", widget: "datetime"}
