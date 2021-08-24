@@ -1,0 +1,17 @@
+.filterLabel {
+    // border: 5px solid #000;
+    padding: 0.2rem;
+    line-height: 1;
+    white-space: nowrap;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: underline;
+    // &:hover {
+    //     text-shadow: 1px 1px 1px rgba(#000, 1);
+    // }
+}
+.tagInput {
+    top: 100px;
+}

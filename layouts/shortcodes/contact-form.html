@@ -1,0 +1,34 @@
+<script>
+    getParameter = (key) => {
+  address = window.location.search
+  parameterList = new URLSearchParams(address)
+  return parameterList.get(key)
+}
+
+if(getParameter("message") == 'success') {
+    alert('Your message was delivered!');
+    window.location.href = "/";
+}
+</script>
+<form action="https://api.staticforms.xyz/submit" method="post" class="space-y-sm max-w-md">
+    <div>
+        <label class="field">
+            <span class="label">Your Email</span>
+            <input class="textInput" type="email" name="email" required />
+        </label>
+    </div>
+    <div>
+        <label class="field">
+            <span class="label">Your Message</span>
+            <textarea required class="textInput" name="message"></textarea>
+        </label>
+    </div>
+    <div>
+    <input type="text" name="honeypot" style="display:none">
+    <input type="hidden" name="accessKey" value="{{ .Get "key"}}">
+    <input type="hidden" name="subject" value="{{ with .Get "subject"}}{{.}}{{else}}Message submitted from {{ .Page.Permalink }}{{end}}" />
+    <input type="hidden" name="replyTo" value="@">
+    <input type="hidden" name="redirectTo" value="{{ .Page.Permalink }}?message=success">
+    <input class="btn btn-primary" type="submit" value="Submit" />
+</div>
+</form>

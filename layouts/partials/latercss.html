@@ -1,0 +1,4 @@
+{{ $options := (dict "outputStyle" "compressed") }}
+{{- $laterCss := resources.Get "scss/later.scss" | toCSS $options }}
+<link rel="preload" href="{{ $laterCss.Permalink }}" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+<noscript><link rel="stylesheet" href="{{ $laterCss.Permalink }}" /></noscript>

@@ -1,0 +1,62 @@
+{{ $tags := slice "all" }}
+{{ $tagNames := slice "all" }}
+{{ range $key, $taxonomy := .Site.Taxonomies.tags }}
+    {{ $tags = $tags | append ( $key | urlize ) }}
+    {{ $tagNames = $tagNames | append .Page.Title }}
+{{end }}
+<section>
+<style>
+    .filteredContentItems > * {
+        display: none;
+    }
+    {{ range $tags }}
+
+#{{ . }}:checked ~ .filteredContent .filteredContentItems .{{ . }} {
+    display: inline;
+}
+{{ end }}
+    {{ range $tags }}
+        {{ $red := index (seq 100 | shuffle) 0 }}
+        {{ $green := index (seq 100 | shuffle) 0 }}
+        {{ $blue := index (seq 100 | shuffle) 0 }}
+
+        label.{{ . }} {
+            color: rgb({{$red}},{{$green}},{{$blue}});
+        }
+        #{{ . }}:checked ~ .filterLabels [for="{{ . }}"] {
+            background-color: rgb({{$red}},{{$green}},{{$blue}});
+            color: #fff;
+            text-decoration: none;
+        }
+    {{ end }}
+</style>
+<div class="relative">
+{{ range $tags }}
+<input {{ if eq . "all" }}checked{{end}} class="sr-only tagInput" type="radio" aria-label="Show {{ . }}" id="{{ . }}" value="{{ . }}" name="filterTag" />
+{{ end }}
+<div class="filterLabels containerPull-both mb-md">
+    <div class="px-edge">
+    <h4 class="mb-md tc">Filter By Topic</h4>
+    <div class="justify-center flexWidthGaps flexWidthGaps-sm">
+    {{ range $index, $tag := $tags }}
+        <label class="filterLabel inline-block p-sm mrb-sm bg-gray {{ $tag }}" for="{{ $tag }}">
+            {{- index $tagNames $index -}}
+        </label>
+    {{ end }}
+</div>
+</div>
+</div>
+{{/* Make sure classnames on filterable content matches the urlized titles of the filters */}}
+<div class="filteredContent containerPull-both px-edge">
+        <div class="filteredContentItems grid two-cols gap-sm">
+            {{- range where .Site.RegularPages "Type" "tips" }}
+            <a href="{{.Permalink}}" class="article-prompt page-link all {{ if .Params.tags }}{{ range $tag := .Params.tags}}{{ $tag | urlize }} {{ end }}{{ end }}" >
+                <h5>{{.Title}}</h5>
+                <time datetime="{{ .PublishDate }}">{{.PublishDate.Format "January 2, 2006"}}</time>
+            </a>
+            {{- end }}
+        </div>
+
+</div>
+</div>
+</section>

@@ -1,0 +1,17 @@
+.grid-flex {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    grid-gap: 1rem;
+}
+
+.grid {
+    display: grid;
+}
+
+.two-cols {
+    grid-template-columns: repeat(auto-fill, minmax(30vw, 1fr));
+}
+
+.gap-sm {
+    grid-gap: 1rem;
+}

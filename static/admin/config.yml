@@ -1,0 +1,22 @@
+backend:
+  name: git-gateway
+  branch: main
+media_folder: assets/images
+public_folder: /images
+collections:
+  - name: 'tips'
+    label: 'Tips'
+    folder: "content/tips/{{slug}}/"
+    slug: '{{slug}}'
+    file: '_index'
+    media_folder: ''
+    create: true
+    editor:
+      preview: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Header Image", name: header, widget: "image", required: false}
+      - {label: "Description", name: "description", widget: "markdown"}
+      - {label: "Tags", name: "tags", widget: "list"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Date", name: "date", widger: "datetime"}

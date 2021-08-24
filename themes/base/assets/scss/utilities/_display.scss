@@ -1,0 +1,20 @@
+$properties: (
+  ('', 'display', ''),
+);
+
+$options: (
+  inline-block: inline-block,
+  flex: flex,
+  grid: grid
+);
+
+@include generateUtilityClasses($properties, $options, false);
+
+$options: (
+  none: none,
+  block: block,
+);
+
+@include generateUtilityClasses($properties, $options, true);
+
+

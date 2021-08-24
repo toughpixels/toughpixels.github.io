@@ -1,0 +1,28 @@
+<script>
+const baseUrl = window.location.host;
+
+if(baseUrl.indexOf('localhost') >= 0) {
+    caches.keys().then(function(names) {
+    for (let name of names)
+        caches.delete(name);
+    });
+}
+else if('serviceWorker' in navigator) {
+        navigator.serviceWorker
+            .register('/sw.js', { scope: '/' })
+            .then(function(registration) {
+                console.log('Service Worker Registered');
+            });
+
+        navigator.serviceWorker
+            .ready
+            .then(function(registration) {
+                console.log('Service Worker Ready');
+            });
+}
+
+if ( typeof(initProjectNames) !== 'undefined')  {
+    initProjectNames();
+}
+
+</script>

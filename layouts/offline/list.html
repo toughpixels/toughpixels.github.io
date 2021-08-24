@@ -1,0 +1,15 @@
+{{- define "main" }}
+    <main class="container prose">
+        <div style="text-align: center;">
+            {{.Content}}
+        </div>
+
+        {{ with .Site.GetPage "section" "tips" }}
+   
+         {{- range first 1 .Pages.ByLength.Reverse }}
+         {{- partial "single-tip-view.html" . -}}
+         {{ end }}
+
+        {{ end }}
+    </main>
+{{- end }}
