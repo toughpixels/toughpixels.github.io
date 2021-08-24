@@ -1,19 +1,16 @@
 backend:
   name: git-gateway
   branch: main
-media_folder: assets/images
+media_folder: static/images
 public_folder: /images
 collections:
   - name: 'tips'
     label: 'Tips'
-    folder: "content/tips/{{slug}}/"
-    slug: '{{slug}}'
-    file: '_index'
+    folder: 'content/tips/{{slug}}'
+    path: '{{slug}}/_index'
     media_folder: ''
     public_folder: ''
     create: true
-    editor:
-      preview: true
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Header Image", name: header, widget: "image", required: false}
