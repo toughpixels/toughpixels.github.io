@@ -10,6 +10,7 @@ collections:
     slug: '{{slug}}'
     file: '_index'
     media_folder: ''
+    public_folder: ''
     create: true
     editor:
       preview: true
