@@ -32,6 +32,9 @@ const MAX_TTL = {
 };
 
 const CACHE_BLACKLIST = [
+    (str) => {
+        return !str.endsWith('/admin');
+    }
     //(str) => {
     //    return !str.startsWith('http://localhost') && !str.startsWith('https://gohugohq.com');
     //},
