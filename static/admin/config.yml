@@ -20,4 +20,4 @@ collections:
       - {label: "Description", name: "description", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Date", name: "date", widger: "datetime"}
+      - {label: "Date", name: "date", widger: "date"}
