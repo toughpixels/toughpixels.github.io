@@ -3,8 +3,12 @@ languageCode = "en-us"
 title = "Tough Pixels Tips"
 theme = "base"
 publishDir = "docs"
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
 [params]
-    description = "Hugo, HTML, CSS. Common sense web development that combines modern tools with ancient standards."
+    description = "Common sense web development. We combine modern tools with enduring standards to help clients own their content."
     images = ["toughpixels.png"]
     author = "Tough Pixels"
     title = "Tough Pixels"
