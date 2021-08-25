@@ -7,7 +7,6 @@ tags:
   - svg
   - css
 date: 2021-08-24T14:17:02-05:00
-draft: true
 ---
 It's great to draw cool stuff in Inkscape, but it's a pain to get saved Inkscape SVGs to display properly on the web. We'll show you how to clean up SVGs so when you save them they obey CSS rules.
 
