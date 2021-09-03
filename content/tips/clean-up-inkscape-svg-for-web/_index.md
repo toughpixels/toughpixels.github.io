@@ -66,6 +66,6 @@ Can be safely removed.
 
 ## Fixing Inkscape SVGs For The Web
 
-We covered setting up default unit and canvas size in Inkscape, creating a default template, and using an XML editor to remove inline styles from Inkscape SVGs. 
+We covered setting up default unit and canvas size in Inkscape, creating a default template, and using an XML editor to clean up inline styles from Inkscape SVGs. 
 
 #### Good luck making something beautiful!
