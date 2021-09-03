@@ -2,22 +2,24 @@
 <html lang="en"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Markdown | Tough Pixels Tips</title>
-    <meta name="description" content="">
+    <title>Saving Inkscape SVGs for Internet Use | Tough Pixels Tips</title>
+    <meta name="description" content="Inkscape is a great program for making SVG designs. We step through cleaning up an Inkscape SVG so it works well with CSS and HTML.">
     <meta name="keywords" content="Hugo, HTML, CSS, JavaScript, Personal Growth, Tutorial">
     <meta name="author" content="Tough Pixels">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Baloo+Tamma&display=swap">
-    <meta property="og:title" content="Markdown" />
-<meta property="og:description" content="Common sense web development. We combine modern tools with enduring standards to help clients own their content." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://toughpixels.com/tags/markdown/" /><meta property="og:image" content="https://toughpixels.com/toughpixels.png"/><meta property="og:site_name" content="Tough Pixels" />
+    <meta property="og:title" content="Saving Inkscape SVGs for Internet Use" />
+<meta property="og:description" content="Inkscape is a great program for making SVG designs. We step through cleaning up an Inkscape SVG so it works well with CSS and HTML." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://toughpixels.com/tips/clean-up-inkscape-svg-for-web/" /><meta property="og:image" content="https://toughpixels.com/toughpixels.png"/><meta property="article:section" content="tips" />
+<meta property="article:published_time" content="2021-08-24T14:17:02-05:00" />
+<meta property="article:modified_time" content="2021-08-24T14:17:02-05:00" /><meta property="og:site_name" content="Tough Pixels" />
 
 
     <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://toughpixels.com/toughpixels.png"/>
 
-<meta name="twitter:title" content="Markdown"/>
-<meta name="twitter:description" content="Common sense web development. We combine modern tools with enduring standards to help clients own their content."/>
+<meta name="twitter:title" content="Saving Inkscape SVGs for Internet Use"/>
+<meta name="twitter:description" content="Inkscape is a great program for making SVG designs. We step through cleaning up an Inkscape SVG so it works well with CSS and HTML."/>
 
 <style type="text/css">*{box-sizing:border-box}:root{--background: lightblue;--pink: #e6adda;--dark:  black;--primary: azure;--link-hover-bg: #2D6FE7;--home-hover: var(--primary);--twitter-hover: rgba(29,161,242,1.00);--contact-hover: var(--pink);--article-preview-bg: #aeade6;--article-preview-text: #100a14;--article-preview-hover: #c0bbfa;--font-default: sans-serif;--font-fancys: 'Baloo Tamma', sans-serif}body,html{margin:0;padding:0}html{line-height:1.5}a{color:inherit}.skip-link,.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);border:0}body{background:var(--background);overflow-x:hidden;font-family:var(--font-default)}.smFlex{display:block}@media only screen and (min-width: 401px){html{font-size:20px}}@media only screen and (min-width: 768px){html{font-size:26px}.smFlex{display:flex}}@media only screen and (min-width: 1100px){html{font-size:30px}}.icon.waving{width:3rem}.tc{text-align:center}.dib{display:inline}.invis{display:none}.lead{display:block;font-size:1.8rem;font-weight:normal;margin:0.67em 0}*{margin:0}time{display:block}h1{font-size:2rem;line-height:1.2}h4,.title-big{font-family:var(--font-fancy)}h2{font-size:1.6rem}h3{font-size:1.3rem;line-height:1.3}h4{font-size:1.2rem;letter-spacing:0.05em}.align-center{align-items:center}.title-big{font-size:1.6rem;text-decoration:none}.title-small{padding:0 0.2rem}.prose>*{margin-top:0}.prose>*+*{margin-top:1.5em}.prose>*+time{margin-top:0.5em}.prose>*>li+li{margin-top:1em}aside{padding:1rem;margin-left:2rem;border:3px solid rgba(0,0,0,0.5);border-radius:10px;background:rgba(255,255,255,0.5)}.miniArticleLink{border:2px solid #000;padding:0.5rem;font-size:1rem;text-align:left;text-decoration:none;background:rgba(255,255,255,0.2)}.miniArticleLink h3{font-size:1rem;font-weight:bold}.grid-flex{display:grid;grid-template-columns:repeat(auto-fill, minmax(290px, 1fr));grid-gap:1rem}.grid{display:grid}.two-cols{grid-template-columns:repeat(auto-fill, minmax(30vw, 1fr))}.gap-sm{grid-gap:1rem}.filterLabel{padding:0.2rem;line-height:1;white-space:nowrap;display:inline-block;vertical-align:top;border-radius:5px;font-weight:bold;text-decoration:underline}.tagInput{top:100px}.relative{position:relative}.textLink{text-align:left;font-size:1rem}@keyframes color{0%{fill:#ffadad}13%{fill:#ffd6a5}26%{fill:#fdffb6}39%{fill:#caffbf}52%{fill:#9bf6ff}65%{fill:#a0c4ff}78%{fill:#bdb2ff}91%{fill:#ffc6ff}100%{fill:#ffadad}}:root{--tips: #329b9b}@keyframes tipsColor{0%{color:var(--tips)}25%{color:#3ea5a5}50%{color:#55b3b3}75%{color:#3a9999}100%{color:var(--tips)}}.tipsColor{color:var(--tips);fill:currentColor;stroke:currentColor}.outline{stroke:#000000;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:.8;stroke-width:.2rem}.logo a:hover,.logo a:focus{background:none}.logo a:hover .tipsColor,.logo a:focus .tipsColor{color:var(--link-hover-bg)}
 </style> 
@@ -26,7 +28,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="manifest" href="/site.webmanifest"></head>
-    <body class="term "><header class="container smFlex align-center space-between">
+    <body class="page "><header class="container smFlex align-center space-between">
     
 
     <div class="logo">
@@ -2633,25 +2635,47 @@
     </a>
 </div><a href="#footer-nav" class="skip-link">Skip to Footer Links</a>
 </header>
-<main class="container prose">
-    <article>
-        <header>
-            <h1>Markdown</h1>
-        </header>
+<main class="container"><article class="prose">
+    <h1>Saving Inkscape SVGs for Internet Use</h1>
+    
+        <time datetime="2021-08-24 14:17:02 -0500 CDT">Published: August 24, 2021</time>
         
-    </article>
-    <ul>
-        <li>
-            <a href="https://toughpixels.com/tips/loading-hugo-into-github-pages/">2020-12-13 | Loading Hugo Into Github Pages</a>
-        </li>
-        <li>
-            <a href="https://toughpixels.com/tips/hugo-fastest-custom-setup-making-a-theme/">2020-09-25 | Hugo Fastest Custom Setup, Building a Theme</a>
-        </li>
-        <li>
-            <a href="https://toughpixels.com/tips/making-a-homepage-with-hugo/">2020-09-08 | Making a Custom Hugo Homepage</a>
-        </li>
-    </ul>
+    
+    <p>SVGs are a great option for making simple, scalable graphics, logos, and animations. <a href="https://inkscape.org/">Inkscape</a> is a free open source program for making <a href="https://inkscape.org/develop/about-svg/">SVGs</a>.</p>
+<p>It&rsquo;s great to draw cool stuff in Inkscape, but it&rsquo;s a pain to get Inkscape SVGs to display properly on the web. We&rsquo;ll show you how to clean up SVGs so when you save them so they obey CSS rules.</p>
+<h2 id="setting-your-document-properties">Setting Your Document Properties</h2>
+<p>Check in on your Document Properties by going to <code>File &gt; Document Properties.</code> Here you&rsquo;ll manage unit size and canvas size.</p>
+<h3 id="keeping-inkscape-in-pixels-and-sizing-properly">Keeping Inkscape In Pixels and Sizing Properly</h3>
+<p>Check that your <code>Display Units</code> and <code>Units</code> are set to <code>px</code>. In this interface, you can also size canvas you&rsquo;re using. We like starting with a 1000 x 1000 pixel square. While you&rsquo;re here, setting the <code>Viewbox</code> fields to start at 0,0 and be 1000 units wide makes reasoning about your SVG much easier.</p>
+<p><img src="screenshot-from-2021-09-03-14-26-28.png" alt="Screenshot of the Document Properties screen in Inkscape" title="Recommended Inkscape Document Properties"></p>
+<h3 id="making-svgs-smaller">Making SVGs Smaller</h3>
+<p>By default, SVG gives you a lot of numerical precision when making SVGs. On the web, this can be a liability, and make edits much harder. Reduce the size of your files by going to <code>Edit &gt; Preferences</code>, find the <code>SVG Output</code> option, and reduce the <code>Numerical precision</code> to 1 or 2 to save decimal places.</p>
+<h3 id="saving-work-for-later">Saving Work For Later</h3>
+<p>Inkscape provides templates for saving work you&rsquo;ll commonly set. Once you set up your display units and canvas size, use those defaults by saving a <code>default.svg</code> file. Then, every SVG you make in the future will have those properties.</p>
+<p>Find out where to save your template by checking your <code>Preferences</code> , then finding <code>System</code>. There, you&rsquo;ll see the <code>User config:</code> field. That folder will contain a <code>templates</code> directory. Save your configured, blank SVG as <code>default.svg</code> in that templates folder and skip setup next time.</p>
+<h2 id="draw-something-cool">Draw Something Cool</h2>
+<p>Second step: draw an SVG in Inkscape. We drew this!</p>
+<p><img src="bitmap.png" alt="Three bubbles of various sizes floating inside a square." title="Simple Inkscape Drawing"></p>
+<h3 id="resizing-the-canvas">Resizing The Canvas</h3>
+<p>Once your drawing is done, you&rsquo;ll often want to resize the canvas. Go back to <code>Document Properties</code>, and expand <code>Resize page to content...</code>, set any margins you want, then click <code>Resize page to drawing or selection</code>.</p>
+<h2 id="removing-tags-with-the-xml-editor">Removing Tags with the XML Editor</h2>
+<p>Once everything is in pixels, the heart of cleaning your SVG is removing a bunch of unwanted Inkscape defaults. Under <code>Edit &gt; XML Editor</code> you&rsquo;ll open an <code>XML Editor</code> interface for directly modifying the text output for the SVG. Give this screen space, you&rsquo;ll want it.</p>
+<h3 id="fixing-size-in-the-svgsvg-base-element">Fixing Size In The <code>&lt;svg:svg&gt;</code> Base Element</h3>
+<p>Get the lowest level of your SVG you get by clicking <code>svg:svg</code> in the <code>XML Editor</code>. Immediately delete the inline <code>width</code> and <code>height</code> attributes. Inkscape will replace them with a default 100% value, which means your SVG will fill a container <code>div</code> element.</p>
+<p>Clean up your code by editing the `id` element while you&rsquo;re here. It&rsquo;s very powerful to apply JavaScript to SVGs, start by giving things descriptive element names.</p>
+<h3 id="keeping-your-css-style-by-editing-svgpath">Keeping Your CSS Style By Editing <code>&lt;svg:path&gt;</code></h3>
+<p>Inkscape puts SVG styles inline on path elements. Click on each <code>path</code>, select the <code>style</code> element, and click <code>Delete Attribute</code>. This is also a good time to put descriptive <code>id</code> fields on any paths you want to modify with CSS animations or JavaScript.</p>
+<h2 id="where-to-put-style">Where To Put Style?</h2>
+<p>Now that the style has been removed from the <code>path</code> element, you can keep it inline as CSS on the SVG, or move the style out to your website&rsquo;s CSS. Whatever you think is easier.</p>
+<h3 id="the-svgmetadata-element">The <code>&lt;svg:metadata&gt;</code> Element</h3>
+<p>Can be safely removed.</p>
+<h2 id="fixing-inkscape-svgs-for-the-web">Fixing Inkscape SVGs For The Web</h2>
+<p>We covered setting up default unit and canvas size in Inkscape, creating a default template, and using an XML editor to clean up inline styles from Inkscape SVGs.</p>
+<h4 id="good-luck-making-something-beautiful">Good luck making something beautiful!</h4>
+
+</article>
 </main>
+
         <footer class="container site-footer mt-lg">
     <div class="tc">
 
@@ -2833,10 +2857,10 @@
         
 
         label.all {
-            color: rgb(1,16,47);
+            color: rgb(63,80,22);
         }
         #all:checked ~ .filterLabels [for="all"] {
-            background-color: rgb(1,16,47);
+            background-color: rgb(63,80,22);
             color: #fff;
             text-decoration: none;
         }
@@ -2846,10 +2870,10 @@
         
 
         label.api {
-            color: rgb(92,52,39);
+            color: rgb(25,18,3);
         }
         #api:checked ~ .filterLabels [for="api"] {
-            background-color: rgb(92,52,39);
+            background-color: rgb(25,18,3);
             color: #fff;
             text-decoration: none;
         }
@@ -2859,10 +2883,10 @@
         
 
         label.beginner {
-            color: rgb(92,23,72);
+            color: rgb(61,9,64);
         }
         #beginner:checked ~ .filterLabels [for="beginner"] {
-            background-color: rgb(92,23,72);
+            background-color: rgb(61,9,64);
             color: #fff;
             text-decoration: none;
         }
@@ -2872,10 +2896,10 @@
         
 
         label.browser {
-            color: rgb(87,78,94);
+            color: rgb(49,62,41);
         }
         #browser:checked ~ .filterLabels [for="browser"] {
-            background-color: rgb(87,78,94);
+            background-color: rgb(49,62,41);
             color: #fff;
             text-decoration: none;
         }
@@ -2885,10 +2909,10 @@
         
 
         label.bug-fix {
-            color: rgb(98,79,76);
+            color: rgb(51,9,86);
         }
         #bug-fix:checked ~ .filterLabels [for="bug-fix"] {
-            background-color: rgb(98,79,76);
+            background-color: rgb(51,9,86);
             color: #fff;
             text-decoration: none;
         }
@@ -2898,10 +2922,10 @@
         
 
         label.css {
-            color: rgb(55,61,54);
+            color: rgb(68,7,94);
         }
         #css:checked ~ .filterLabels [for="css"] {
-            background-color: rgb(55,61,54);
+            background-color: rgb(68,7,94);
             color: #fff;
             text-decoration: none;
         }
@@ -2911,10 +2935,10 @@
         
 
         label.dns {
-            color: rgb(36,48,79);
+            color: rgb(11,3,83);
         }
         #dns:checked ~ .filterLabels [for="dns"] {
-            background-color: rgb(36,48,79);
+            background-color: rgb(11,3,83);
             color: #fff;
             text-decoration: none;
         }
@@ -2924,10 +2948,10 @@
         
 
         label.domains {
-            color: rgb(68,29,69);
+            color: rgb(59,70,93);
         }
         #domains:checked ~ .filterLabels [for="domains"] {
-            background-color: rgb(68,29,69);
+            background-color: rgb(59,70,93);
             color: #fff;
             text-decoration: none;
         }
@@ -2937,10 +2961,10 @@
         
 
         label.github-pages {
-            color: rgb(60,92,13);
+            color: rgb(14,56,39);
         }
         #github-pages:checked ~ .filterLabels [for="github-pages"] {
-            background-color: rgb(60,92,13);
+            background-color: rgb(14,56,39);
             color: #fff;
             text-decoration: none;
         }
@@ -2950,10 +2974,10 @@
         
 
         label.go {
-            color: rgb(91,90,94);
+            color: rgb(9,85,29);
         }
         #go:checked ~ .filterLabels [for="go"] {
-            background-color: rgb(91,90,94);
+            background-color: rgb(9,85,29);
             color: #fff;
             text-decoration: none;
         }
@@ -2963,10 +2987,10 @@
         
 
         label.html {
-            color: rgb(60,39,10);
+            color: rgb(23,11,22);
         }
         #html:checked ~ .filterLabels [for="html"] {
-            background-color: rgb(60,39,10);
+            background-color: rgb(23,11,22);
             color: #fff;
             text-decoration: none;
         }
@@ -2976,10 +3000,10 @@
         
 
         label.http {
-            color: rgb(20,83,27);
+            color: rgb(60,28,73);
         }
         #http:checked ~ .filterLabels [for="http"] {
-            background-color: rgb(20,83,27);
+            background-color: rgb(60,28,73);
             color: #fff;
             text-decoration: none;
         }
@@ -2989,10 +3013,10 @@
         
 
         label.hugo {
-            color: rgb(22,92,16);
+            color: rgb(47,71,67);
         }
         #hugo:checked ~ .filterLabels [for="hugo"] {
-            background-color: rgb(22,92,16);
+            background-color: rgb(47,71,67);
             color: #fff;
             text-decoration: none;
         }
@@ -3002,10 +3026,10 @@
         
 
         label.iframes {
-            color: rgb(57,4,37);
+            color: rgb(33,71,68);
         }
         #iframes:checked ~ .filterLabels [for="iframes"] {
-            background-color: rgb(57,4,37);
+            background-color: rgb(33,71,68);
             color: #fff;
             text-decoration: none;
         }
@@ -3015,10 +3039,10 @@
         
 
         label.markdown {
-            color: rgb(2,22,96);
+            color: rgb(27,71,24);
         }
         #markdown:checked ~ .filterLabels [for="markdown"] {
-            background-color: rgb(2,22,96);
+            background-color: rgb(27,71,24);
             color: #fff;
             text-decoration: none;
         }
@@ -3028,10 +3052,10 @@
         
 
         label.project {
-            color: rgb(21,66,65);
+            color: rgb(85,23,86);
         }
         #project:checked ~ .filterLabels [for="project"] {
-            background-color: rgb(21,66,65);
+            background-color: rgb(85,23,86);
             color: #fff;
             text-decoration: none;
         }
@@ -3041,10 +3065,10 @@
         
 
         label.responsive-sites {
-            color: rgb(77,90,65);
+            color: rgb(2,41,68);
         }
         #responsive-sites:checked ~ .filterLabels [for="responsive-sites"] {
-            background-color: rgb(77,90,65);
+            background-color: rgb(2,41,68);
             color: #fff;
             text-decoration: none;
         }
@@ -3054,10 +3078,10 @@
         
 
         label.sass {
-            color: rgb(87,19,85);
+            color: rgb(48,82,21);
         }
         #sass:checked ~ .filterLabels [for="sass"] {
-            background-color: rgb(87,19,85);
+            background-color: rgb(48,82,21);
             color: #fff;
             text-decoration: none;
         }
@@ -3067,10 +3091,10 @@
         
 
         label.scss {
-            color: rgb(54,76,94);
+            color: rgb(79,5,29);
         }
         #scss:checked ~ .filterLabels [for="scss"] {
-            background-color: rgb(54,76,94);
+            background-color: rgb(79,5,29);
             color: #fff;
             text-decoration: none;
         }
@@ -3080,10 +3104,10 @@
         
 
         label.static-site-generator {
-            color: rgb(39,93,89);
+            color: rgb(23,9,95);
         }
         #static-site-generator:checked ~ .filterLabels [for="static-site-generator"] {
-            background-color: rgb(39,93,89);
+            background-color: rgb(23,9,95);
             color: #fff;
             text-decoration: none;
         }
@@ -3093,10 +3117,10 @@
         
 
         label.svg {
-            color: rgb(18,7,82);
+            color: rgb(34,35,53);
         }
         #svg:checked ~ .filterLabels [for="svg"] {
-            background-color: rgb(18,7,82);
+            background-color: rgb(34,35,53);
             color: #fff;
             text-decoration: none;
         }

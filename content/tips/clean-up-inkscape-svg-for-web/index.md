@@ -1,7 +1,8 @@
 ---
 title: Saving Inkscape SVGs for Internet Use
-image: bitmap.png
-description: Inkscape is a great program for making SVG designs. We step through cleaning up an Inkscape SVG so it works well with CSS and HTML.
+header: bitmap.png
+description: Inkscape is a great program for making SVG designs. We step through
+  cleaning up an Inkscape SVG so it works well with CSS and HTML.
 tags:
   - svg
   - css
@@ -65,6 +66,6 @@ Can be safely removed.
 
 ## Fixing Inkscape SVGs For The Web
 
-We covered setting up default unit and canvas size in Inkscape, creating a default template, and using an XML editor to remove inline styles from Inkscape SVGs.
+We covered setting up default unit and canvas size in Inkscape, creating a default template, and using an XML editor to clean up inline styles from Inkscape SVGs.
 
 #### Good luck making something beautiful!
