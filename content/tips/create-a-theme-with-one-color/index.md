@@ -1,7 +1,8 @@
 ---
 title: "Create a Theme With One Color"
 date: 2021-05-10T14:48:48-05:00
-tags: 
+tags:
+    - scss
 description: "Here's how to use SASS to generate a theme from a single color."
 draft: false
 ---
@@ -59,7 +60,7 @@ Here's an example theme using a version of this mixin:
 
 {{< aside >}}
 #### Tip
-Make sure that your input color is dark enough that it contrasts well with your light background.  You can test the accessiblity of your colors in Chrome or Brave by following these steps: 
+Make sure that your input color is dark enough that it contrasts well with your light background.  You can test the accessiblity of your colors in Chrome or Brave by following these steps:
 1. open the code inspector ([ctrl] + [shift] + [i])
 2. click the "lighthouse" tab
 3. click "generate report"
