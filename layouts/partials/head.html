@@ -1,11 +1,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ block "title" . }}{{ if .Title }}{{ .Title }} | {{ end }}{{end }}{{ .Site.Title }}</title>
+    <title>{{ .Title }}</title>
     <meta name="description" content="{{if .IsHome}}{{ $.Site.Params.description }}{{else}}{{.Description}}{{end}}">
-    <meta name="keywords" content="Hugo, HTML, CSS, JavaScript, Personal Growth, Tutorial">
+    <meta name="keywords" content="Hugo, HTML, CSS, and JavaScript tutorials put into context by simple technology overviews.">
     <meta name="author" content="Tough Pixels">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Baloo+Tamma&display=swap">
     {{ template "_internal/opengraph.html" . }}
     {{ template "_internal/twitter_cards.html" . }}
     {{- partial "vitalcss.html" . -}}
