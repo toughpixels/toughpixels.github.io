@@ -5,7 +5,6 @@ tags:
 - Hugo
 - Markdown
 - HTML
-- Go
 - CSS
 - project
 description: "Use Hugo's buit in theme generator to build a homepage fast."
