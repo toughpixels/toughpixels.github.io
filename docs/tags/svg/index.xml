@@ -1,22 +1,3 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>svg on Tough Pixels Tips</title>
-    <link>https://toughpixels.com/tags/svg/</link>
-    <description>Recent content in svg on Tough Pixels Tips</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 24 Aug 2021 14:17:02 -0500</lastBuildDate><atom:link href="https://toughpixels.com/tags/svg/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Saving Inkscape SVGs for Internet Use</title>
-      <link>https://toughpixels.com/tips/clean-up-inkscape-svg-for-web/</link>
-      <pubDate>Tue, 24 Aug 2021 14:17:02 -0500</pubDate>
-      
-      <guid>https://toughpixels.com/tips/clean-up-inkscape-svg-for-web/</guid>
-      <description>SVGs are a great option for making simple, scalable graphics, logos, and animations. Inkscape is a free open source program for making SVGs.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>svg on Tough Pixels Tips</title><link>https://toughpixels.com/tags/svg/</link><description>Recent content in svg on Tough Pixels Tips</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 24 Aug 2021 14:17:02 -0500</lastBuildDate><atom:link href="https://toughpixels.com/tags/svg/index.xml" rel="self" type="application/rss+xml"/><item><title>Saving Inkscape SVGs for Internet Use</title><link>https://toughpixels.com/tips/clean-up-inkscape-svg-for-web/</link><pubDate>Tue, 24 Aug 2021 14:17:02 -0500</pubDate><guid>https://toughpixels.com/tips/clean-up-inkscape-svg-for-web/</guid><description>SVGs are a great option for making simple, scalable graphics, logos, and animations. Inkscape is a free open source program for making SVGs.
 It&amp;rsquo;s great to draw cool stuff in Inkscape, but it&amp;rsquo;s a pain to get Inkscape SVGs to display properly on the web. We&amp;rsquo;ll show you how to clean up SVGs so when you save them so they obey CSS rules.
-Setting Your Document Properties Check in on your Document Properties by going to File &amp;gt; Document Properties.</description>
-    </item>
-    
-  </channel>
-</rss>
+Setting Your Document Properties Check in on your Document Properties by going to File &amp;gt; Document Properties.</description></item></channel></rss>

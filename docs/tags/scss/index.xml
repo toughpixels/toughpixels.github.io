@@ -1,33 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>scss on Tough Pixels Tips</title>
-    <link>https://toughpixels.com/tags/scss/</link>
-    <description>Recent content in scss on Tough Pixels Tips</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 10 May 2021 14:48:48 -0500</lastBuildDate><atom:link href="https://toughpixels.com/tags/scss/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Create a Theme With One Color</title>
-      <link>https://toughpixels.com/tips/create-a-theme-with-one-color/</link>
-      <pubDate>Mon, 10 May 2021 14:48:48 -0500</pubDate>
-      
-      <guid>https://toughpixels.com/tips/create-a-theme-with-one-color/</guid>
-      <description>SASS makes it easy to generate a theme from a single color using a mixin like this:
-@mixin generateTheme($color) { $btnAltColor: lighten($color, 20%); .bg-dark { background-color: darken($color, 30%); color: #fff; } .bg-offwhite { background-color: lighten($color, 57%); } a { color: $color; &amp;amp;:hover, &amp;amp;:focus { background: $color; color: #fff; } } .btn-secondary { color: $color; border-color: currentColor; background-color: #fff; &amp;amp;:hover, &amp;amp;:focus { color: $btnAltColor; background-color: #fff; } } .btn-primary { color: #fff; background: $color; border-color: $color; &amp;amp;:hover, &amp;amp;:focus { background: $btnAltColor; border-color: $btnAltColor; } } .</description>
-    </item>
-    
-    <item>
-      <title>Creating Responsive iFrames</title>
-      <link>https://toughpixels.com/tips/creating-responsive-iframes/</link>
-      <pubDate>Tue, 17 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://toughpixels.com/tips/creating-responsive-iframes/</guid>
-      <description>The Problem Whenever you pull some iFrame code from a 3rd party site (like YouTube or Bandcamp) to embed on your site, it will have an inline height and width defined in pixels.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>scss on Tough Pixels Tips</title><link>https://toughpixels.com/tags/scss/</link><description>Recent content in scss on Tough Pixels Tips</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 10 May 2021 14:48:48 -0500</lastBuildDate><atom:link href="https://toughpixels.com/tags/scss/index.xml" rel="self" type="application/rss+xml"/><item><title>Create a Theme With One Color</title><link>https://toughpixels.com/tips/create-a-theme-with-one-color/</link><pubDate>Mon, 10 May 2021 14:48:48 -0500</pubDate><guid>https://toughpixels.com/tips/create-a-theme-with-one-color/</guid><description>SASS makes it easy to generate a theme from a single color using a mixin like this:
+@mixin generateTheme($color) { $btnAltColor: lighten($color, 20%); .bg-dark { background-color: darken($color, 30%); color: #fff; } .bg-offwhite { background-color: lighten($color, 57%); } a { color: $color; &amp;amp;:hover, &amp;amp;:focus { background: $color; color: #fff; } } .btn-secondary { color: $color; border-color: currentColor; background-color: #fff; &amp;amp;:hover, &amp;amp;:focus { color: $btnAltColor; background-color: #fff; } } .btn-primary { color: #fff; background: $color; border-color: $color; &amp;amp;:hover, &amp;amp;:focus { background: $btnAltColor; border-color: $btnAltColor; } } .</description></item><item><title>Creating Responsive iFrames</title><link>https://toughpixels.com/tips/creating-responsive-iframes/</link><pubDate>Tue, 17 Nov 2020 00:00:00 +0000</pubDate><guid>https://toughpixels.com/tips/creating-responsive-iframes/</guid><description>The Problem Whenever you pull some iFrame code from a 3rd party site (like YouTube or Bandcamp) to embed on your site, it will have an inline height and width defined in pixels.
 &amp;lt;iframe width=&amp;quot;560&amp;quot; height=&amp;quot;315&amp;quot; src=&amp;quot;...&amp;quot;&amp;gt;&amp;lt;/iframe&amp;gt;
 This is because iFrames are like little windows into another site and need to have a defined size so that everything that site wants to display in its iFrame will be visible.
-If you want your iFrame to fill 100% of its allotted space, it&amp;rsquo;s not enough to make the width &amp;ldquo;100%&amp;rdquo; because its height won&amp;rsquo;t follow suit.</description>
-    </item>
-    
-  </channel>
-</rss>
+If you want your iFrame to fill 100% of its allotted space, it&amp;rsquo;s not enough to make the width &amp;ldquo;100%&amp;rdquo; because its height won&amp;rsquo;t follow suit.</description></item></channel></rss>
