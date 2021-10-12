@@ -1,7 +1,8 @@
 ---
 title: "Hugo Image Processing: Total Control and Sensible Defaults"
 description: "Hugo offers image resizing, Exif manipulation, and "
-tags: null
+tags:
+  - hugo
 date: 2021-04-24T05:53:07-05:00
 draft: true
 ---
@@ -22,4 +23,4 @@ Order the `imageSizes` large to small. The last `imageFormats` entry is the defa
 
 ## Making a Template
 
-Next, make the template for 
+Next, make the template for your images.
