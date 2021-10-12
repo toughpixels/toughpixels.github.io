@@ -17,6 +17,9 @@ Before we do anything else, let's add your defaults in the `config.toml` file. A
   imageSizes = "1280 768 640 320"
   imageFormats = "webp jpeg"
 ```
+
 Order the `imageSizes` large to small. The last `imageFormats` entry is the default file format. Set the values to what you want as a default. 
 
-## 
+## Making a Template
+
+Next, make the template for 
