@@ -1,121 +1,127 @@
 ---
-title: "Hugo Fastest Custom Setup, Building a Theme"
-date: 2020-09-25T20:06:44-05:00
+title: Fastest Custom Hugo Setup; Copying An Empty Theme
+image: charlotte-coneybeer-l9vxw4a9qzm-unsplash.jpg
+description: Hugo is perfect for building customized websites. Here is a fast
+  way to get started without a theme. You'll create files to work with and learn
+  how to use them.
 tags:
-- Hugo
-- Markdown
-- HTML
-- CSS
-- project
-description: "Use Hugo's buit in theme generator to build a homepage fast."
+  - Hugo
+  - Beginner
+  - HTML
+  - project
+date: 2020-09-25T20:06:44-05:00
 ---
+Hugo is perfect for building extremely customized static HTML websites. If you're learning or want to skip using a theme for any reason; here's a trick to quickly create the files almost every Hugo site uses, and an explanation of how to use them.
 
-## Orienting for Speed
+## Where Are The Layout Files?
 
-[Hugo](https://gohugo.io/) is a way to write an HTML website using the [Go](https://golang.org/) programming language. It's nice, because you use lots of [HTML](https://www.w3schools.com/html/html_intro.asp) and a little Go. The fastest way to build a custom Hugo site is starting your own theme.
+Try this:
 
-## Command Line, Activate Theme
-
-Open your terminal, check your installation and version of Hugo, and let's run some commands. You can rename the last word of these, they use silly placeholder names.
-
-````
-# if you have a site, skip this
-hugo new site best-website-ever
-# move into the project directory
+```
+hugo new site {{< project >}}
 cd {{< project >}}
-hugo new theme theme-time-now
-````
+hugo new theme temp
+cp -r themes/temp/layouts/* layouts/
+rm -rf themes/temp
+```
 
-### Outcome
-Look at the new files with `ls themes/theme-time-now`. The file structure is similar to a `hugo new site` command.
+These commands will create all the layout files you need to get started. For now, the only file that's not empty is the `_default/baseof.html`. The final result is on GitHub.
 
-### Differences
-There is no `content`, and some default `layouts` and `partials` have been created to kickstart your custom theme. Woo!
+## Hooking Into Your Baseof Layout
 
-### Make The Theme Appear
-Your website hasn't heard about your theme yet. Tell your site by editing `config.toml` in the `{{< project >}}` folder. Add this line: `theme = "theme-time-now"` and save.
-
-## Wiring Components Together
-
-All code described from here is inside `best-website-ever/themes/theme-time-now/layouts/`.
-
-### Theme Layouts
-
-To hook your pages to the `_default/_baseof.html` layout, use this Go code.
-
-````
-{{- define "main" }}
-{{- end }}
-````
-
- To jump start your homepage, add it to `index.html`. You can also add it to `_default/list.html` and `_default/single.html`. These files are two primary categories for your content.
-
-### Filling Out Main
-
-When building your site, Hugo will convert any Go code in a `.html` file into HTML. Open `index.html` again and write something like this.
+Tell your pages to wrap themselves in the `baseof.html` layout with this code.
 
 ```
 {{- define "main" }}
+{{- end }}
+```
+
+You'll add this to any `layout` that builds a page for your site. For now, that's the `index.html` (your [homepage](https://gohugo.io/templates/homepage/)), the `_default/list.html` ([summary pages](https://gohugo.io/templates/lists/)), and `_default/single.html` ([single pages](https://gohugo.io/templates/single-page-templates/)).
+
+### Filling Out The Homepage
+
+To get something on your homepage, open `index.html` and fill in some HTML.
+
+```
+{{- define "main" }}
+    <div>{{ .Title }}</div>
+    <div>We're Home!</div>
+    <div>{{ .Content }}</div>
+{{- end }}
+```
+
+You sprinkle in Go using the `{{}}` double curly braces, and write HTML for the rest.
+
+To add homepage content run: `hugo new _index.md`. 
+
+This command will generate files using the templates in the `archetypes` folder. For now it's pulling from `default.md`. Look at `content/_index.md` file that was generated to add a title and some content.
+
+```
+---
+title: "My Homepage Title"
+date: 2021-10-12T10:15:20-06:00
+draft: true
+---
+My Homepage Content!
+```
+
+Because of the archetype we're using, everything gets generated as a `draft`. You can either delete the draft parameter, or run your server with the draft flag: `hugo server -D`.
+
+For the homepage, you can delete the `draft` and `date` parameters.
+
+## Other Kinds Of Pages
+
+The process for filling in other kinds of pages is similar. Make a template, then add content.
+
+### Single Page Templates
+For a single page, add this to the `layouts/default/single.html` file:
+```
+{{- define "main" }}
+    <div>{{ .Title }}</div>
+    <div>It's a single page!</div>
+    <div>{{ .Content }}</div>
+{{- end }}
+```
+### Single Page Content
+Make a single `post` by running `hugo new posts/first.md`, then add a bit of content to `content/posts/first.md`:
+```
+---
+title: "First"
+date: 2021-11-12T11:10:34-06:00
+---
+My First Post!
+```
+You can see this page my going to [localhost:1313/posts/first](http://localhost:1313/posts/first)
+### List Page Templates
+List pages are a little more complicated. They display information from other pages, which is stored in the Hugo framework. You'll normally use Go code to make list pages useful.
+
+Edit the `layouts/_default/list.html` file. There you'll `[range](https://gohugo.io/functions/range/)` over pages, display their title and link to them.
+ 
+```
+{{- define "main" }}
+    <div>{{ .Title }}</div>
+    <div>List Page Content:</div>
+    {{ range .Pages }}
     <div>
-        {{ .Title }}
+        <a href="{{.Permalink}}">
+            {{.Title}}
+        </a>
     </div>
-    <div>It's Home!</div>
+    {{ end }}
 {{- end }}
 ```
+In Hugo, the file structure of your content builds your routes, so this page already exists because the `posts` directory exists. Visit it at [localhost:1313/posts](http://localhost:1313/posts/).
 
-You can sprinkle in Go wherever you need by using the `{{}}` double curly braces, and you can choose to write HTML all day.
+If you wanted to include some custom content on this list page, you'd add an `_index.html` file to the content directory with this command: 
 
-### Partials Hold Best Practices
+ content file `_index.html`.
 
-Inside the `_default/_baseof.html` file is a HTML skeleton and partials for `head`, `header`, and `footer`. Static HTML sites do best when they are well planned. Apply best practices to your website now, starting with the `head` partial. Check tools like [Lighthouse](https://developers.google.com/web/tools/lighthouse/) and [WebAIM](https://webaim.org/) regularly to maintain high usability for your site.
+## Checking Your Work
 
-## Partials Every Website Needs
+At any time, you can run `hugo server` and check the progress by opening [localhost:1313](http://localhost:1313/) in your browser. If you don't see anything: 
+- Check if your content is done with the `draft` phase. Do you see anything different running `hugo server -D`?
+- Read your terminal output. There could be an error, or your code could be running on a different port.
 
-### Inside the Head
+## Jump Started Hugo Skeleton
 
-It's helpful to know every element a `<head>` [tag](https://www.w3schools.com/html/html_head.asp_) can contain. Many are important for search engines. It's early in the `<html>` document, and search engines can load this without accidentally downloading every image on the world wide web. Try to make sure your head partial contains these elements!
-
-1. A title tag. To make it unique for every page, we use some Hugo code.
-1. Several `meta` tags with different `name` attributes.
-    * `viewport` Helps you [look good](https://www.w3schools.com/css/css_rwd_viewport.asp) on phones.
-    * `keywords` Set your search engine keywords, be accurate and concise. Keep it under a dozen words.
-    * `description` Write a sentence that describes your page well.
-1. Some CSS. We can use Hugo to process the CSS file before it's sent out for users.
-    * You have to build a special home for this file, in `best-website-ever/themes/theme-time-now/assets/main.css`. Create this file (and `asset` folder) to apply CSS style.
-
-```
-<head>
-    <title>{{ .Title }} | {{ .Site.Title }}<title>
-    <meta name="viewport" content="width=device-width, initial-scale=0">
-    <meta name="description" content="I want to be searched, engine.">
-    <meta name="keywords" content="My Interests, Growth, Happiness">
-    {{ $style := resources.Get "css/main.css" }}
-    <link rel="stylesheet" href="{{ $style.RelPermalink }}>
-</head>
-```
-
-### Taking on the Header
-
-A header is visible to most visitors on most pages. This is a final moment to take a breath and carefully plan your website. Decide what to share, what to highlight, how to invite feedback, and examine any  personal information you're making public.
-
-A common choice is to make the header a [navigation system](https://www.w3schools.com/css/css_navbar.asp) to highlight the most important ideas and links.
-
-This is a `.html` file, so you can start very simple, in `best-website-ever/themes/theme-time-now/layouts/partial/header.html` add:
-
-```
-<div>
-    It's header time.
-</div>
-```
-
-### What to Footer
-
-Footers can contain stuff you want on every page, but don't need to highlight. JavaScript that can run whenever, copyrights, and contact information are common. Check out the [Hugo documentation](https://gohugo.io/templates/partials/#example-footerhtml) for a good example! You could also build a beautiful soundscape bounding over the whole website landscape. I believe in you.
-
-## Checking Our Work
-
-At any time, you can run `hugo server` and check the your progress by opening [localhost:1313](http://localhost:1313/) in your browser.
-
-## Goodbye
-
-With the theme skeleton, you get homepage, list page, and single page layouts. You get partials for a solid HTML skeleton, and a 404 page. Good start!
+With the theme skeleton, you get a homepage, list pages, and single page layouts. You can read about how to use the generated partials for a  also get partials for a solid HTML skeleton, and a 404 page. It's a great start for any site, especially if you want to build something custom without a theme.
