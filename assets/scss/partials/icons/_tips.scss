@@ -1,23 +1,6 @@
-:root{
-  --tips: #329b9b;
-}
-
-@keyframes tipsColor {
-    0% { color: var(--tips);}
-    25% {color:#3ea5a5;}
-    50% {color:#55b3b3;}
-    75% {color: #3a9999;}
-    100% {color: var(--tips);}
-}
-
-.tipsColor {
-    color: var(--tips);
-    fill: currentColor;
-    stroke: currentColor;
-}
-
 .outline {
-    stroke:#000000;
+    fill:none;
+    stroke:var(--article-preview-text);
     stroke-linecap:butt;
     stroke-linejoin:round;
     stroke-miterlimit:4;
@@ -26,9 +9,39 @@
     stroke-width:.2rem;
  }
 
+ .color {
+    animation-name: color;
+    fill: var(--background);
+ }
+
+hr {
+    border-top: 8px solid;
+    border-radius: 4px;
+    border-color: var(--article-preview-shadow);
+    width: 66%;
+    margin: auto;
+    &:hover, &:focus {
+        border-color: var(--article-preview-hover);
+    }
+}
+
 .logo a:hover,.logo a:focus {
     background: none;
     .tipsColor {
         color: var(--link-hover-bg);
     }
+}
+
+.tough path {
+    fill: var(--article-preview-shadow);
+    stroke: var(--article-preview-text);
+    stroke-width: .2rem;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.w-50 {
+    width: 50%;
 }

@@ -4,13 +4,16 @@
     --dark:  black;
     --primary: azure;
     --link-hover-bg: #2D6FE7;
-    --home-hover: var(--primary);
+    --home-hover: #e71a3c;
     --twitter-hover: rgba(29,161,242,1.00);
-    --contact-hover: var(--pink);
     --article-preview-bg: #8bb4f6cf;
     --article-preview-text: #100a14;
-    --article-preview-shadow: #1f1963e8;
-    --article-preview-hover: #f336d6c2;
+    --article-preview-shadow: #0a0640d4;
+    --article-preview-hover: #f336d6;
+    --article-background-hover: #eca0ff;
+    --code-start: #eca0ff;
+    --code-middle: #aab2ff;
+    --code-end: #84ffc9;
     --font-default: sans-serif;
     --font-fancys: 'Baloo Tamma', sans-serif;
 }
