@@ -121,7 +121,7 @@ main {
     background: var(--article-preview-bg);
     border: .1em solid black;
     color: var(--article-preview-text);
-    box-shadow: .2em .2em black;
+    box-shadow: .2em .2em var(--article-preview-shadow);
     &:hover, &:focus {
         border-color: var(--article-preview-text);
         box-shadow: .2em .2em var(--article-preview-hover);

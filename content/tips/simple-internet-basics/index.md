@@ -7,6 +7,7 @@ tags:
   - beginner
 date: 2021-08-15T14:17:02-05:00
 image: computer-server-it-knows-internet-protocol-rules.jpg
+draft: true
 ---
 
 # The Very Big Picture
