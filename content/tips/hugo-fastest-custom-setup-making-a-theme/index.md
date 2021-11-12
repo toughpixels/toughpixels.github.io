@@ -1,73 +1,61 @@
 ---
-title: "Hugo Fastest Custom Setup, Building a Theme"
-date: 2020-09-25T20:06:44-05:00
+title: The Fastest Custom Hugo Setup; Copying A Theme Skeleton
+image: charlotte-coneybeer-l9vxw4a9qzm-unsplash.jpg
+description: Hugo is perfect for building extremely customized websites. If you
+  want to get started without a theme, here's a trick to create the empty files
+  you'll work with.
 tags:
-- Hugo
-- Markdown
-- HTML
-- CSS
-- project
-description: "Use Hugo's buit in theme generator to build a homepage fast."
+  - Hugo
+  - Beginner
+  - HTML
+  - CSS
+  - project
+date: 2020-09-25T20:06:44-05:00
 ---
+Hugo is perfect for building extremely customized websites. If you want to get started without a theme, here's a trick to create the files you'll work with.
 
-## Orienting for Speed
+## What Layout Files Should I Make?
 
-[Hugo](https://gohugo.io/) is a way to write an HTML website using the [Go](https://golang.org/) programming language. It's nice, because you use lots of [HTML](https://www.w3schools.com/html/html_intro.asp) and a little Go. The fastest way to build a custom Hugo site is starting your own theme.
-
-## Command Line, Activate Theme
-
-Open your terminal, check your installation and version of Hugo, and let's run some commands. You can rename the last word of these, they use silly placeholder names.
-
-````
-# if you have a site, skip this
-hugo new site best-website-ever
-# move into the project directory
+```
+hugo new site {{< project >}}
 cd {{< project >}}
-hugo new theme theme-time-now
-````
+hugo new theme temp
+cp -r themes/temp/layouts/ layouts/
+rm -rf themes/temp
+```
 
-### Outcome
-Look at the new files with `ls themes/theme-time-now`. The file structure is similar to a `hugo new site` command.
+These commands will create the layout files you need for most sites. For now, the only file that's not empty is the `_default/baseof.html`.
 
-### Differences
-There is no `content`, and some default `layouts` and `partials` have been created to kickstart your custom theme. Woo!
+### Hooking Layouts Into Your Default
 
-### Make The Theme Appear
-Your website hasn't heard about your theme yet. Tell your site by editing `config.toml` in the `{{< project >}}` folder. Add this line: `theme = "theme-time-now"` and save.
-
-## Wiring Components Together
-
-All code described from here is inside `best-website-ever/themes/theme-time-now/layouts/`.
-
-### Theme Layouts
-
-To hook your pages to the `_default/_baseof.html` layout, use this Go code.
-
-````
-{{- define "main" }}
-{{- end }}
-````
-
- To jump start your homepage, add it to `index.html`. You can also add it to `_default/list.html` and `_default/single.html`. These files are two primary categories for your content.
-
-### Filling Out Main
-
-When building your site, Hugo will convert any Go code in a `.html` file into HTML. Open `index.html` again and write something like this.
+Tell your pages to wrap themselves in the `baseof.html` layout with this Go code.
 
 ```
 {{- define "main" }}
-    <div>
-        {{ .Title }}
-    </div>
-    <div>It's Home!</div>
 {{- end }}
 ```
 
-You can sprinkle in Go wherever you need by using the `{{}}` double curly braces, and you can choose to write HTML all day.
+You'll probably add this to any layout that builds a full page on your site. In the `layouts` folder, it'll be added to `index.html`, `_default/list.html`, and `_default/single.html`. The `index.html` is your [homepage](https://gohugo.io/templates/homepage/), the `list.html` is for [summary pages](https://gohugo.io/templates/lists/), and the `single.html` builds [single pages](https://gohugo.io/templates/single-page-templates/).
 
-### Partials Hold Best Practices
+### Filling Out The Homepage
 
-Inside the `_default/_baseof.html` file is a HTML skeleton and partials for `head`, `header`, and `footer`. Static HTML sites do best when they are well planned. Apply best practices to your website now, starting with the `head` partial. Check tools like [Lighthouse](https://developers.google.com/web/tools/lighthouse/) and [WebAIM](https://webaim.org/) regularly to maintain high usability for your site.
+Open `index.html` again and fill in some content.
+
+```
+{{- define "main" }}
+    <div>{{ .Title }}</div>
+    <div>We're Home!</div>
+    <div>{{ .Content }}</div>
+{{- end }}
+```
+
+You sprinkle in Go wherever you need by using the `{{}}` double curly braces, you can also write HTML all day.
+
+To 
+
+### Partials Help You Use Best Practices
+
+The `_default/_baseof.html` file calls partials for `head`, `header`, and `footer`. Get your website behaving well now by starting with the `head` partial. Check tools like [Lighthouse](https://developers.google.com/web/tools/lighthouse/) and [WebAIM](https://webaim.org/) regularly to maintain high usability for your site.
 
 ## Partials Every Website Needs
 
@@ -76,12 +64,14 @@ Inside the `_default/_baseof.html` file is a HTML skeleton and partials for `hea
 It's helpful to know every element a `<head>` [tag](https://www.w3schools.com/html/html_head.asp_) can contain. Many are important for search engines. It's early in the `<html>` document, and search engines can load this without accidentally downloading every image on the world wide web. Try to make sure your head partial contains these elements!
 
 1. A title tag. To make it unique for every page, we use some Hugo code.
-1. Several `meta` tags with different `name` attributes.
-    * `viewport` Helps you [look good](https://www.w3schools.com/css/css_rwd_viewport.asp) on phones.
-    * `keywords` Set your search engine keywords, be accurate and concise. Keep it under a dozen words.
-    * `description` Write a sentence that describes your page well.
-1. Some CSS. We can use Hugo to process the CSS file before it's sent out for users.
-    * You have to build a special home for this file, in `best-website-ever/themes/theme-time-now/assets/main.css`. Create this file (and `asset` folder) to apply CSS style.
+2. Several `meta` tags with different `name` attributes.
+
+   * `viewport` Helps you [look good](https://www.w3schools.com/css/css_rwd_viewport.asp) on phones.
+   * `keywords` Set your search engine keywords, be accurate and concise. Keep it under a dozen words.
+   * `description` Write a sentence that describes your page well.
+3. Some CSS. We can use Hugo to process the CSS file before it's sent out for users.
+
+   * You have to build a special home for this file, in `best-website-ever/themes/theme-time-now/assets/main.css`. Create this file (and `asset` folder) to apply CSS style.
 
 ```
 <head>
