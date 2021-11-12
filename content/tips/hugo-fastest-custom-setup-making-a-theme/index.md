@@ -1,9 +1,9 @@
 ---
-title: The Fastest Custom Hugo Setup; Copying A Theme Skeleton
+title: The Fastest Custom Hugo Setup; Copying An Empty Theme
 image: charlotte-coneybeer-l9vxw4a9qzm-unsplash.jpg
 description: Hugo is perfect for building extremely customized websites. If you
-  want to get started without a theme, here's a trick to create the empty files
-  you'll work with.
+  want to get started without a theme, here's a fast way to create the empty
+  files you'll work with, and what to put in them.
 tags:
   - Hugo
   - Beginner
@@ -12,21 +12,23 @@ tags:
   - project
 date: 2020-09-25T20:06:44-05:00
 ---
-Hugo is perfect for building extremely customized websites. If you want to get started without a theme, here's a trick to create the files you'll work with.
+Hugo is perfect for building extremely customized static HTML websites. If you're learning or want to skip using a theme for any reason, here's a trick to quickly create the files almost every Hugo site uses.
 
-## What Layout Files Should I Make?
+## Where Are The Layout Files?
+
+Try this:
 
 ```
 hugo new site {{< project >}}
 cd {{< project >}}
 hugo new theme temp
-cp -r themes/temp/layouts/ layouts/
+cp -r themes/temp/layouts/* layouts/
 rm -rf themes/temp
 ```
 
-These commands will create the layout files you need for most sites. For now, the only file that's not empty is the `_default/baseof.html`.
+These commands will create all the layout files you need to get started. For now, the only file that's not empty is the `_default/baseof.html`.
 
-### Hooking Layouts Into Your Default
+## Hooking Layouts Into Your Default
 
 Tell your pages to wrap themselves in the `baseof.html` layout with this Go code.
 
@@ -35,11 +37,11 @@ Tell your pages to wrap themselves in the `baseof.html` layout with this Go code
 {{- end }}
 ```
 
-You'll probably add this to any layout that builds a full page on your site. In the `layouts` folder, it'll be added to `index.html`, `_default/list.html`, and `_default/single.html`. The `index.html` is your [homepage](https://gohugo.io/templates/homepage/), the `list.html` is for [summary pages](https://gohugo.io/templates/lists/), and the `single.html` builds [single pages](https://gohugo.io/templates/single-page-templates/).
+You'll add this to any `layout` that builds a full page for your site. For now, that's the `index.html` (your [homepage](https://gohugo.io/templates/homepage/)), the `_deault/list.html` ([summary pages](https://gohugo.io/templates/lists/)), and `_default/single.html` ([single pages](https://gohugo.io/templates/single-page-templates/)).
 
 ### Filling Out The Homepage
 
-Open `index.html` again and fill in some content.
+Open `index.html` and fill in some HTML.
 
 ```
 {{- define "main" }}
@@ -49,63 +51,43 @@ Open `index.html` again and fill in some content.
 {{- end }}
 ```
 
-You sprinkle in Go wherever you need by using the `{{}}` double curly braces, you can also write HTML all day.
+Sprinkle in Go using the `{{}}` double curly braces, or write HTML.
 
-To 
+To add some content run: `hugo new _index.html`. 
 
-### Partials Help You Use Best Practices
-
-The `_default/_baseof.html` file calls partials for `head`, `header`, and `footer`. Get your website behaving well now by starting with the `head` partial. Check tools like [Lighthouse](https://developers.google.com/web/tools/lighthouse/) and [WebAIM](https://webaim.org/) regularly to maintain high usability for your site.
-
-## Partials Every Website Needs
-
-### Inside the Head
-
-It's helpful to know every element a `<head>` [tag](https://www.w3schools.com/html/html_head.asp_) can contain. Many are important for search engines. It's early in the `<html>` document, and search engines can load this without accidentally downloading every image on the world wide web. Try to make sure your head partial contains these elements!
-
-1. A title tag. To make it unique for every page, we use some Hugo code.
-2. Several `meta` tags with different `name` attributes.
-
-   * `viewport` Helps you [look good](https://www.w3schools.com/css/css_rwd_viewport.asp) on phones.
-   * `keywords` Set your search engine keywords, be accurate and concise. Keep it under a dozen words.
-   * `description` Write a sentence that describes your page well.
-3. Some CSS. We can use Hugo to process the CSS file before it's sent out for users.
-
-   * You have to build a special home for this file, in `best-website-ever/themes/theme-time-now/assets/main.css`. Create this file (and `asset` folder) to apply CSS style.
+This command will generate files using the templates in the `archetypes` folder, for now it's pulling from `default.html`. Look at `content_index.html` file that was generated and add a title and some content.
 
 ```
-<head>
-    <title>{{ .Title }} | {{ .Site.Title }}<title>
-    <meta name="viewport" content="width=device-width, initial-scale=0">
-    <meta name="description" content="I want to be searched, engine.">
-    <meta name="keywords" content="My Interests, Growth, Happiness">
-    {{ $style := resources.Get "css/main.css" }}
-    <link rel="stylesheet" href="{{ $style.RelPermalink }}>
-</head>
+---
+title: "My Homepage Title"
+date: 2021-10-12T10:15:20-06:00
+draft: true
+---
+My Homepage Content!
 ```
 
-### Taking on the Header
+Because of the archetype we're using, everything gets generated as a `draft`. You can either delete the draft parameter, or run your server with the draft flag: `hugo server -D`
 
-A header is visible to most visitors on most pages. This is a final moment to take a breath and carefully plan your website. Decide what to share, what to highlight, how to invite feedback, and examine any  personal information you're making public.
+## Single Pages And List Pages
 
-A common choice is to make the header a [navigation system](https://www.w3schools.com/css/css_navbar.asp) to highlight the most important ideas and links.
-
-This is a `.html` file, so you can start very simple, in `best-website-ever/themes/theme-time-now/layouts/partial/header.html` add:
+The process for filling in other kinds of pages is similar. For a single page, add this to the `layouts/default/single.html` file:
 
 ```
-<div>
-    It's header time.
-</div>
+{{- define "main" }}
+    <div>{{ .Title }}</div>
+    <div>It's a single page!</div>
+    <div>{{ .Content }}</div>
+{{- end }}
 ```
 
-### What to Footer
+Make a single `post` by running `hugo new posts/first.md`, then add some more content to `content/posts/first.md`:
 
-Footers can contain stuff you want on every page, but don't need to highlight. JavaScript that can run whenever, copyrights, and contact information are common. Check out the [Hugo documentation](https://gohugo.io/templates/partials/#example-footerhtml) for a good example! You could also build a beautiful soundscape bounding over the whole website landscape. I believe in you.
+## Checking Your Work
 
-## Checking Our Work
+At any time, you can run `hugo server` and check the progress by opening [localhost:1313](http://localhost:1313/) in your browser. If you don't see anything: 
+- Check if your content is done with the `draft` phase. Do you see anything different running `hugo server -D`?
+- Read your terminal output. There could be an error, or your code could be running on a different port.
 
-At any time, you can run `hugo server` and check the your progress by opening [localhost:1313](http://localhost:1313/) in your browser.
+## Jump Started Hugo Skeleton
 
-## Goodbye
-
-With the theme skeleton, you get homepage, list page, and single page layouts. You get partials for a solid HTML skeleton, and a 404 page. Good start!
+With the theme skeleton, you get a homepage, list pages, and single page layouts. You can read about how to use the generated partials for a  also get partials for a solid HTML skeleton, and a 404 page. It's a great start for any site, especially if you want to build something custom without a theme.
