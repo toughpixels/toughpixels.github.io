@@ -4,5 +4,6 @@
         <time datetime="{{ .PublishDate }}">Published: {{.PublishDate.Format "January 2, 2006"}}</time>
         {{ partial "solicitProjectName.html" . }}
     {{ end }}
+    {{ partial "image.html" . }}
     {{ .Content }}
 </article>

@@ -12,6 +12,8 @@ publishDir = "docs"
     images = ["toughpixels.png"]
     author = "Tough Pixels"
     title = "Tough Pixels"
+    imageSizes = "1280 640 320"
+    imageFormats = "webp jpeg"
 [blackfriday]
   plainIDAnchors = true
   hrefTargetBlank = true
