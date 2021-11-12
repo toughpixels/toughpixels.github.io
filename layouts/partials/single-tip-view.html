@@ -1,10 +1,12 @@
 <article class="prose">
     <h1 class="tc mb-sm">{{ .Title }}</h1>
-    <div class="mb-sm">
+    <div class="tc mb-sm">
         {{ partial "image.html" . }}
     </div>
     {{ if eq .Page.Type "tips" }}
-        <time datetime="{{ .PublishDate }}">Published: {{.PublishDate.Format "January 2, 2006"}}</time>
+        <time class="tc" datetime="{{ .PublishDate }}">
+            Published: {{.PublishDate.Format "January 2, 2006"}}
+        </time>
         {{ partial "solicitProjectName.html" . }}
     {{ end }}
     {{ .Content }}

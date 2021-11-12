@@ -1,7 +1,7 @@
 ---
 title: "Using SASS to Create a Lean Utility Library"
 date: 2021-03-02T21:15:55-06:00
-tags: 
+tags:
 description: "Write mixins with SASS to generate utility classes that speed up the development of your site."
 draft: false
 ---
@@ -179,7 +179,7 @@ $displayOptions: (
 );
 ```
 {{< aside >}}
-### Note 
+### Note
 `('', 'display', ''),` has a trailing comma.  SASS will give you an error if it's not there.
 {{< /aside >}}
 
@@ -311,14 +311,14 @@ Here's our new mixin, now incorporating the `responsive` mixin:
 ```
 
 ### Fancy Utility Classes
-Some utility classes are too complex for the above mixin to generate.  But we can write custom mixins for custom needs.  
+Some utility classes are too complex for the above mixin to generate.  But we can write custom mixins for custom needs.
 #### For example:
 
 Sometimes you might want to visually shift an element
 
 {{< containerPull type="left" >}}over here{{< /containerPull >}}
 
-or 
+or
 
 {{< containerPull type="right" >}}over here!{{< /containerPull >}}
 

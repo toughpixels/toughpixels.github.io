@@ -83,6 +83,19 @@ main {
 .flex {
     display: flex;
 }
+
+.flexm {
+    display: flex;
+}
+
+@media only screen and (max-width: 460px) {
+    .flexm {
+        display: block;
+        margin: auto;
+        text-align: center;
+    }
+}
+
 .justify-center {
     justify-content: center;
 }
@@ -119,6 +132,10 @@ main {
     padding: 0.2em;
     border-radius: 0.2em;
     border: .1em solid black;
+    box-shadow: .2em .2em var(--article-preview-shadow);
+    &:hover, &:focus {
+        box-shadow: .2em .2em var(--article-preview-hover);
+    }
 }
 
 .article-prompt time {
@@ -167,10 +184,8 @@ img {
     display: block;
     background: var(--article-preview-bg);
     color: var(--article-preview-text);
-    box-shadow: .2em .2em var(--article-preview-shadow);
     &:hover, &:focus {
         border-color: var(--article-preview-text);
-        box-shadow: .2em .2em var(--article-preview-hover);
         background: var(--article-background-hover);
         color: var(--article-preview-text);
     }
@@ -182,7 +197,7 @@ code {
     margin: .1em;
 }
 
-.ma {
+.m-auto {
     margin: auto;
 }
 

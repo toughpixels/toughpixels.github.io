@@ -54,13 +54,13 @@ body {
     html {
         font-size: 20px;
     }
+    .smFlex {
+        display: flex;
+    }
 }
 @media only screen and (min-width: 768px) {
     html {
         font-size: 26px;
-    }
-    .smFlex {
-        display: flex;
     }
 }
 @media only screen and (min-width: 1100px) {
