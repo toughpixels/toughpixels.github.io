@@ -1,6 +1,6 @@
 ---
 title: Saving Inkscape SVGs for Internet Use
-header: bitmap.png
+image: bitmap.png
 description: Inkscape is a great program for making SVG designs. We step through
   cleaning up an Inkscape SVG so it works well with CSS and HTML.
 tags:
