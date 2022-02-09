@@ -8,14 +8,14 @@
 <meta property="og:title" content="Simple In Browser Debugging for APIs">
 <meta property="og:description" content="You can easily mock API and other network requests for development and debugging using Firefox, the Network Inspector, and the 'Edit and Resend' tool.">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://toughpixels.com/tips/debugging-apis-in-the-browser/"><meta property="og:image" content="https://toughpixels.com/editandresend.png"><meta property="article:section" content="tips">
+<meta property="og:url" content="https://toughpixels.com/tips/debugging-apis-in-the-browser/"><meta property="og:image" content="https://toughpixels.com/toughpixels.png"><meta property="article:section" content="tips">
 <meta property="article:published_time" content="2021-03-23T19:09:06-05:00">
 <meta property="article:modified_time" content="2021-03-23T19:09:06-05:00"><meta property="og:site_name" content="Tough Pixels">
 <meta name=twitter:card content="summary_large_image">
-<meta name=twitter:image content="https://toughpixels.com/editandresend.png">
+<meta name=twitter:image content="https://toughpixels.com/toughpixels.png">
 <meta name=twitter:title content="Simple In Browser Debugging for APIs">
 <meta name=twitter:description content="You can easily mock API and other network requests for development and debugging using Firefox, the Network Inspector, and the 'Edit and Resend' tool.">
-<style type=text/css>*{box-sizing:border-box}img{object-fit:cover}:root{--background:lightblue;--pink:#e6adda;--dark:black;--primary:azure;--link-hover-bg:#2D6FE7;--home-hover:#e71a3c;--twitter-hover:rgba(29,161,242,1.00);--preview:#8bb4f6cf;--article-preview-text:#100a14;--accent:#0a0640d4;--article-preview-hover:#f336d6;--article-background-hover:#eca0ff;--code-start:#eca0ff;--code-middle:#aab2ff;--code-end:#84ffc9;--font-default:sans-serif;--font-fancys:'Baloo Tamma', sans-serif}body,html{margin:0;padding:0}html{line-height:1.5}a{color:inherit}.skip-link,.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}body{background:var(--background);overflow-x:hidden;font-family:var(--font-default)}.smFlex{display:block}@media only screen and (min-width:401px){html{font-size:20px}.smFlex{display:flex}}@media only screen and (min-width:768px){html{font-size:26px}}@media only screen and (min-width:1100px){html{font-size:30px}}.icon.waving{width:3rem}.tc{text-align:center}.dib{display:inline}.invis{display:none}.lead{display:block;font-size:1.8rem;font-weight:400;margin:.67em 0}*{margin:0}time{display:block}h1{font-size:2rem;line-height:1.2}h4,.title-big{font-family:var(--font-fancy)}h2{font-size:1.6rem}h3{font-size:1.3rem;line-height:1.3}h4{font-size:1.2rem;letter-spacing:.05em}.align-center{align-items:center}.title-big{font-size:1.6rem;text-decoration:none}.title-small{padding:0 .2rem}.prose>*{margin-top:0}.prose>*+*{margin-top:.75em}.prose>*+time{margin-top:.5em}.prose>*>li+li{margin-top:1em}aside{padding:1rem;margin-left:2rem;border:3px solid rgba(0,0,0,.5);border-radius:10px;background:rgba(255,255,255,.5)}.miniArticleLink{border:2px solid #000;padding:.5rem;font-size:1rem;text-align:left;text-decoration:none;background:rgba(255,255,255,.2)}.miniArticleLink h3{font-size:1rem;font-weight:700}.grid-flex{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));grid-gap:1rem}.grid{display:grid}.two-cols{grid-template-columns:repeat(auto-fill,minmax(30vw,1fr))}.gap-sm{grid-gap:1rem}.filterLabel{padding:.2rem;line-height:1;white-space:nowrap;display:inline-block;vertical-align:top;border-radius:5px;font-weight:700;text-decoration:underline}.tagInput{top:100px}.relative{position:relative}.textLink{text-align:left;font-size:1rem}@keyframes color{0%{fill:#ffadad}13%{fill:#ffd6a5}26%{fill:#fdffb6}39%{fill:#caffbf}52%{fill:#9bf6ff}65%{fill:#a0c4ff}78%{fill:#bdb2ff}91%{fill:#ffc6ff}100%{fill:#ffadad}}.outline{fill:none;stroke:var(--article-preview-text);stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:.8;stroke-width:.2rem}.color{animation-name:color;fill:var(--background)}hr{border-top:8px solid;border-radius:4px;border-color:var(--accent);width:66%;margin:auto}hr:hover,hr:focus{border-color:var(--article-preview-hover)}.logo a:hover,.logo a:focus{background:0 0}.logo a:hover .tipsColor,.logo a:focus .tipsColor{color:var(--link-hover-bg)}.tough path{fill:var(--accent);stroke:var(--article-preview-text);stroke-width:.2rem}.w-100{width:100%}.w-50{width:50%}</style>
+<style type=text/css>*{box-sizing:border-box}img{object-fit:cover}:root{--background:#c2e3ee;--preview:#94b8f1;--accent:#201b6d;--dark:black;--link-hover-bg:#2D6FE7;--home-hover:#e71a3c;--twitter-hover:rgba(29,161,242,1.00);--article-preview-text:#100a14;--article-preview-hover:#f336d6;--article-background-hover:#eca0ff;--code-start:#eca0ff;--code-middle:#aab2ff;--code-end:#84ffc9;--font-default:sans-serif;--font-fancys:'Baloo Tamma', sans-serif}body,html{margin:0;padding:0}html{line-height:1.5}a{color:inherit}.skip-link,.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}body{background:var(--background);overflow-x:hidden;font-family:var(--font-default)}.smFlex{display:block}@media only screen and (min-width:401px){html{font-size:20px}.smFlex{display:flex}}@media only screen and (min-width:768px){html{font-size:26px}}@media only screen and (min-width:1100px){html{font-size:30px}}.icon.waving{width:3rem}.tc{text-align:center}.dib{display:inline}.invis{display:none}.lead{display:block;font-size:1.6rem;font-weight:700;margin:.67em 0}*{margin:0}time{display:block}h1{font-size:2rem;line-height:1.2}h4,.title-big{font-family:var(--font-fancy)}h2{font-size:1.6rem}h3{font-size:1.3rem;line-height:1.3}h4{font-size:1.2rem;letter-spacing:.05em}.align-center{align-items:center}.title-big{font-size:1.6rem;text-decoration:none}.title-small{padding:0 .2rem}.prose>*{margin-top:0}.prose>*+*{margin-top:.75em}.prose>*+time{margin-top:.5em}.prose>*>li+li{margin-top:1em}aside{padding:1rem;margin-left:2rem;border:3px solid rgba(0,0,0,.5);border-radius:10px;background:rgba(255,255,255,.5)}.small-text{font-size:.6rem}.miniArticleLink{border:2px solid #000;padding:.5rem;font-size:1rem;text-align:left;text-decoration:none;background:rgba(255,255,255,.2)}.miniArticleLink h3{font-size:1rem;font-weight:700}.grid-flex{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));grid-gap:1rem}.grid{display:grid}.two-cols{grid-template-columns:repeat(auto-fill,minmax(30vw,1fr))}.gap-sm{grid-gap:1rem}.filterLabel{padding:.2rem;line-height:1;white-space:nowrap;display:inline-block;vertical-align:top;border-radius:5px;font-weight:700;text-decoration:underline}.tagInput{top:100px}.relative{position:relative}.textLink{text-align:left;font-size:1rem}@keyframes color{0%{fill:#ffadad}13%{fill:#ffd6a5}26%{fill:#fdffb6}39%{fill:#caffbf}52%{fill:#9bf6ff}65%{fill:#a0c4ff}78%{fill:#bdb2ff}91%{fill:#ffc6ff}100%{fill:#ffadad}}.outline{fill:none;stroke:var(--article-preview-text);stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:.8;stroke-width:.2rem}.color{animation-name:color;fill:var(--background)}hr{border-top:4px solid;border-radius:4px;border-color:var(--accent);background-color:var(--accent);width:80%;margin:auto}.logo a:hover,.logo a:focus{background:0 0}.logo a:hover .tipsColor,.logo a:focus .tipsColor{color:var(--link-hover-bg)}.tough path{fill:var(--accent);stroke:var(--article-preview-text);stroke-width:.2rem}.w-100{width:100%}.w-50{width:50%}</style>
 <link rel=preload href=https://toughpixels.com/scss/later.css as=style onload="this.onload=null,this.rel='stylesheet'">
 <noscript><link rel=stylesheet href=https://toughpixels.com/scss/later.css></noscript><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
 <link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
@@ -29,50 +29,89 @@
 </header>
 <main class=container><article class=prose>
 <h1 class="tc mb-sm">Simple In Browser Debugging for APIs</h1>
-<div class="tc mb-sm">
-</div>
-<time class=tc datetime="2021-03-23 19:09:06 -0500 CDT">
-Published: March 23, 2021
+<time class=small-text datetime="2021-03-23 19:09:06 -0500 CDT">
+Published: Mar. 23, 2021
 </time>
 <h2 id=mocking-api-network-requests-with-the-inspector>Mocking API Network Requests with The Inspector</h2>
 <p>One difficult part of building an API is mocking and modifying the requests your application will receive. There are lots of tools out there, like <a href=https://www.postman.com/>Postman</a>, but those are heavy tools to use early in the development process or for simple testing. Instead, there is a simple way of copying, editing, and re-running HTTP requests directly in the inspector.</p>
+<figure class="flex justify-center mv1">
+<picture>
+<source media="(min-width: 640px)" width=640 height=293 srcset=/tips/debugging-apis-in-the-browser/editandresend_hu476ab8ea8bee006d138368f1d5142c58_76974_640x0_resize_q75_h2_box_3.webp type=image/webp>
+<source media="(min-width: 640px)" width=640 height=293 srcset=/tips/debugging-apis-in-the-browser/editandresend_hu476ab8ea8bee006d138368f1d5142c58_76974_640x0_resize_q75_bgffffff_box_3.jpg type=image/jpeg>
+<source media="(min-width: 320px)" width=320 height=147 srcset=/tips/debugging-apis-in-the-browser/editandresend_hu476ab8ea8bee006d138368f1d5142c58_76974_320x0_resize_q75_h2_box_3.webp type=image/webp>
+<source media="(min-width: 320px)" width=320 height=147 srcset=/tips/debugging-apis-in-the-browser/editandresend_hu476ab8ea8bee006d138368f1d5142c58_76974_320x0_resize_q75_bgffffff_box_3.jpg type=image/jpeg>
+<img src=/tips/debugging-apis-in-the-browser/editandresend_hu476ab8ea8bee006d138368f1d5142c58_76974_320x0_resize_q75_bgffffff_box_3.jpg loading=lazy alt="Image of Firefox's Edit and Resend Tool In Use">
+</picture>
+</figure>
 <h2 id=firefox>Firefox!</h2>
 <p>The Firefox browser <a href=https://developer.mozilla.org/en-US/docs/Tools>inspector</a> comes bundles with some great developments tools. Two of my favorites are the <a href=https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts>CSS grid inspector</a> and this API debugging miracle: &ldquo;Edit and Resend&rdquo;.</p>
 <h2 id=network-inspector>Network Inspector</h2>
 <p>If you&rsquo;re a seasoned developer, you might know and love the <a href=https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor>Network Monitor</a>. If you&rsquo;re newer or haven&rsquo;t ever checked it out, I really encourage you to watch a few dozen web requests pass by while looking at the tab. It gives you a lot of insight into how the web works.</p>
 <h2 id=edit-and-resend>Edit and Resend</h2>
 <p>To use this tool, open the Network Monitor tab of your Inspector in Firefox. Make your first HTTP request by visting a URL. In the image, I&rsquo;m visiting <code>localhost:8000/api/users/create</code>, which creates a GET request for that resource.</p>
-<figure><img src=API-request-returning-a-405-error-code.png alt="Making a GET request to my API"><figcaption>
-<p>Making a GET request to my API</p>
-</figcaption>
+<figure class="flex justify-center mv1">
+<picture>
+<source media="(min-width: 1280px)" width=1280 height=462 srcset=/tips/debugging-apis-in-the-browser/API-request-returning-a-405-error-code_hubcc79ad74f6e2e6dbb0504b8748e3252_137732_1280x0_resize_q75_h2_box_3.webp type=image/webp>
+<source media="(min-width: 1280px)" width=1280 height=462 srcset=/tips/debugging-apis-in-the-browser/API-request-returning-a-405-error-code_hubcc79ad74f6e2e6dbb0504b8748e3252_137732_1280x0_resize_q75_bgffffff_box_3.jpg type=image/jpeg>
+<source media="(min-width: 640px)" width=640 height=231 srcset=/tips/debugging-apis-in-the-browser/API-request-returning-a-405-error-code_hubcc79ad74f6e2e6dbb0504b8748e3252_137732_640x0_resize_q75_h2_box_3.webp type=image/webp>
+<source media="(min-width: 640px)" width=640 height=231 srcset=/tips/debugging-apis-in-the-browser/API-request-returning-a-405-error-code_hubcc79ad74f6e2e6dbb0504b8748e3252_137732_640x0_resize_q75_bgffffff_box_3.jpg type=image/jpeg>
+<source media="(min-width: 320px)" width=320 height=115 srcset=/tips/debugging-apis-in-the-browser/API-request-returning-a-405-error-code_hubcc79ad74f6e2e6dbb0504b8748e3252_137732_320x0_resize_q75_h2_box_3.webp type=image/webp>
+<source media="(min-width: 320px)" width=320 height=115 srcset=/tips/debugging-apis-in-the-browser/API-request-returning-a-405-error-code_hubcc79ad74f6e2e6dbb0504b8748e3252_137732_320x0_resize_q75_bgffffff_box_3.jpg type=image/jpeg>
+<img src=/tips/debugging-apis-in-the-browser/API-request-returning-a-405-error-code_hubcc79ad74f6e2e6dbb0504b8748e3252_137732_320x0_resize_q75_bgffffff_box_3.jpg loading=lazy>
+<figcaption class=tc>Making a GET request to my API</figcaption>
+</picture>
 </figure>
 <p>In my application, the endpoint only accepts POST requests, so the application throws an error. Time to break out some <code>cURL</code> or <code>fetch()</code>, right? There&rsquo;s an easier solution! I can right click the request, then select <code>Edit and Resend</code> to modify the request right in the browser.</p>
-<figure><img src=editandresend.png alt="Locating the Edit and Resend tool"><figcaption>
-<p>Locating the Edit and Resend tool</p>
-</figcaption>
+<figure class="flex justify-center mv1">
+<picture>
+<source media="(min-width: 640px)" width=640 height=293 srcset=/tips/debugging-apis-in-the-browser/editandresend_hu476ab8ea8bee006d138368f1d5142c58_76974_640x0_resize_q75_h2_box_3.webp type=image/webp>
+<source media="(min-width: 640px)" width=640 height=293 srcset=/tips/debugging-apis-in-the-browser/editandresend_hu476ab8ea8bee006d138368f1d5142c58_76974_640x0_resize_q75_bgffffff_box_3.jpg type=image/jpeg>
+<source media="(min-width: 320px)" width=320 height=147 srcset=/tips/debugging-apis-in-the-browser/editandresend_hu476ab8ea8bee006d138368f1d5142c58_76974_320x0_resize_q75_h2_box_3.webp type=image/webp>
+<source media="(min-width: 320px)" width=320 height=147 srcset=/tips/debugging-apis-in-the-browser/editandresend_hu476ab8ea8bee006d138368f1d5142c58_76974_320x0_resize_q75_bgffffff_box_3.jpg type=image/jpeg>
+<img src=/tips/debugging-apis-in-the-browser/editandresend_hu476ab8ea8bee006d138368f1d5142c58_76974_320x0_resize_q75_bgffffff_box_3.jpg loading=lazy>
+<figcaption class=tc>Locating the Edit and Resend tool</figcaption>
+</picture>
 </figure>
 <p>I changed the HTTP request method to POST, and added some data to the request body.</p>
-<figure><img src=edit-request.png alt="Making any changes to my API request"><figcaption>
-<p>Making any changes to my API request</p>
-</figcaption>
+<figure class="flex justify-center mv1">
+<picture>
+<source media="(min-width: 640px)" width=640 height=580 srcset=/tips/debugging-apis-in-the-browser/edit-request_hu3d9794919346ed0d3ea6e740d185d94c_163656_640x0_resize_q75_h2_box_3.webp type=image/webp>
+<source media="(min-width: 640px)" width=640 height=580 srcset=/tips/debugging-apis-in-the-browser/edit-request_hu3d9794919346ed0d3ea6e740d185d94c_163656_640x0_resize_q75_bgffffff_box_3.jpg type=image/jpeg>
+<source media="(min-width: 320px)" width=320 height=290 srcset=/tips/debugging-apis-in-the-browser/edit-request_hu3d9794919346ed0d3ea6e740d185d94c_163656_320x0_resize_q75_h2_box_3.webp type=image/webp>
+<source media="(min-width: 320px)" width=320 height=290 srcset=/tips/debugging-apis-in-the-browser/edit-request_hu3d9794919346ed0d3ea6e740d185d94c_163656_320x0_resize_q75_bgffffff_box_3.jpg type=image/jpeg>
+<img src=/tips/debugging-apis-in-the-browser/edit-request_hu3d9794919346ed0d3ea6e740d185d94c_163656_320x0_resize_q75_bgffffff_box_3.jpg loading=lazy>
+<figcaption class=tc>Making any changes to my API request</figcaption>
+</picture>
 </figure>
 <p>Now when I click the send button, I can see that my API is reponding as expected. It&rsquo;s <code>201</code> season, friends!</p>
-<figure><img src=success!.png alt="After tweaking, the API handles my request!"><figcaption>
-<p>After tweaking, the API handles my request!</p>
-</figcaption>
+<figure class="flex justify-center mv1">
+<picture>
+<source media="(min-width: 640px)" width=640 height=262 srcset=/tips/debugging-apis-in-the-browser/success!_hu1b9de496ae14244fec811a62451bd506_73425_640x0_resize_q75_h2_box_3.webp type=image/webp>
+<source media="(min-width: 640px)" width=640 height=262 srcset=/tips/debugging-apis-in-the-browser/success!_hu1b9de496ae14244fec811a62451bd506_73425_640x0_resize_q75_bgffffff_box_3.jpg type=image/jpeg>
+<source media="(min-width: 320px)" width=320 height=131 srcset=/tips/debugging-apis-in-the-browser/success!_hu1b9de496ae14244fec811a62451bd506_73425_320x0_resize_q75_h2_box_3.webp type=image/webp>
+<source media="(min-width: 320px)" width=320 height=131 srcset=/tips/debugging-apis-in-the-browser/success!_hu1b9de496ae14244fec811a62451bd506_73425_320x0_resize_q75_bgffffff_box_3.jpg type=image/jpeg>
+<img src=/tips/debugging-apis-in-the-browser/success!_hu1b9de496ae14244fec811a62451bd506_73425_320x0_resize_q75_bgffffff_box_3.jpg loading=lazy>
+<figcaption class=tc>After tweaking, the API handles my request!</figcaption>
+</picture>
 </figure>
 <h2 id=pack-it-up-and-take-it-away>Pack It Up and Take It Away!</h2>
 <p>Once your API request is properly formed in the browser, and your API or application is returning the results you expect, how do you export that request to another application? Again, the browser makes it easy. Right click your working request, then copy it into the format you want. Now you can use your working request anywhere in your code!</p>
-<figure><img src=copytoyourfavoritetool.png alt="Copying my API request for use in my application."><figcaption>
-<p>Copying my API request for use in my application.</p>
-</figcaption>
+<figure class="flex justify-center mv1">
+<picture>
+<source media="(min-width: 640px)" width=640 height=313 srcset=/tips/debugging-apis-in-the-browser/copytoyourfavoritetool_hu5af13087c55eedc33c3493fc181b5232_115465_640x0_resize_q75_h2_box_3.webp type=image/webp>
+<source media="(min-width: 640px)" width=640 height=313 srcset=/tips/debugging-apis-in-the-browser/copytoyourfavoritetool_hu5af13087c55eedc33c3493fc181b5232_115465_640x0_resize_q75_bgffffff_box_3.jpg type=image/jpeg>
+<source media="(min-width: 320px)" width=320 height=156 srcset=/tips/debugging-apis-in-the-browser/copytoyourfavoritetool_hu5af13087c55eedc33c3493fc181b5232_115465_320x0_resize_q75_h2_box_3.webp type=image/webp>
+<source media="(min-width: 320px)" width=320 height=156 srcset=/tips/debugging-apis-in-the-browser/copytoyourfavoritetool_hu5af13087c55eedc33c3493fc181b5232_115465_320x0_resize_q75_bgffffff_box_3.jpg type=image/jpeg>
+<img src=/tips/debugging-apis-in-the-browser/copytoyourfavoritetool_hu5af13087c55eedc33c3493fc181b5232_115465_320x0_resize_q75_bgffffff_box_3.jpg loading=lazy>
+<figcaption class=tc>Copying my API request for use in my application.</figcaption>
+</picture>
 </figure>
 </article></main>
 <hr class=mt-md>
 <footer class="container site-footer mt-lg">
 <div class=tc>
 <section>
-<style>.filteredContentItems>*{display:none}#all:checked~.filteredContent .filteredContentItems .all{display:inline}#api:checked~.filteredContent .filteredContentItems .api{display:inline}#beginner:checked~.filteredContent .filteredContentItems .beginner{display:inline}#browser:checked~.filteredContent .filteredContentItems .browser{display:inline}#css:checked~.filteredContent .filteredContentItems .css{display:inline}#dns:checked~.filteredContent .filteredContentItems .dns{display:inline}#github-pages:checked~.filteredContent .filteredContentItems .github-pages{display:inline}#html:checked~.filteredContent .filteredContentItems .html{display:inline}#http:checked~.filteredContent .filteredContentItems .http{display:inline}#hugo:checked~.filteredContent .filteredContentItems .hugo{display:inline}#markdown:checked~.filteredContent .filteredContentItems .markdown{display:inline}#project:checked~.filteredContent .filteredContentItems .project{display:inline}#responsive-sites:checked~.filteredContent .filteredContentItems .responsive-sites{display:inline}#scss:checked~.filteredContent .filteredContentItems .scss{display:inline}#svg:checked~.filteredContent .filteredContentItems .svg{display:inline}label.all{color:#381f34}#all:checked~.filterLabels [for=all]{background-color:#381f34;color:#fff;text-decoration:none}label.api{color:#630659}#api:checked~.filterLabels [for=api]{background-color:#630659;color:#fff;text-decoration:none}label.beginner{color:#252d31}#beginner:checked~.filterLabels [for=beginner]{background-color:#252d31;color:#fff;text-decoration:none}label.browser{color:#251245}#browser:checked~.filterLabels [for=browser]{background-color:#251245;color:#fff;text-decoration:none}label.css{color:#60024d}#css:checked~.filterLabels [for=css]{background-color:#60024d;color:#fff;text-decoration:none}label.dns{color:#214e3d}#dns:checked~.filterLabels [for=dns]{background-color:#214e3d;color:#fff;text-decoration:none}label.github-pages{color:#2b4e51}#github-pages:checked~.filterLabels [for=github-pages]{background-color:#2b4e51;color:#fff;text-decoration:none}label.html{color:#251641}#html:checked~.filterLabels [for=html]{background-color:#251641;color:#fff;text-decoration:none}label.http{color:#3c0144}#http:checked~.filterLabels [for=http]{background-color:#3c0144;color:#fff;text-decoration:none}label.hugo{color:#2d5920}#hugo:checked~.filterLabels [for=hugo]{background-color:#2d5920;color:#fff;text-decoration:none}label.markdown{color:#591211}#markdown:checked~.filterLabels [for=markdown]{background-color:#591211;color:#fff;text-decoration:none}label.project{color:#13181c}#project:checked~.filterLabels [for=project]{background-color:#13181c;color:#fff;text-decoration:none}label.responsive-sites{color:#075d24}#responsive-sites:checked~.filterLabels [for=responsive-sites]{background-color:#075d24;color:#fff;text-decoration:none}label.scss{color:#53343b}#scss:checked~.filterLabels [for=scss]{background-color:#53343b;color:#fff;text-decoration:none}label.svg{color:#350d44}#svg:checked~.filterLabels [for=svg]{background-color:#350d44;color:#fff;text-decoration:none}</style>
+<style>.filteredContentItems>*{display:none}#all:checked~.filteredContent .filteredContentItems .all{display:inline}#api:checked~.filteredContent .filteredContentItems .api{display:inline}#beginner:checked~.filteredContent .filteredContentItems .beginner{display:inline}#browser:checked~.filteredContent .filteredContentItems .browser{display:inline}#css:checked~.filteredContent .filteredContentItems .css{display:inline}#dns:checked~.filteredContent .filteredContentItems .dns{display:inline}#github-pages:checked~.filteredContent .filteredContentItems .github-pages{display:inline}#html:checked~.filteredContent .filteredContentItems .html{display:inline}#http:checked~.filteredContent .filteredContentItems .http{display:inline}#hugo:checked~.filteredContent .filteredContentItems .hugo{display:inline}#markdown:checked~.filteredContent .filteredContentItems .markdown{display:inline}#project:checked~.filteredContent .filteredContentItems .project{display:inline}#responsive-sites:checked~.filteredContent .filteredContentItems .responsive-sites{display:inline}#scss:checked~.filteredContent .filteredContentItems .scss{display:inline}#svg:checked~.filteredContent .filteredContentItems .svg{display:inline}label.all{color:#0e373f}#all:checked~.filterLabels [for=all]{background-color:#0e373f;color:#fff;text-decoration:none}label.api{color:#613a46}#api:checked~.filterLabels [for=api]{background-color:#613a46;color:#fff;text-decoration:none}label.beginner{color:#510641}#beginner:checked~.filterLabels [for=beginner]{background-color:#510641;color:#fff;text-decoration:none}label.browser{color:#150502}#browser:checked~.filterLabels [for=browser]{background-color:#150502;color:#fff;text-decoration:none}label.css{color:#0e1f4c}#css:checked~.filterLabels [for=css]{background-color:#0e1f4c;color:#fff;text-decoration:none}label.dns{color:#2d0606}#dns:checked~.filterLabels [for=dns]{background-color:#2d0606;color:#fff;text-decoration:none}label.github-pages{color:#12250b}#github-pages:checked~.filterLabels [for=github-pages]{background-color:#12250b;color:#fff;text-decoration:none}label.html{color:#564233}#html:checked~.filterLabels [for=html]{background-color:#564233;color:#fff;text-decoration:none}label.http{color:#4f234a}#http:checked~.filterLabels [for=http]{background-color:#4f234a;color:#fff;text-decoration:none}label.hugo{color:#5e1c51}#hugo:checked~.filterLabels [for=hugo]{background-color:#5e1c51;color:#fff;text-decoration:none}label.markdown{color:#591059}#markdown:checked~.filterLabels [for=markdown]{background-color:#591059;color:#fff;text-decoration:none}label.project{color:#1d4d06}#project:checked~.filterLabels [for=project]{background-color:#1d4d06;color:#fff;text-decoration:none}label.responsive-sites{color:#48553a}#responsive-sites:checked~.filterLabels [for=responsive-sites]{background-color:#48553a;color:#fff;text-decoration:none}label.scss{color:#1a3c01}#scss:checked~.filterLabels [for=scss]{background-color:#1a3c01;color:#fff;text-decoration:none}label.svg{color:#330f5d}#svg:checked~.filterLabels [for=svg]{background-color:#330f5d;color:#fff;text-decoration:none}</style>
 <div class=relative>
 <input checked class="sr-only tagInput" type=radio aria-label="Show all" id=all value=all name=filterTag>
 <input class="sr-only tagInput" type=radio aria-label="Show api" id=api value=api name=filterTag>
@@ -163,7 +202,8 @@ Published: March 23, 2021
 </div>
 </div>
 </section></div>
-<div class=mt-md><nav id=footer-nav>
+<div class=mt-md>
+<hr class="mb-md mt-md"><nav id=footer-nav>
 <ul class="header-list smFlex space-between">
 <li>
 <a class="footer-nav-icon home" href=https://toughpixels.com><svg class="icon-heart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 1280"><title>A Heart</title><desc>A heart with a pointed tip</desc><g transform="translate(0.0,1280.0) scale(0.1,-0.1)" stroke="none"><path d="M3820 10854c-19-2-78-9-130-15-467-54-942-245-1320-530-563-426-901-1030-986-1760-23-2e2-15-603 15-804 108-707 431-1354 1018-2041 70-82 240-262 378-4e2 426-426 744-697 1731-1471 572-449 805-642 1088-901 330-303 613-644 742-895 21-43 41-77 44-77s23 34 44 77c129 251 412 592 742 895 283 259 516 452 1088 901 987 774 1305 1045 1731 1471 138 138 308 318 378 4e2 587 687 910 1334 1018 2041 30 201 38 604 15 804-51 433-184 810-406 1145-418 628-1090 1034-19e2 1147-126 18-555 18-675 1-543-78-986-283-1348-622-284-266-516-650-643-1060-18-58-37-105-44-105s-26 47-44 105c-127 410-359 794-643 1060-353 330-784 534-1303 615-1e2 16-505 29-590 19z"/></g></svg>
