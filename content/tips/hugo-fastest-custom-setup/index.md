@@ -1,6 +1,5 @@
 ---
 title: Fastest Custom Hugo Setup, Copying An Empty Theme
-image: charlotte-coneybeer-l9vxw4a9qzm-unsplash.jpg
 description: Hugo is perfect for building customized websites. Here is a fast way to get started without a theme. You'll create files to work with and learn how to use them.
 tags:
   - Hugo
@@ -9,7 +8,10 @@ tags:
   - project
 date: 2021-11-11T20:06:44-05:00
 ---
-Hugo is perfect for building extremely customized static HTML websites. If you're learning or want to skip using a theme for any reason: here's a trick to quickly create the files almost every Hugo site uses, and an explanation of how to use them.
+Hugo is perfect for building extremely customized static HTML websites. If you're learning or want to skip using a theme for any reason: here's a trick to quickly create the files every Hugo site uses, and a quick explanation of how to use them.
+
+{{<image src="charlotte-coneybeer-l9vxw4a9qzm-unsplash.jpg" alt="Roller Coaster Underneath a Sign That Reads Turbo" caption="Hugo Turbo Mode">}}
+
 ## Where Are The Layout Files?
 To make basic layout files and a new site, try this:
 ```

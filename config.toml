@@ -8,7 +8,7 @@ publishDir = "docs"
     [markup.goldmark.renderer]
       unsafe = true
 [params]
-    description = "Common sense web development tips. Keep it simple and it'll last."
+    description = "Programming guides for building simple and sustainable web projects."
     images = ["toughpixels.png"]
     author = "Tough Pixels"
     title = "Tough Pixels"

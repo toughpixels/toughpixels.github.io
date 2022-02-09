@@ -1,6 +1,5 @@
 ---
 title: Saving Inkscape SVGs for Internet Use
-image: bitmap.png
 description: Inkscape is a great program for making SVG designs. We step through
   cleaning up an Inkscape SVG so it works well with CSS and HTML.
 tags:
@@ -12,6 +11,8 @@ SVGs are a great option for making simple, scalable graphics, logos, and animati
 
 It's great to draw cool stuff in Inkscape, but it's a pain to get Inkscape SVGs to display properly on the web. We'll show you how to clean up SVGs so when you save them so they obey CSS rules.
 
+{{< image src="markus-spiske-yUTgdQkbd7c-unsplash.jpg" alt="Hand holding up an Polaroid picture that hasn't developed yet inside a house." caption="Making Inkscape Work for the Web">}}
+
 ## Setting Your Document Properties
 
 Check in on your Document Properties by going to `File > Document Properties.` Here you'll manage unit size and canvas size.
@@ -20,7 +21,7 @@ Check in on your Document Properties by going to `File > Document Properties.` H
 
 Check that your `Display Units` and `Units` are set to `px`. In this interface, you can also size canvas you're using. We like starting with a 1000 x 1000 pixel square. While you're here, setting the `Viewbox` fields to start at 0,0 and be 1000 units wide makes reasoning about your SVG much easier.
 
-![Screenshot of the Document Properties screen in Inkscape](screenshot-from-2021-09-03-14-26-28.png "Recommended Inkscape Document Properties")
+{{< image src="screenshot-from-2021-09-03-14-26-28.png" alt="Screenshot of the Document Properties Screen in Inkscape" caption="Recommended Inkscape Document Properties">}}
 
 ### Making SVGs Smaller
 
@@ -36,7 +37,7 @@ Find out where to save your template by checking your `Preferences` , then findi
 
 Second step: draw an SVG in Inkscape. We drew this!
 
-![Three bubbles of various sizes floating inside a square.](bitmap.png "Simple Inkscape Drawing")
+{{< image src="bitmap.png" alt="Three bubbles of various sizes floating inside a square." caption="Simple Inkscape Drawing">}}
 
 ### Resizing The Canvas
 
@@ -67,5 +68,3 @@ Can be safely removed.
 ## Fixing Inkscape SVGs For The Web
 
 We covered setting up default unit and canvas size in Inkscape, creating a default template, and using an XML editor to clean up inline styles from Inkscape SVGs.
-
-#### Good luck making something beautiful!

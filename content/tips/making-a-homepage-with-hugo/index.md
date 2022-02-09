@@ -16,7 +16,7 @@ Do you know how to use the terminal?  If you don't, [start here](https://www.lea
 
 The first step in the installation process is noting what software is already  installed. I'm running Linux (an operating system, specifically Ubuntu 18.04) and have Hugo (0.74.3) installed. If you don't have Hugo, follow their [installation instructions](https://gohugo.io/getting-started/installing). With Hugo installed, run `hugo new site best-website` in the terminal.
 
-{{< figure src="Lookup-Operating-System-Version,-Lookup-Hugo-Version,-Create-Hugo-New-Site.png" caption="Lookup Operating System Version, Lookup Hugo Version, Create Hugo New Site" >}}
+{{< image src="Lookup-Operating-System-Version,-Lookup-Hugo-Version,-Create-Hugo-New-Site.png" caption="Lookup Operating System Version, Lookup Hugo Version, Create Hugo New Site" >}}
 
 This commands generates a folder structure (run `ls` in the terminal to see!), and two files. `config.toml` is an important file, it sets variables any page can access.
 
@@ -26,7 +26,7 @@ The first command is running the server, this generates HTML for your web browse
 
 There is nothing there but an empty HTML page.
 
-{{< figure src="Change-Directory-into-Hugo-Project,-Run-Hugo-Server,-Examine-Errors.png" caption="Change Directory into Hugo Project, Run Hugo Server" >}}
+{{< image src="Change-Directory-into-Hugo-Project,-Run-Hugo-Server,-Examine-Errors.png" caption="Change Directory into Hugo Project, Run Hugo Server" >}}
 
 ## Fill In An Empty Homepage
 

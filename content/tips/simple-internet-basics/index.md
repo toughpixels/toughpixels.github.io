@@ -16,6 +16,8 @@ The internet is a complicated dance of **billions** of computers all agreeing on
 
 Computers are organized into networks. Networks are contected to each other to create the internet.
 
+{{< image src="computer-server-it-knows-internet-protocol-rules.jpg" alt="Computer Server Rack With Red and Blue Wires in a Dark Area" >}}
+
 ## Why It's Awesome
 
 You can [email](https://www.w3.org/Consortium/contact "Contact Page for W3C") the rule makers of the internet.

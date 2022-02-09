@@ -1,7 +1,7 @@
 .lead {
     display: block;
-    font-size: 1.8rem;
-    font-weight: normal;
+    font-size: 1.6rem;
+    font-weight: bold;
     margin: 0.67em 0;
 }
 * {
@@ -10,6 +10,7 @@
 time {
     display: block;
 }
+
 h1 {
     font-size: 2rem;
     line-height: 1.2;
@@ -67,4 +68,8 @@ aside {
     &.note {
         // background
     }
+}
+
+.small-text {
+    font-size: .6rem;
 }

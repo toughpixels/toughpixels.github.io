@@ -132,15 +132,12 @@ main {
     padding: 0.2em;
     border-radius: 0.2em;
     border: .1em solid black;
-    box-shadow: .2em .2em var(--article-preview-shadow);
+    box-shadow: .2em .2em var(--accent);
     &:hover, &:focus {
         box-shadow: .2em .2em var(--article-preview-hover);
     }
 }
 
-.article-prompt time {
-    font-size: 1rem;
-}
 .article-prompt .reading-time {
     font-size: 0.8rem;
     margin-top: 0.5rem;
@@ -182,7 +179,7 @@ img {
 .page-link {
     text-decoration: none;
     display: block;
-    background: var(--article-preview-bg);
+    background: var(--preview);
     color: var(--article-preview-text);
     &:hover, &:focus {
         border-color: var(--article-preview-text);
