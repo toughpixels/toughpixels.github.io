@@ -1,4 +1,4 @@
-# [Tough Pixels Tips](https://stridesprogramming.github.io/)
+# [Tough Pixels Tips](https://toughpixels.com/)
 Tips articles about various programming, content creation, and general livability articles.
 
 ## Usage
