@@ -11,23 +11,23 @@ Non-profits have a unique challenge - building sites that are easy to update, ca
 
 ### Stability
 
-Sites for long lasting public institutions are hard to keep current. Government institutions are one of the last bastions of 90s web design, and non-profits have a fraction of those resources. There are two facets of stability to be aware of: security and ease of maintainance.
+Sites for long lasting public institutions are hard to keep current. Government institutions are among of the last bastions of 90's web design, and non-profits have a fraction of those resources. There are three facets of website stability to be aware of are: security, ease of maintenance, and aesthetics.
 
 #### Security
 We've worked with organizations getting hacked on a weekly basis because their site was using cutting edge technology - from 15 years ago. Technology constantly evolves and what is safe today will be harder to secure tomorrow. This is doubly true if your organization has a database. 
 
-There are three security concerns for most non-profits
-1. Keeping organizational data safe
+There are three primary security concerns for most websites:
+1. Keeping private data safe
 1. Preventing the site from giving users evil code
-1. Preventing the resources used for the site from hosting other more evil sites
+1. Preventing the resources used for the site from being used by unauthorized people
 
 Questions to consider:
-Does my organization need a database? What data does the organization need to keep?
-Are there administrative tools my organization wants built into the website? Who uses those tools?
+- Does my organization need a database? What data does the organization need to keep?
+- Are there administrative tools my organization wants built into the website? Who uses those tools? Do they really need to be built into a website?
 
 ##### The Best Security, No Security
 
-We think the best 
+We think the best way to create a secure website is to simply have no secrets. If all your information is publicly available
 
 
 ####
@@ -36,3 +36,6 @@ We think the best
 ### Cost
 
 A large portion of many non-profit budgets is website hosting and maintenance.
+
+#### Reccomendations
+If you're building a site, the best option is whatever appear on the internet the fastest! The simplest and cheapest site that we know of is a GitHub pages. If you have very little technical experience, a complete hosting and . If you want to learn more about technology, install Wordpress
