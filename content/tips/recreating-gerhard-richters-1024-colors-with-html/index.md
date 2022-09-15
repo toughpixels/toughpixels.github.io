@@ -126,7 +126,7 @@ And add a border to the whole canvas with:
 ```
 ## The Final Code
 
-Here's the final product, using grid and random color generation with JavaScript! It's not as beautiful as the painting, which hangs in the [Centre Pompidou](https://www.centrepompidou.fr/en/) in Paris. Sadly, we can't expect random numbers to always be great artists.
+Here's the final product, using grid and random color generation with JavaScript! It's not as beautiful as the painting, which hangs in the [Centre Pompidou](https://www.centrepompidou.fr/en/) in Paris. Sadly, we can't expect random numbers to always be great artists, but if you reload often enough, maybe an RNG Richter could be born.
 
 
 <style>
