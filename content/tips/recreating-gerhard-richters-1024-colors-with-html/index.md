@@ -1,8 +1,10 @@
 ---
 title: Recreating Gerhard Richter's "1024 Farben" in HTML
-description: Gerhard Richter's "1024 Farben" is a beautiful presentation
-  of pseudo-random color blocks. We'll recreate these paintings using HTML's Grid
-  to create a canvas, then fill it in with random colors using JavaScript.
+image: 2953.jpg
+description: Gerhard Richter's "1024 Farben" is a beautiful series of paintings
+  that explores the presentation of randomly distributed color blocks. We'll
+  recreate these paintings using HTML's Grid to create a canvas, then fill it in
+  with random colors using JavaScript.
 tags:
   - HTML
   - CSS
@@ -126,7 +128,7 @@ And add a border to the whole canvas with:
 ```
 ## The Final Code
 
-Here's the final product, using grid and random color generation with JavaScript! It's not as beautiful as the painting, which hangs in the [Centre Pompidou](https://www.centrepompidou.fr/en/) in Paris. Sadly, we can't expect random numbers to always be great artists, but if you reload often enough, maybe an RNG Richter could be born.
+Here's the final product, using grid and random color generation with JavaScript! It's not as beautiful as the painting, which hangs in the [Centre Pompidou](https://www.centrepompidou.fr/en/) in Paris. Sadly, we can't expect random numbers to always be great artists.
 
 
 <style>
