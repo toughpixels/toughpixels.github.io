@@ -11,7 +11,7 @@ date: 2022-09-14T19:37:12.230Z
 ---
 ## The Painting
 
-Gerhard Richter's "1024 Farben" is a series of paintings experienmenting with random color distribution using colors found in from real life. This article will show you how to recreate one of these famous works using just HTML and JavaScript.
+Gerhard Richter's "1024 Farben" ("1024 Colors") is a series of paintings experimenting with random color distribution using colors found in from real life. This article will show you how to recreate one of these famous works using HTML to create the canvas and JavaScript to generate the colors.
 
 ## The Canvas
 
@@ -171,4 +171,4 @@ function createBackgroundColorString() {
 const range = [...Array(1024).keys()];
 const canvas = document.getElementById('richter-painting-canvas');
 range.forEach(e => addColorBlock(canvas));
-</script>
+</script> 
