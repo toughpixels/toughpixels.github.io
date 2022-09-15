@@ -15,6 +15,8 @@ date: 2022-09-14T19:37:12.230Z
 
 Gerhard Richter's "1024 Farben" ("1024 Colors") is a series of paintings experimenting with random color distribution using colors found in from real life. This article will show you how to recreate one of these famous works using HTML to create the canvas and JavaScript to generate the colors.
 
+![1024 Farben (350-3) from the Centre Pompidou](2953.jpg)
+
 ## The Canvas
 
 The first step toward creating any painting is choosing a canvas. We want to recreate the dimensions of the original piece: 254 x 478 cm. Using dynamic sized units means the work will display properly on screens of any size. So we'll first choose a width that will look good. `88vw` seems like a good starting point (read about sizing units [here](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)), and with a little algebra (478/88 = 254/x) we know the canvas should be `88vw` wide and `47.8vw` tall. We'll also use the [color picker](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Colors/Color_picker_tool) to discover the background color from an [image of the painting](https://www.centrepompidou.fr/en/ressources/oeuvre/KkdvO7p). So far, we have the following HTML
