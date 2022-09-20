@@ -25,7 +25,7 @@ Check that your `Display Units` and `Units` are set to `px`. In this interface, 
 
 ### Making SVGs Smaller
 
-By default, SVG gives you a lot of numerical precision when making SVGs. On the web, this can be a liability, and make edits much harder. Reduce the size of your files by going to `Edit > Preferences`, find the `SVG Output` option, and reduce the `Numerical precision` to 1 or 2 to save decimal places.
+By default, SVG gives you a lot of numerical precision when making SVGs. On the web, this can be a liability, and make edits much harder. Reduce the size of your files by going to `Edit > Preferences`, find the `SVG Output` option, and reduce the `Numerical precision` to around 5. YOu can't go too small or drawing the SVG will be impossible.
 
 ### Saving Work For Later
 
