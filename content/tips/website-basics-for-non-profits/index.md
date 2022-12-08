@@ -7,7 +7,7 @@ tags:
   - beginner
 date: 2022-08-10T18:07:43.723Z
 ---
-Non-profits have a unique challenge - building sites that are easy to update, can handle changes in leadership and a range of technical abilities, and won't break the bank. Here's our guide for how non-profits and resource constrained organizations can use fundamental web technologies to create and deploy sites for these requirements.
+Non-profits have a unique challenge - building sites that are easy to update, l  won't break the bank. Here's our guide for how non-profits and resource constrained organizations can use fundamental web technologies to create and deploy sites for these requirements.thatast a long t
 
 ### Stability
 
